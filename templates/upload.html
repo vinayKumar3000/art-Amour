@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Your Machine Learning App</title>
+  </head>
+
+  <body>
+    <form
+      method="POST"
+      enctype="multipart/form-data"
+      action="{{ url_for('upload') }}"
+    >
+      <input name="img" type="file" accept="image/*" />
+      <button type="submit">Submit</button>
+    </form>
+    <img src={{ url_for('static', filename='img/output.png') }} style="height:
+    400px; width: 400px" />
+  </body>
+</html>

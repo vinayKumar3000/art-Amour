@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/faa3ecd5db.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Learn</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    @import url(https://fonts.googleapis.com/css?family=Chewy);
+    @import url(https://fonts.googleapis.com/css?family=Passion+One);
+*{
+	list-style: none;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+}
+
+body{
+	background:white;
+}
+
+.wrapper .sidebar{
+	background-image: url("sidebar3.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    position: fixed;
+	top: 0;
+	left: 0;
+	width: 225px;
+	height: 100%;
+	transition: all 0.5s ease;
+}
+
+
+.wrapper .sidebar ul li a{
+	display: block;
+	padding: 13px 30px;
+	border-bottom: 1px solid #2d0831;
+	color: rgb(241, 237, 237);
+	font-size: 16px;
+	position: relative;
+}
+
+.wrapper .sidebar ul li a .icon{
+	color: #dee4ec;
+	width: 30px;
+	display: inline-block;
+}
+
+ 
+
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active{
+	color: #130110;
+
+	background:rgb(233, 214, 236);
+    border-right: 0px solid rgb(5, 68, 104);
+    opacity:0.5;
+}
+
+.wrapper .sidebar ul li a:hover .icon,
+.wrapper .sidebar ul li a.active .icon{
+	color: #2d0831;
+}
+
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before{
+	display: block;
+}
+
+.wrapper .section{
+	width: calc(100% - 225px);
+	margin-left: 225px;
+	transition: all 0.5s ease;
+}
+
+.wrapper .section .top_navbar{
+	background:linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 158, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+	height: 50px;
+	display: flex;
+	align-items: center;
+	padding: 0 30px;
+ 
+}
+
+.wrapper .section .top_navbar .hamburger a{
+	font-size: 28px;
+	color: #f4fbff;
+}
+
+.wrapper .section .top_navbar .hamburger a:hover{
+	color: #e9c9ef;
+}
+
+body.active .wrapper .sidebar{
+	left: -225px;
+}
+
+body.active .wrapper .section{
+	margin-left: 0;
+	width: 100%;
+}
+.img-with-heading{
+    
+    margin-left:350px;
+    margin-top:40px;
+    display: flex;
+   justify-content: center;
+   flex-direction: column;
+   margin-right:150px;
+}
+.heading{
+    text-align:justify;
+    font-family: "Chewy";
+    justify-content: space-between;
+    font-size:50px;
+    background: -webkit-linear-gradient(92deg, transparent 0%, rgba(48,6,59,0.9) 88%, #7d155b 100%),
+            -webkit-linear-gradient(173deg, #d93232 0%, #c0a1e2 100%);
+    -webkit-text-fill-color: transparent;
+}
+p{
+   
+   text-align:justify;
+   width:auto;
+   background-color:lavenderblush;
+   padding:15px;
+   padding-top:20px;
+   justify-content: space-between;
+   font-family:Helvetica;
+   line-height:25px;
+   
+}
+
+
+</style>
+</head>
+<body>
+   
+    <div class="wrapper">
+        <div class="section">
+            <div class="top_navbar">
+                <div class="hamburger">
+                    <a href="#">
+                        <i class="fas fa-bars"></i>
+                    </a>
+        
+                    <a href="{{ url_for('index') }}" style="position:relative; left:900px;">
+                        <i class="fa-solid fa-feather-pointed fa-sm"></i>
+                    </a>
+                </div>
+                   
+                
+            </div>
+             
+        </div>
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a href="{{ url_for('learn_blog') }}" class="active">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></i></span>
+                        <span class="item">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('painting') }}">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></i></span>
+                        <span class="item">Paintings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('mandalas') }}">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></i></span>
+                        <span class="item">Mandalas</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></i></span>
+                        <span class="item">People</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></i></span>
+                        <span class="item">Perfomance</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></span>
+                        <span class="item">Development</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></span>
+                        <span class="item">Reports</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></span>
+                        <span class="item">Admin</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></span>
+                        <span class="item">Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+  <script>
+       var hamburger = document.querySelector(".hamburger");
+	hamburger.addEventListener("click", function(){
+		document.querySelector("body").classList.toggle("active");
+	})
+  </script>
+  <!--contentside-->
+  <div class="img-with-heading">
+      <h1 class="heading">Path of Art</h1>
+      <!--image-->
+      
+       <img src="captionimg2.jpg" height="520px" width="auto"><br>
+      <!--article-->
+      
+      <p>
+        Each morning we see the sunshine outside and feel relaxed seeing the sun and clouds in different views. Thus, you see that art is everywhere and anywhere if we look closely. In other words, everything in life is artwork. 
+        For as long as humanity has existed, art has been part of our lives. For many years, people have been creating and enjoying art.  It expresses emotions or expression of life. It is one such creation that enables interpretation of any kind.
+        It is a skill that applies to music, painting, poetry, dance and more. Moreover, nature is no less than art. For instance, if nature creates something unique, it is also art. Artists use their artwork for passing along their feelings.
+        Thus, art and artists bring value to society and have been doing so throughout history. Art gives us an innovative way to view the world or society around us. Most important thing is that it lets us interpret it on our own individual experiences and associations.
+      </p>
+ </div>
+
+  
+</body>
+</html>

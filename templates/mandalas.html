@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>painting</title>
+    <script src="https://kit.fontawesome.com/faa3ecd5db.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+ @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    @import url(https://fonts.googleapis.com/css?family=Chewy);
+    @import url(https://fonts.googleapis.com/css?family=Passion+One);
+    @media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+*{
+	list-style: none;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+}
+
+body{
+	background:white;
+}
+
+.wrapper .sidebar{
+	background-image: url("sidebar3.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    position: fixed;
+	top: 0;
+	left: 0;
+	width: 225px;
+	height: 100%;
+	transition: all 0.5s ease;
+}
+
+
+.wrapper .sidebar ul li a{
+	display: block;
+	padding: 13px 30px;
+	border-bottom: 1px solid #2d0831;
+	color: rgb(241, 237, 237);
+	font-size: 16px;
+	position: relative;
+}
+
+.wrapper .sidebar ul li a .icon{
+	color: #dee4ec;
+	width: 30px;
+	display: inline-block;
+}
+
+ 
+
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active{
+	color: #130110;
+
+	background:rgb(233, 214, 236);
+    border-right: 0px solid rgb(5, 68, 104);
+    opacity:0.5;
+}
+
+.wrapper .sidebar ul li a:hover .icon,
+.wrapper .sidebar ul li a.active .icon{
+	color: #2d0831;
+}
+
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before{
+	display: block;
+}
+
+.wrapper .section{
+	width: calc(100% - 225px);
+	margin-left: 225px;
+	transition: all 0.5s ease;
+}
+
+.wrapper .section .top_navbar{
+	background:linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 158, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+	height: 50px;
+	display: flex;
+	align-items: center;
+	padding: 0 30px;
+ 
+}
+
+.wrapper .section .top_navbar .hamburger a{
+	font-size: 28px;
+	color: #f4fbff;
+}
+
+.wrapper .section .top_navbar .hamburger a:hover{
+	color:#e9c9ef;
+}
+
+body.active .wrapper .sidebar{
+	left: -225px;
+}
+
+body.active .wrapper .section{
+	margin-left: 0;
+	width: 100%;
+}
+.layout{
+    margin-left:280px;
+    margin-top:40px;
+    margin-right:50px;}
+.heading{  
+    text-align:justify;
+    font-family: "Chewy";
+    justify-content: space-between;
+    font-size:50px;
+    background: -webkit-linear-gradient(92deg, transparent 0%, rgba(48,6,59,0.9) 88%, #7d155b 100%),
+            -webkit-linear-gradient(173deg, #d93232 0%, #c0a1e2 100%);
+    -webkit-text-fill-color: transparent;
+}
+.para{
+    padding-top:10px;
+    text-align: justify;
+    
+}
+.img{
+    text-align: center;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align:start;
+  font-family: arial;
+}
+
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: rgb(65, 42, 91);
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  margin:0;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+.cards{
+    display: flex;
+    flex-direction: row;
+}
+</style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="section">
+            <div class="top_navbar">
+                <div class="hamburger">
+                    <a href="#">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                    <a href="{{ url_for('index') }}" style="position:relative; left:900px;">
+                        <i class="fa-solid fa-feather-pointed fa-sm"></i>
+                    </a>
+                </div>
+            </div>
+             
+        </div>
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a href="{{ url_for('learn_blog') }}" class="active">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></i></span>
+                        <span class="item">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('painting') }}">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></i></span>
+                        <span class="item">Paintings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('mandalas') }}">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></i></span>
+                        <span class="item">Mandalas</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></i></span>
+                        <span class="item">People</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></i></span>
+                        <span class="item">Perfomance</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></span>
+                        <span class="item">Development</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></span>
+                        <span class="item">Reports</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></span>
+                        <span class="item">Admin</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></span>
+                        <span class="item">Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+    <script>
+        var hamburger = document.querySelector(".hamburger");
+     hamburger.addEventListener("click", function(){
+         document.querySelector("body").classList.toggle("active");
+     })
+   </script>
+<!--mandala content-->
+<div class="layout">
+    <h1 class="heading">Mandala Art</h1><br><hr><br>
+    <h2>What is Mandala ?</h2><br><hr>
+    <p class="para">
+        A mandala is a spiritual symbol in Buddhism and Hinduism.
+        It's a symbolic representation of the universe with an inner and outer world.
+        The word mandala comes from Sanskrit, an ancient Indian language.
+        Literally mandala means "circle." The circle is seen as a magical form, without beginning and end,
+        just as the universe is believed to have no end.<br><br>
+        The Sanskrit word mandala indicates everything that is round or circular.
+        In tantric traditions, it often refers to a sacred space, which can be round or square or any other form. Deities are invited to enter this space by uttering powerful words (mantras).
+        The prototype of the mandala is a square with four gates containing a circle with a central point. Often the mandala is also in an outer circle. This basic form can be found in many ancient mandalas, but there are many more variants. The mandala can also be filled with all kinds of patterns: geometric figures, Buddhist saints, flowers, you name it.
+    </p>
+    <div class="img">
+        <img src="mandala1.jpg" style="height:400px; width:400px;">
+    </div>
+    <p class="para">
+        The mandala is used as an object to focus your attention on while meditating. Because of the symmetrical shape, your attention is directed to the center. People in the Western world often used a freer form of the mandala, which is more reflective of the inner self and the unconscious self. Regardless of what mandala you use, coloring it can be very meditative and relaxing.
+    </p><br><hr><br>
+    <h2>Types of Mandalas</h2><br><hr><br>
+        <h3>Geometric Mandala</h3>
+            <p class="para">
+                Geometric mandalas are the most well-known type out of them all. They’re the ones that you encounter as doodling exercises or in coloring books. The pattern might consist of lines, geometrical shapes, or anything else. 
+                What makes them all geometric mandalas is the way they’re designed. They all have a clearly visible center, which the patterns radiate from, and every pattern is broken up by implied or actual lines to simplify the design. They can have the shape of a circle, semi-circle, triangle, square, or other figures.
+            </p>
+            <div class="img">
+                <img src="geomandala2.jpg" style="height:300px; width:300px;">
+            </div><br>
+        <h3>Flower Mandalas</h3>
+        <p class="para">
+        Flower mandalas can be made of any material, but their main subjects are flowers, specifically their petals, and the spiritual symbolism of these flowers. They can be the symbols of rebirth, the eternal life of the soul, spiritual enlightenment, self-love, balance, and many other things. Or, they can simply be beautiful flowers that are fascinating enough to want to capture them in your mandala art.
+        </p>
+        <div class="img">
+            <img src="flowermandala.png" style="height:300px; width:300px;">
+        </div><br>
+        <h3>Letter Mandalas</h3>
+        <p class="para">
+            Letter mandalas are currently associated with pretty lettering or patterns that are shaped like letters. However, the original meaning of letter mandalas were the simplified ones, where people drew letters instead of full-body depictions of spiritual beings or deities. They can also be called symbol mandalas if the symbols are used instead of letters.
+        </p>
+        <div class="img">
+            <img src="lettermandala2.jpg" style="height:300px; width:300px;">
+        </div><br><hr><br>
+    <h2>Materials Required for drawing mandala</h2><br><hr><br>
+    <ol>
+        <li>1. A4 sheet paper</li>
+        <li>2. Pencil and Fine Liners</li>
+        <li>3. Geometrical Box (Compass & Protractor)</li>
+        <li>4. Eraser</li>
+        <li>5. Scale/Rulers</li>
+    </ol><br><hr><br>
+    <h3>Learn to Draw Mandalas</h3><br><hr><br>
+    <div class="cards">
+    <div class="card">
+        <img src="learnmandala.jpg" style="width:100%">
+        <a href="https://www.wikihow.com/Draw-a-Mandala"><button>click here</button></a>
+    </div>
+    <div class="card">
+        <img src="learnmandala.jpg" style="width:100%">
+        <a href="https://mandalas.life/2017/what-are-the-different-types-of-mandala/"><button>click here</button></a>
+    </div>
+    </div><br>
+</div>
+</body>
+</html>
+
+    

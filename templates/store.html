@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="A Beginner's Guide to the Artists" />
+    <meta
+      name="keywords"
+      content="color palette generator,artists e-learning,art store,art blogs,art website"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Art Amour</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <div>
+          <h1>Art_Amour</h1>
+          </div>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <div class="left">
+            <a href="#">ColorPalette |</a>&nbsp; <a href="Learn-blog.html">Learn |</a>&nbsp;
+            <a href="#">Store |</a>&nbsp; <a href="#">Updates</a>&nbsp;
+          </div>
+        </div>
+
+        <nav class="right">
+          <a href="login.html"><i class="fa fa-user-circle-o fa-5x" aria-hidden="true" style="font-size:23px;"></i></a>&nbsp;
+        </nav>
+      </div>
+    </header>
+    <!--slideshow-->
+    <div class="slideshow-container" data-options="width:40%;">
+
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="gouache.jpg" style="width:100%; height:80%" >
+        <div class="text">Caption Text</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="oilcolors.jpg" style="width:100%;height:80%">
+        <div class="text">Caption Two</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="Acrylic-Paint2.jpg" style="width:100%">
+        <div class="text">Caption Three</div>
+      </div>
+      
+      </div>
+      <br>
+      
+      <div style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+      </div>
+      <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+        </script>
+    
+    <!--our gallery-->
+    <div class="photo_gallery">
+      <div class="photo_heading">
+        <h3>Art <span>Gallery</span></h3>
+      </div>
+    </div>
+    <!--photosupload-->
+    <div class="wrap">
+ 
+      <div class="box">
+       <div class="boxInner">
+         <img src="1.jpg"/>
+         <div class="overlay">Canvas Couple Art</div>
+        </div>
+      </div>
+     
+      <div class="box">
+       <div class="boxInner">
+         <img src="2.jpg"/>
+         <div class="overlay">Gouache art</div>
+       </div>
+      </div>
+     
+      <div class="box">
+       <div class="boxInner">
+        <img src="13.jpg"/>
+        <div class="overlay">Doodle</div>
+       </div>
+      </div>
+     
+      <div class="box">
+       <div class="boxInner">
+        <img src="4.jpg"/>
+        <div class="overlay">Acrylic Wall Art</div>
+       </div>
+      </div>
+     
+      <div class="box">
+       <div class="boxInner">
+        <img src="5.jpg"/>
+        <div class="overlay">Poloroid Art</div>
+       </div>
+      </div>
+     
+      <div class="box">
+       <div class="boxInner">
+        <img src="6.jpg"/>
+        <div class="overlay">WaterColor Mermaid</div>
+       </div>
+      </div>
+
+      <div class="box">
+        <div class="boxInner">
+          <img src="7.jpg"/>
+          <div class="overlay">Mandala Art</div>
+         </div>
+       </div>
+
+       <div class="box">
+        <div class="boxInner">
+          <img src="8.jpg"/>
+          <div class="overlay">Madubhani Art</div>
+         </div>
+       </div>
+
+       <div class="box">
+        <div class="boxInner">
+          <img src="9.jpg"/>
+          <div class="overlay">Calligraphy</div>
+         </div>
+       </div>
+       <div class="box">
+        <div class="boxInner">
+          <img src="10.jpg"/>
+          <div class="overlay">Pencil Art</div>
+         </div>
+       </div>
+       <div class="box">
+        <div class="boxInner">
+          <img src="11.jpg"/>
+          <div class="overlay">Floral Art</div>
+         </div>
+       </div>
+
+       <div class="box">
+        <div class="boxInner">
+          <img src="12.jpg"/>
+          <div class="overlay">BlackInk Art</div>
+         </div>
+       </div>
+
+       <div class="box">
+        <div class="boxInner">
+          <img src="14.jpeg"/>
+          <div class="overlay">Moonscape Canvas</div>
+         </div>
+       </div>
+
+       <div class="box">
+        <div class="boxInner">
+          <img src="19.jpeg" height="295px";/>
+          <div class="overlay"> Mini Landscapes</div>
+         </div>
+       </div>
+
+       <div class="box">
+        <div class="boxInner">
+          <img src="16.jpg"/>
+          <div class="overlay">Zentangle Art</div>
+         </div>
+       </div>
+
+       <div class="box">
+        <div class="boxInner">
+          <img src="18.jpg"/>
+          <div class="overlay">Unicorn Sketch</div>
+         </div>
+       </div>
+
+       
+     
+     </div>
+    
+
+    <footer>
+      <div class="container3">
+        <div style="margin-left: 100px"><p>Show Us Your Art On</p></div>
+        <div class="footer_left">
+          <a href="#"
+            ><i
+              class="fa fa-instagram"
+              aria-hidden="true"
+              style="font-size: 23px"
+            ></i
+            >&nbsp;|&nbsp;</a
+          >&nbsp;
+          <a href="#"
+            ><i
+              class="fa fa-pinterest"
+              aria-hidden="true"
+              style="font-size: 23px"
+            ></i
+            >&nbsp;|&nbsp;</a
+          >&nbsp;
+          <a href="#"
+            ><i
+              class="fa fa-tumblr-square"
+              aria-hidden="true"
+              style="font-size: 23px"
+            ></i
+            >&nbsp;|&nbsp;</a
+          >&nbsp;
+          <a href="#"
+            ><i
+              class="fa fa-deviantart"
+              aria-hidden="true"
+              style="font-size: 23px"
+            ></i
+          ></a>
+        </div>
+        <div id="contact">
+          Contact Us:9804560329 | Email Us: artamour@gmail.com
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

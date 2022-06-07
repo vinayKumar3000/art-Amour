@@ -29,7 +29,7 @@ body{
 }
 
 .wrapper .sidebar{
-	background-image: url("sidebar3.jpg");
+	background-image: url("../static/img/sidebar3.jpg");
     background-repeat:no-repeat;
     background-size:cover;
     position: fixed;
@@ -124,16 +124,14 @@ body.active .wrapper .section{
     font-size:50px;
     background: -webkit-linear-gradient(92deg, transparent 0%, rgba(48,6,59,0.9) 88%, #7d155b 100%),
             -webkit-linear-gradient(173deg, #d93232 0%, #c0a1e2 100%);
-    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
 }
 .cards {
     display:flex;
     flex-wrap: wrap;
-    align-items: stretch;
     margin-right:10px;
-    max-width: 400px;
-    overflow: hidden;
   }
   .card {
     flex: 10 0 300px;
@@ -145,7 +143,6 @@ body.active .wrapper .section{
   } 
   .card img {
     max-width: 100%;
-    
   }
     
   .card .text {
@@ -262,7 +259,7 @@ body.active .wrapper .section{
 <h1 class="heading">The Paint Guild</h1>
 <main class="cards">
   <article class="card">
-    <img src="Watercolor-Paintings.jpg" alt="Sample photo">
+    <img src="../static/img/Watercolor-Paintings.jpg" alt="Sample photo">
     <div class="text">
       <h3>Water Colors</h3>
       <p class="para">Watercolor painting is the process of painting with pigments that are mixed with water. Of all the painting processes, watercolor painting is known for its inherent delicacy and subtlety because watercolor art is all about thin washes and transparent color </p>
@@ -271,7 +268,7 @@ body.active .wrapper .section{
   </article>
   <article class="card">
     <div>
-      <img src="Acrylic3.jpg" alt="Sample photo">
+      <img src="../static/img/Acrylic3.jpg" alt="Sample photo">
     </div>
     <div class="text">
       <h3>Acrylic Colors</h3>
@@ -280,7 +277,7 @@ body.active .wrapper .section{
     </div>
   </article>
   <article class="card">
-    <img src="oilcolors.jpg" alt="Sample photo">
+    <img src="../static/img/oilcolors.jpg" alt="Sample photo">
     <div class="text">
       <h3>Gouache Colors</h3>
       <p class="para">Completely synergize resource taxing relationships via premier niche markets.</p>
@@ -288,7 +285,7 @@ body.active .wrapper .section{
     </div>
   </article>
   <article class="card">
-    <img src="gouache3.jpg" alt="Sample photo" height="335px;" width="100%;">
+    <img src="../static/img/gouache3.jpg" alt="Sample photo" height="335px;" width="100%;">
     <div class="text">
       <h3>Oil Colors</h3>
       <p class="para">Imagine jumping into that boat, and just letting it sail wherever the wind takes you...</p>

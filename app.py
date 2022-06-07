@@ -19,7 +19,7 @@ db=mongodb_client.db
 @app.route('/')
 def index():
     if 'username' in session:
-        return  render_template('front-end.html')
+        return  render_template('front-end.html',username=session['username'])
 
     return render_template('login.html')
 
@@ -44,13 +44,10 @@ def upload():
     if request.method == "POST":
         
         # Unpickle classifier
-        #clf = joblib.load("clf.pkl")
         image2=request.files.get('img','')
-        print(image2)
 
         file=request.files['img']
         file.save(os.path.join('./', "received.jpg"))
-        output="received.jpg"
     
         ## ML CODE
         img = cv2.imread('./received.jpg')
@@ -115,10 +112,10 @@ def upload():
 
       
         cv2.destroyAllWindows()
-        cv2.imwrite(os.path.join('./static/img/', "output.png"),final)
-        output="./static/img/output.png"
+        cv2.imwrite(os.path.join('./static/img/', image2.filename),final)
+        output="./static/img/"+image2.filename
     else:
-        output="./static/img/output.png"
+        output="./static/img/default.jpg"
         
     return render_template("upload.html",output=output)
 

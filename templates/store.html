@@ -13,78 +13,361 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <title>Art Amour</title>
-    <link rel="stylesheet" href="style.css" />
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Passion+One);
+      @import url(https://fonts.googleapis.com/css?family=Chewy);
+      body {
+        font: 15px/1.5 Arial, Helvetica, sans-serif;
+        padding: 0;
+        margin: 0;
+        background: color #f4f4f4;
+      }
+      /*global*/
+      .container {
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+      }
+      /*header*/
+      header {
+        background: linear-gradient(
+          90deg,
+          rgba(131, 58, 180, 1) 0%,
+          rgba(253, 29, 158, 1) 50%,
+          rgba(252, 176, 69, 1) 100%
+        );
+        color: black;
+        padding-top: 5px;
+        min-height: 20px;
+      }
+      header a {
+        color: white;
+        text-decoration: none;
+        text-transform: none;
+        font-size: 20px;
+        font-family: "Passion One";
+      }
+      .logo {
+        font-family: "Chewy";
+        display: flex;
+        color: #f4f4f4;
+        justify-content: space-between;
+      }
+      .left {
+        overflow: hidden;
+        float: left;
+        padding-top: 30px;
+      }
+      .right {
+        float: right;
+        overflow: hidden;
+        padding-top: 30px;
+        padding-left: 100spx;
+      }
+      /*slideshow*/
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Verdana, sans-serif;
+      }
+      .mySlides {
+        display: none;
+      }
+      img {
+        vertical-align: middle;
+      }
+
+      /* Slideshow container */
+      .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+      }
+
+      /* Caption text */
+      .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+      }
+
+      /* Number text (1/3 etc) */
+      .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+
+      /* The dots/bullets/indicators */
+      .dot {
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+
+      .active {
+        background-color: #717171;
+      }
+
+      /* Fading animation */
+      .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0.4;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+        .text {
+          font-size: 11px;
+        }
+      }
+
+      /*footer*/
+      footer {
+        background: linear-gradient(
+          90deg,
+          rgba(131, 58, 180, 1) 0%,
+          rgba(253, 29, 158, 1) 50%,
+          rgba(252, 176, 69, 1) 100%
+        );
+        padding: 9px;
+        margin-top: 0px;
+        text-align: center;
+        color: #f4f4f4;
+        min-height: 10px;
+      }
+      footer a {
+        color: white;
+        text-decoration: none;
+        text-transform: none;
+        font-size: 20px;
+        font-family: "Passion One";
+      }
+      footer p {
+        float: left;
+        font-size: 20px;
+        font-family: "Passion One";
+        margin-top: 3px;
+        margin-bottom: 10px;
+      }
+      .footer_left {
+        float: left;
+        padding-left: 45px;
+        padding-top: 4px;
+        margin-right: auto;
+      }
+      #contact {
+        float: right;
+        font-size: 20px;
+        font-family: "Passion One";
+        margin-top: 3px;
+        margin-bottom: 10px;
+      }
+      .container3 {
+        display: flex;
+        justify-content: space-around;
+      }
+      /*photo gallery*/
+      .photo_gallery {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0 20px 0 20px;
+      }
+      .photo_gallery .photo_heading {
+        width: 50%;
+        padding-bottom: 50px;
+      }
+      .photo_gallery .photo_heading h3 {
+        font-size: 3em;
+        font-weight: bolder;
+        border-bottom: 3px solid #222;
+        opacity: 0.7;
+      }
+      .photo_gallery .photo_heading h3 span {
+        font-weight: 100;
+      }
+
+      .wrap {
+        overflow: hidden;
+        max-width: 1500px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .box {
+        float: left;
+        position: relative;
+        width: 20%;
+        padding-bottom: 20%;
+      }
+
+      .boxInner {
+        position: absolute;
+        left: 10px;
+        right: 10px;
+        top: 10px;
+        bottom: 10px;
+        overflow: hidden;
+      }
+      .boxInner img {
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        display: block; /* remove extra space below image */
+      }
+      /*caption for image*/
+      .overlay {
+        position: absolute;
+        bottom: 0;
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5); /* Black see-through */
+        color: #f1f1f1;
+        width: 100%;
+        transition: 0.5s ease;
+        opacity: 0;
+        color: white;
+        font-size: 20px;
+        padding: 20px;
+        text-align: justify;
+      }
+      .box:hover .overlay {
+        opacity: 1;
+      }
+
+      @media only screen and (max-width: 480px) {
+        /* Smartphone view: 1 tile */
+        .box {
+          width: 100%;
+          padding-bottom: 100%;
+        }
+      }
+      @media only screen and (max-width: 650px) and (min-width: 481px) {
+        /* Tablet view: 2 tiles */
+        .box {
+          width: 50%;
+          padding-bottom: 50%;
+        }
+      }
+      @media only screen and (max-width: 1050px) and (min-width: 651px) {
+        /* Small desktop / ipad view: 3 tiles */
+        .box {
+          width: 33.3%;
+          padding-bottom: 33.3%;
+        }
+      }
+      @media only screen and (max-width: 1290px) and (min-width: 1051px) {
+        /* Medium desktop: 4 tiles */
+        .box {
+          width: 25%;
+          padding-bottom: 25%;
+        }
+      }
+    </style>
   </head>
   <body>
     <header>
       <div class="container">
         <div class="logo">
           <div>
-          <h1>Art_Amour</h1>
+            <h1>Art_Amour</h1>
           </div>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <div class="left">
-            <a href="#">ColorPalette |</a>&nbsp; <a href="Learn-blog.html">Learn |</a>&nbsp;
+            <a href="#">ColorPalette |</a>&nbsp;
+            <a href="../static/img/Learn-blog.html">Learn |</a>&nbsp;
             <a href="#">Store |</a>&nbsp; <a href="#">Updates</a>&nbsp;
           </div>
         </div>
 
         <nav class="right">
-          <a href="login.html"><i class="fa fa-user-circle-o fa-5x" aria-hidden="true" style="font-size:23px;"></i></a>&nbsp;
+          <a href="../static/img/login.html"
+            ><i
+              class="fa fa-user-circle-o fa-5x"
+              aria-hidden="true"
+              style="font-size: 23px"
+            ></i></a
+          >&nbsp;
         </nav>
       </div>
     </header>
     <!--slideshow-->
     <div class="slideshow-container" data-options="width:40%;">
-
       <div class="mySlides fade">
         <div class="numbertext">1 / 3</div>
-        <img src="gouache.jpg" style="width:100%; height:80%" >
+        <img src="../static/img/gouache.jpg" style="width: 100%; height: 80%" />
         <div class="text">Caption Text</div>
       </div>
-      
+
       <div class="mySlides fade">
         <div class="numbertext">2 / 3</div>
-        <img src="oilcolors.jpg" style="width:100%;height:80%">
+        <img
+          src="../static/img/oilcolors.jpg"
+          style="width: 100%; height: 80%"
+        />
         <div class="text">Caption Two</div>
       </div>
-      
+
       <div class="mySlides fade">
         <div class="numbertext">3 / 3</div>
-        <img src="Acrylic-Paint2.jpg" style="width:100%">
+        <img src="../static/img/Acrylic-Paint2.jpg" style="width: 100%" />
         <div class="text">Caption Three</div>
       </div>
-      
-      </div>
-      <br>
-      
-      <div style="text-align:center">
-        <span class="dot"></span> 
-        <span class="dot"></span> 
-        <span class="dot"></span> 
-      </div>
-      <script>
-        let slideIndex = 0;
-        showSlides();
-        
-        function showSlides() {
-          let i;
-          let slides = document.getElementsByClassName("mySlides");
-          let dots = document.getElementsByClassName("dot");
-          for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
-          }
-          slideIndex++;
-          if (slideIndex > slides.length) {slideIndex = 1}    
-          for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-          }
-          slides[slideIndex-1].style.display = "block";  
-          dots[slideIndex-1].className += " active";
-          setTimeout(showSlides, 2000); // Change image every 2 seconds
+    </div>
+    <br />
+
+    <div style="text-align: center">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+    <script>
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
         }
-        </script>
-    
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
+    </script>
+
     <!--our gallery-->
     <div class="photo_gallery">
       <div class="photo_heading">
@@ -93,121 +376,116 @@
     </div>
     <!--photosupload-->
     <div class="wrap">
- 
       <div class="box">
-       <div class="boxInner">
-         <img src="1.jpg"/>
-         <div class="overlay">Canvas Couple Art</div>
+        <div class="boxInner">
+          <img src="../static/img/1.jpg" />
+          <div class="overlay">Canvas Couple Art</div>
         </div>
       </div>
-     
+
       <div class="box">
-       <div class="boxInner">
-         <img src="2.jpg"/>
-         <div class="overlay">Gouache art</div>
-       </div>
-      </div>
-     
-      <div class="box">
-       <div class="boxInner">
-        <img src="13.jpg"/>
-        <div class="overlay">Doodle</div>
-       </div>
-      </div>
-     
-      <div class="box">
-       <div class="boxInner">
-        <img src="4.jpg"/>
-        <div class="overlay">Acrylic Wall Art</div>
-       </div>
-      </div>
-     
-      <div class="box">
-       <div class="boxInner">
-        <img src="5.jpg"/>
-        <div class="overlay">Poloroid Art</div>
-       </div>
-      </div>
-     
-      <div class="box">
-       <div class="boxInner">
-        <img src="6.jpg"/>
-        <div class="overlay">WaterColor Mermaid</div>
-       </div>
+        <div class="boxInner">
+          <img src="../static/img/2.jpg" />
+          <div class="overlay">Gouache art</div>
+        </div>
       </div>
 
       <div class="box">
         <div class="boxInner">
-          <img src="7.jpg"/>
+          <img src="../static/img/13.jpg" />
+          <div class="overlay">Doodle</div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="boxInner">
+          <img src="../static/img/4.jpg" />
+          <div class="overlay">Acrylic Wall Art</div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="boxInner">
+          <img src="../static/img/5.jpg" />
+          <div class="overlay">Poloroid Art</div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="boxInner">
+          <img src="../static/img/6.jpg" />
+          <div class="overlay">WaterColor Mermaid</div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="boxInner">
+          <img src="../static/img/7.jpg" />
           <div class="overlay">Mandala Art</div>
-         </div>
-       </div>
+        </div>
+      </div>
 
-       <div class="box">
+      <div class="box">
         <div class="boxInner">
-          <img src="8.jpg"/>
+          <img src="../static/img/8.jpg" />
           <div class="overlay">Madubhani Art</div>
-         </div>
-       </div>
+        </div>
+      </div>
 
-       <div class="box">
+      <div class="box">
         <div class="boxInner">
-          <img src="9.jpg"/>
+          <img src="../static/img/9.jpg" />
           <div class="overlay">Calligraphy</div>
-         </div>
-       </div>
-       <div class="box">
+        </div>
+      </div>
+      <div class="box">
         <div class="boxInner">
-          <img src="10.jpg"/>
+          <img src="../static/img/10.jpg" />
           <div class="overlay">Pencil Art</div>
-         </div>
-       </div>
-       <div class="box">
+        </div>
+      </div>
+      <div class="box">
         <div class="boxInner">
-          <img src="11.jpg"/>
+          <img src="../static/img/11.jpg" />
           <div class="overlay">Floral Art</div>
-         </div>
-       </div>
+        </div>
+      </div>
 
-       <div class="box">
+      <div class="box">
         <div class="boxInner">
-          <img src="12.jpg"/>
+          <img src="../static/img/12.jpg" />
           <div class="overlay">BlackInk Art</div>
-         </div>
-       </div>
+        </div>
+      </div>
 
-       <div class="box">
+      <div class="box">
         <div class="boxInner">
-          <img src="14.jpeg"/>
+          <img src="../static/img/14.jpeg" />
           <div class="overlay">Moonscape Canvas</div>
-         </div>
-       </div>
+        </div>
+      </div>
 
-       <div class="box">
+      <div class="box">
         <div class="boxInner">
-          <img src="19.jpeg" height="295px";/>
-          <div class="overlay"> Mini Landscapes</div>
-         </div>
-       </div>
+          <img src="../static/img/19.jpeg" height="295px" ; />
+          <div class="overlay">Mini Landscapes</div>
+        </div>
+      </div>
 
-       <div class="box">
+      <div class="box">
         <div class="boxInner">
-          <img src="16.jpg"/>
+          <img src="../static/img/16.jpg" />
           <div class="overlay">Zentangle Art</div>
-         </div>
-       </div>
+        </div>
+      </div>
 
-       <div class="box">
+      <div class="box">
         <div class="boxInner">
-          <img src="18.jpg"/>
+          <img src="../static/img/18.jpg" />
           <div class="overlay">Unicorn Sketch</div>
-         </div>
-       </div>
-
-       
-     
-     </div>
-    
+        </div>
+      </div>
+    </div>
 
     <footer>
       <div class="container3">

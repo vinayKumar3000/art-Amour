@@ -12,8 +12,226 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Passion+One);
+      @import url(https://fonts.googleapis.com/css?family=Chewy);
+      body {
+        font: 15px/1.5 Arial, Helvetica, sans-serif;
+        padding: 0;
+        margin: 0;
+        background: color #f4f4f4;
+      }
+      /*global*/
+      .container {
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+      }
+      /*header*/
+      header {
+        background: linear-gradient(
+          90deg,
+          rgba(131, 58, 180, 1) 0%,
+          rgba(253, 29, 158, 1) 50%,
+          rgba(252, 176, 69, 1) 100%
+        );
+        color: black;
+        padding-top: 5px;
+        min-height: 20px;
+      }
+      header a {
+        color: white;
+        text-decoration: none;
+        text-transform: none;
+        font-size: 20px;
+        font-family: "Passion One";
+      }
+      .logo {
+        font-family: "Chewy";
+        display: flex;
+        color: #f4f4f4;
+        justify-content: space-between;
+      }
+      .left {
+        overflow: hidden;
+        float: left;
+        padding-top: 30px;
+      }
+      .right {
+        float: right;
+        overflow: hidden;
+        padding-top: 30px;
+        padding-left: 100spx;
+      }
+      /*A beginners guide to artists section*/
+      #section1 {
+        min-height: 497px;
+        background: url("../static/img/homeimg6.jpg") no-repeat;
+        background-size: cover;
+        text-align: center;
+        color: black;
+        opacity: 0.7;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #section1 h1 {
+        margin-top: 50px;
+        font-size: 42px;
+        text-align: center;
+        font-family: "Passion One";
+      }
+      #section1 p {
+        text-align: center;
+        font-size: larger;
+        padding: 10px;
+      }
+      /*footer*/
+      footer {
+        background: linear-gradient(
+          90deg,
+          rgba(131, 58, 180, 1) 0%,
+          rgba(253, 29, 158, 1) 50%,
+          rgba(252, 176, 69, 1) 100%
+        );
+        padding: 9px;
+        margin-top: 0px;
+        text-align: center;
+        color: #f4f4f4;
+        min-height: 10px;
+      }
+      footer a {
+        color: white;
+        text-decoration: none;
+        text-transform: none;
+        font-size: 20px;
+        font-family: "Passion One";
+      }
+      footer p {
+        float: left;
+        font-size: 20px;
+        font-family: "Passion One";
+        margin-top: 3px;
+        margin-bottom: 10px;
+      }
+      .footer_left {
+        float: left;
+        padding-left: 45px;
+        padding-top: 4px;
+        margin-right: auto;
+      }
+      #contact {
+        float: right;
+        font-size: 20px;
+        font-family: "Passion One";
+        margin-top: 3px;
+        margin-bottom: 10px;
+      }
+      .container3 {
+        display: flex;
+        justify-content: space-around;
+      }
+      /*photo gallery*/
+      .photo_gallery {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0 20px 0 20px;
+      }
+      .photo_gallery .photo_heading {
+        width: 50%;
+        padding-bottom: 50px;
+      }
+      .photo_gallery .photo_heading h3 {
+        font-size: 3em;
+        font-weight: bolder;
+        border-bottom: 3px solid #222;
+        opacity: 0.7;
+      }
+      .photo_gallery .photo_heading h3 span {
+        font-weight: 100;
+      }
+
+      .wrap {
+        overflow: hidden;
+        max-width: 1500px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .box {
+        float: left;
+        position: relative;
+        width: 20%;
+        padding-bottom: 20%;
+      }
+
+      .boxInner {
+        position: absolute;
+        left: 10px;
+        right: 10px;
+        top: 10px;
+        bottom: 10px;
+        overflow: hidden;
+      }
+      .boxInner img {
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        display: block; /* remove extra space below image */
+      }
+      /*caption for image*/
+      .overlay {
+        position: absolute;
+        bottom: 0;
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5); /* Black see-through */
+        color: #f1f1f1;
+        width: 100%;
+        transition: 0.5s ease;
+        opacity: 0;
+        color: white;
+        font-size: 20px;
+        padding: 20px;
+        text-align: justify;
+      }
+      .box:hover .overlay {
+        opacity: 1;
+      }
+
+      @media only screen and (max-width: 480px) {
+        /* Smartphone view: 1 tile */
+        .box {
+          width: 100%;
+          padding-bottom: 100%;
+        }
+      }
+      @media only screen and (max-width: 650px) and (min-width: 481px) {
+        /* Tablet view: 2 tiles */
+        .box {
+          width: 50%;
+          padding-bottom: 50%;
+        }
+      }
+      @media only screen and (max-width: 1050px) and (min-width: 651px) {
+        /* Small desktop / ipad view: 3 tiles */
+        .box {
+          width: 33.3%;
+          padding-bottom: 33.3%;
+        }
+      }
+      @media only screen and (max-width: 1290px) and (min-width: 1051px) {
+        /* Medium desktop: 4 tiles */
+        .box {
+          width: 25%;
+          padding-bottom: 25%;
+        }
+      }
+    </style>
     <title>Art Amour</title>
-    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
@@ -24,19 +242,20 @@
           </div>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <div class="left">
-            <a href="#">ColorPalette |</a>&nbsp;
+            <a href="{{ url_for('upload') }}">ColorPalette |</a>&nbsp;
             <a href="{{ url_for('learn_blog') }}">Learn |</a>&nbsp;
             <a href="#">Store |</a>&nbsp; <a href="#">Updates</a>&nbsp;
           </div>
         </div>
 
         <nav class="right">
-          <a
-            ><i
-              class="fa fa-user-circle-o fa-5x"
-              aria-hidden="true"
-              style="font-size: 23px"
-            ></i></a
+          &nbsp;
+          <i
+            class="fa fa-user-circle-o fa-5x"
+            aria-hidden="true"
+            style="font-size: 23px"
+          >
+            {{username}}</i
           >&nbsp;
         </nav>
       </div>
@@ -67,110 +286,110 @@
     <div class="wrap">
       <div class="box">
         <div class="boxInner">
-          <img src="1.jpg" />
+          <img src="../static/img/1.jpg" />
           <div class="overlay">Canvas Couple Art</div>
         </div>
       </div>
 
       <div class="box">
         <div class="boxInner">
-          <img src="2.jpg" />
+          <img src="../static/img/2.jpg" />
           <div class="overlay">Gouache art</div>
         </div>
       </div>
 
       <div class="box">
         <div class="boxInner">
-          <img src="13.jpg" />
+          <img src="../static/img/13.jpg" />
           <div class="overlay">Doodle</div>
         </div>
       </div>
 
       <div class="box">
         <div class="boxInner">
-          <img src="4.jpg" />
+          <img src="../static/img/4.jpg" />
           <div class="overlay">Acrylic Wall Art</div>
         </div>
       </div>
 
       <div class="box">
         <div class="boxInner">
-          <img src="5.jpg" />
+          <img src="../static/img/5.jpg" />
           <div class="overlay">Poloroid Art</div>
         </div>
       </div>
 
       <div class="box">
         <div class="boxInner">
-          <img src="6.jpg" />
+          <img src="../static/img/6.jpg" />
           <div class="overlay">WaterColor Mermaid</div>
         </div>
       </div>
 
       <div class="box">
         <div class="boxInner">
-          <img src="7.jpg" />
+          <img src="../static/img/7.jpg" />
           <div class="overlay">Mandala Art</div>
         </div>
       </div>
 
       <div class="box">
         <div class="boxInner">
-          <img src="8.jpg" />
+          <img src="../static/img/8.jpg" />
           <div class="overlay">Madubhani Art</div>
         </div>
       </div>
 
       <div class="box">
         <div class="boxInner">
-          <img src="9.jpg" />
+          <img src="../static/img/9.jpg" />
           <div class="overlay">Calligraphy</div>
         </div>
       </div>
       <div class="box">
         <div class="boxInner">
-          <img src="10.jpg" />
+          <img src="../static/img/10.jpg" />
           <div class="overlay">Pencil Art</div>
         </div>
       </div>
       <div class="box">
         <div class="boxInner">
-          <img src="11.jpg" />
+          <img src="../static/img/11.jpg" />
           <div class="overlay">Floral Art</div>
         </div>
       </div>
 
       <div class="box">
         <div class="boxInner">
-          <img src="12.jpg" />
+          <img src="../static/img/12.jpg" />
           <div class="overlay">BlackInk Art</div>
         </div>
       </div>
 
       <div class="box">
         <div class="boxInner">
-          <img src="14.jpeg" />
+          <img src="../static/img/14.jpeg" />
           <div class="overlay">Moonscape Canvas</div>
         </div>
       </div>
 
       <div class="box">
         <div class="boxInner">
-          <img src="19.jpeg" height="295px" ; />
+          <img src="../static/img/19.jpeg" height="295px" ; />
           <div class="overlay">Mini Landscapes</div>
         </div>
       </div>
 
       <div class="box">
         <div class="boxInner">
-          <img src="16.jpg" />
+          <img src="../static/img/16.jpg" />
           <div class="overlay">Zentangle Art</div>
         </div>
       </div>
 
       <div class="box">
         <div class="boxInner">
-          <img src="18.jpg" />
+          <img src="../static/img/18.jpg" />
           <div class="overlay">Unicorn Sketch</div>
         </div>
       </div>

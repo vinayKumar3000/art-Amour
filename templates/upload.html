@@ -2,18 +2,94 @@
 <html>
   <head>
     <title>Your Machine Learning App</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: azure;
+        flex-direction: column;
+      }
+      form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        padding: 20px;
+      }
+      .bottom {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+    </style>
   </head>
 
   <body>
+    <div class="top">
+      <img
+        src="../static/img/10.jpg"
+        alt=""
+        style="
+          height: 400px;
+          width: 400px;
+          margin-right: 20px;
+          margin-top: 20px;
+        "
+      />
+      <h2>
+        Let's travel through the wonderful world of colors. Each color conceals
+        a story.Colors is an element of art referring to reflected light. In
+        works of art, artists use color to depict and describe the subject.
+        Artists, especially painters, utilize their knowledge of color to
+        portray mood, light, depth, and point of view in a work of art.In this
+        page we will explore and play with the distinct colors.You can know the
+        most dominent colors present in an image or art piece.
+      </h2>
+    </div>
+    <h2>Upload your image</h2>
     <form
+      name="form"
       method="POST"
       enctype="multipart/form-data"
       action="{{ url_for('upload') }}"
     >
       <input name="img" type="file" accept="image/*" />
-      <button type="submit">Submit</button>
+      <button type="submit" style="margin-right: 10px">Upload</button>
+      <img src="{{output }}" style="height: 400px; width: 400px" />
     </form>
-    <img src={{ url_for('static', filename='img/output.png') }} style="height:
-    400px; width: 400px" />
+    <h1>Explore color combination</h1>
+    <div class="bottom">
+      <img
+        src="../static/img/10.jpg"
+        alt=""
+        style="height: 100px; width: 400px; margin-top: 20px; padding-top: 20px"
+      />
+      <img
+        src="../static/img/10.jpg"
+        alt=""
+        style="height: 100px; width: 400px; margin-top: 20px; padding-top: 20px"
+      />
+      <img
+        src="../static/img/10.jpg"
+        alt=""
+        style="height: 100px; width: 400px; margin-top: 20px; padding-top: 20px"
+      />
+      <img
+        src="../static/img/10.jpg"
+        alt=""
+        style="height: 100px; width: 400px; padding-top: 20px; margin-top: 20px"
+      />
+      <img
+        src="../static/img/10.jpg"
+        alt=""
+        style="height: 100px; width: 400px; margin-top: 20px; padding-top: 20px"
+      />
+    </div>
   </body>
 </html>

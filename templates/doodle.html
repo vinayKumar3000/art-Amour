@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>painting</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+ @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    @import url(https://fonts.googleapis.com/css?family=Chewy);
+    @import url(https://fonts.googleapis.com/css?family=Passion+One);
+    @media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+*{
+	list-style: none;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+}
+
+body{
+	background:white;
+}
+
+.wrapper .sidebar{
+	background-image: url("../static/img/sidebar3.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    position: fixed;
+	top: 0;
+	left: 0;
+	width: 225px;
+	height: 100%;
+	transition: all 0.5s ease;
+}
+
+
+.wrapper .sidebar ul li a{
+	display: block;
+	padding: 13px 30px;
+	border-bottom: 1px solid #2d0831;
+	color: rgb(241, 237, 237);
+	font-size: 16px;
+	position: relative;
+}
+
+.wrapper .sidebar ul li a .icon{
+	color: #dee4ec;
+	width: 30px;
+	display: inline-block;
+}
+
+ 
+
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active{
+	color: #130110;
+
+	background:rgb(233, 214, 236);
+    border-right: 0px solid rgb(5, 68, 104);
+    opacity:0.5;
+}
+
+.wrapper .sidebar ul li a:hover .icon,
+.wrapper .sidebar ul li a.active .icon{
+	color: #2d0831;
+}
+
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before{
+	display: block;
+}
+
+.wrapper .section{
+	width: calc(100% - 225px);
+	margin-left: 225px;
+	transition: all 0.5s ease;
+}
+
+.wrapper .section .top_navbar{
+	background:linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 158, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+	height: 50px;
+	display: flex;
+	align-items: center;
+	padding: 0 30px;
+ 
+}
+
+.wrapper .section .top_navbar .hamburger a{
+	font-size: 28px;
+	color: #f4fbff;
+}
+
+.wrapper .section .top_navbar .hamburger a:hover{
+	color:#e9c9ef;
+}
+
+body.active .wrapper .sidebar{
+	left: -225px;
+}
+
+body.active .wrapper .section{
+	margin-left: 0;
+	width: 100%;
+}
+.layout{
+    margin-left:280px;
+    margin-top:40px;
+    margin-right:50px;}
+.heading{  
+    text-align:justify;
+    font-family: "Chewy";
+    justify-content: space-between;
+    font-size:50px;
+    background: -webkit-linear-gradient(92deg, transparent 0%, rgba(48,6,59,0.9) 88%, #7d155b 100%),
+            -webkit-linear-gradient(173deg, #d93232 0%, #c0a1e2 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.para{
+    padding-top:10px;
+    text-align: justify;
+    
+}
+.img{
+    text-align: center;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align:start;
+  font-family: arial;
+}
+
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: rgb(65, 42, 91);
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  margin:0;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+.cards{
+    display: flex;
+    flex-direction: row;
+}
+</style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="section">
+            <div class="top_navbar">
+                <div class="hamburger">
+                    <a href="#">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <a href="{{ url_for('index') }}" style="position:relative; left:900px;">
+                        <i class="fa fa-snowflake-o"></i>
+                    </a>
+                </div>
+            </div>
+             
+        </div>
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a href="{{ url_for('learn_blog') }}" class="active">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></i></span>
+                        <span class="item">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('painting') }}">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></i></span>
+                        <span class="item">Paintings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('mandalas') }}">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></i></span>
+                        <span class="item">Mandalas</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('zentangle') }}">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></i></span>
+                        <span class="item"><b>Zentangles</b></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('doodle') }}">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></span>
+                        <span class="item"><b>Cartoon Doodles</b></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('painting_brushes') }}">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></span>
+                        <span class="item"><b>Painting Brushes</b></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('materials') }}">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></span>
+                        <span class="item"><b>Materials</b></span>
+                    </a>
+                </li>
+           
+            </ul>
+           
+        </div>
+        
+    </div>
+    <script>
+        var hamburger = document.querySelector(".hamburger");
+     hamburger.addEventListener("click", function(){
+         document.querySelector("body").classList.toggle("active");
+     })
+   </script>
+<!--mandala content-->
+<div class="layout">
+    <h1 class="heading">Cartoon Doodles</h1><br><hr><br>
+    <h2>What are Doodles ?</h2><br><hr>
+    <p class="para">
+        A doodle is an unfocused drawing made while a person's attention is otherwise occupied. Doodles are simple drawings that can have concrete representational meaning or may just be abstract shapes.
+        Doodles may be shapes, patterns, drawings or scribbles – anything we produce in an idle moment while the focus of our attention is elsewhere. It’s amazing how creative we can be without even trying! Strangely, doodles seem to take shape of their own accord, as if they had a life of their own in a parallel world. So you may suddenly find a circled word transformed into a sun beaming down on a desert island, punctuation turned into arrows or flowers, or a lover’s name emerging bold as brass from a memo.
+    </p><br>
+    <div class="img">
+        <img src="../static/img/doodle1.webp" style="height:400px; width:500px;">
+    </div>
+    <p class="para">
+        It's the easiest thing to do and easy on the common media, such as paper, pen and pencil. These actions are often referred to as doodling.
+        Popular kinds of doodles include cartoon versions of teachers or companions in a school, famous TV or comic characters, invented fictional beings, landscapes, geometric shapes and patterns, textures, banners with legends, and animations made by drawing a scene sequence in various pages of a book or notebook.<br><br>
+        Now doodle art style has been widely in use as one element in graphic design, you can see billboards for: mobile advertising, TV, etc. which often use these elements. By using elements of doodle art, the messages conveyed in the work seem more friendly, relaxed, and humane.
+
+    </p><br><hr><br>
+    <h2>Why Should We Doodle?</h2><br><hr><br>
+            <p class="para">
+                Doodling is an important way for people, kids, teens and whole families to:<br>
+                <ul>
+                    <li>1. Relax</li>
+                    <li>2. Stay focused </li>
+                    <li>3. Grasp new concepts </li>
+                    <li>4. Grasp new concepts </li>
+                    <li>5. Think amazing creative thoughts </li>
+                    <li>6. Achieve more health because it’s a way to relax </li>
+                </ul>
+            </p>
+            <br><hr><br>
+    <h2>Best Pens for Doodling</h2><br><hr><br>
+    <ol>
+        <li>1. Micron pens</li>
+        <li>2. Uni-pin fine liner by Mitsubishi (0,1 mm)</li>
+        <li>3. Uni-ball eye micro by Mitsubishi </li>
+        <li>4. Faber-Castell PITT artist pens</li>
+    </ol><br><hr><br>
+    <h2>Paper for Doodling</h2><br><hr><br>
+    <ol>
+        <li>1. Bristol Board</li>
+        <li>2. Mixed Media Paper</li>
+        <li>3. Drawing Sketchbook</li>
+        <li>4. Watercolor Paper</li>
+    </ol><br><hr><br>
+    <h2>Cartoon Doodles</h2><br><hr>
+    <br>
+    <div class="img">
+        <img src="../static/img/doodle2.webp" style="height:400px; width:400px;">
+        <img src="../static/img/doodle3.jpg" style="height:400px; width:400px;">
+    </div><br>
+    <div class="img">
+        <img src="../static/img/doodle4.png" style="height:400px; width:400px;">
+        <img src="../static/img/doodle5.jpg" style="height:400px; width:400px;">
+    </div><br>
+</div>
+</body>
+</html>
+
+    

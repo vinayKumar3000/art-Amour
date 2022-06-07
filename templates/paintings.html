@@ -2,7 +2,10 @@
 <html>
 <head>
     <title>painting</title>
-    <script src="https://kit.fontawesome.com/faa3ecd5db.js" crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -124,14 +127,16 @@ body.active .wrapper .section{
     font-size:50px;
     background: -webkit-linear-gradient(92deg, transparent 0%, rgba(48,6,59,0.9) 88%, #7d155b 100%),
             -webkit-linear-gradient(173deg, #d93232 0%, #c0a1e2 100%);
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
     -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .cards {
     display:flex;
     flex-wrap: wrap;
+    align-items: stretch;
     margin-right:10px;
+    overflow: hidden;
   }
   .card {
     flex: 10 0 300px;
@@ -143,6 +148,8 @@ body.active .wrapper .section{
   } 
   .card img {
     max-width: 100%;
+    object-fit: cover;
+    
   }
     
   .card .text {
@@ -169,9 +176,140 @@ body.active .wrapper .section{
   color:white;
   
 }
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 20px; /* Location of the box */
+  padding-bottom:20px;
+  width: 78%; /* Full width */
+  height: 90%; /* Full height */
+  overflow:auto; /* Enable scroll if needed */
+  background-color: #fae6f0; /* Fallback color */
+  top:5%;
+  left:20%;
+  
+  
+}
 
+/* Modal Content */
+#modal-content {
+  background-color: #f4f1f1;
+  padding:0px;
+  border: 5px solid rgb(105, 102, 102);
+  width: 90%;
+  margin-left:42px;
+  margin-right:25px;
+  border-radius: 2px;
+}
+
+/* The Close Button */
+.close {
+    float: right;
+    width: 2rem;
+    line-height: 1.7rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgray;
+    top:5px;
+    right:5px;
+    position:absolute;
+    font-size:30px;
+ }
+
+.close:hover{
+  color:#5a0e8d;
+  text-decoration: none;
+  cursor: pointer;
+}
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal-para{
+  margin-top:10px;
+  margin-left:10px;
+  margin-right:10px;
+  text-align: justify ;
+  margin-bottom:10px;
+}
+h2{
+  margin-top:5px;
+  margin-left:5px;
+  padding:5px;
+
+
+}
+hr{
+  color:#130110;
+  width:100%;
+  
+}
+.para{
+  text-align:start;
+}
 
 </style>
+<script>
+  // Get the modal
+
+  var modalparent = document.getElementsByClassName("modal");
+
+  // Get the button that opens the modal
+
+  var modal_btn_multi = document.getElementsByClassName("btn");
+
+  // Get the <span> element that closes the modal
+  var span_close_multi = document.getElementsByClassName("close");
+
+  // When the user clicks the button, open the modal
+  function setDataIndex() {
+
+      for (i = 0; i < modal_btn_multi.length; i++)
+      {
+          modal_btn_multi[i].setAttribute('data-index', i);
+          modalparent[i].setAttribute('data-index', i);
+          span_close_multi[i].setAttribute('data-index', i);
+      }
+  }
+
+
+
+  for (i = 0; i < modal_btn_multi.length; i++)
+  {
+      modal_btn_multi[i].onclick = function() {
+          var ElementIndex = this.getAttribute('data-index');
+          modalparent[ElementIndex].style.display = "block";
+      };
+
+      // When the user clicks on <span> (x), close the modal
+      span_close_multi[i].onclick = function() {
+          var ElementIndex = this.getAttribute('data-index');
+          modalparent[ElementIndex].style.display = "none";
+      };
+
+  }
+
+  window.onload = function() {
+
+      setDataIndex();
+  };
+
+  window.onclick = function(event) {
+      if (event.target === modalparent[event.target.getAttribute('data-index')]) {
+          modalparent[event.target.getAttribute('data-index')].style.display = "none";
+      }
+
+      // OLD CODE
+      if (event.target === modal) {
+          modal.style.display = "none";
+      }
+  };
+
+</script> 
 </head>
 <body>
     <div class="wrapper">
@@ -179,10 +317,10 @@ body.active .wrapper .section{
             <div class="top_navbar">
                 <div class="hamburger">
                     <a href="#">
-                        <i class="fas fa-bars"></i>
+                      <i class="fa fa-bars"></i>
                     </a>
                     <a href="{{ url_for('index') }}" style="position:relative; left:900px;">
-                        <i class="fa-solid fa-feather-pointed fa-sm"></i>
+                      <i class="fa fa-snowflake-o"></i>
                     </a>
                 </div>
             </div>
@@ -209,42 +347,32 @@ body.active .wrapper .section{
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="{{ url_for('zentangle') }}">
                     <span class="icon"><i class="fa-solid fa-palette"></i></i></span>
-                    <span class="item">People</span>
+                    <span class="item"><b>Zentangles</b></span>
                 </a>
             </li>
             <li>
-                <a href="#">
-                    <span class="icon"><i class="fa-solid fa-palette"></i></i></span>
-                    <span class="item">Perfomance</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
+                <a href="{{ url_for('doodle') }}">
                     <span class="icon"><i class="fa-solid fa-palette"></i></span>
-                    <span class="item">Development</span>
+                    <span class="item"><b>Cartoon Doodles</b></span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="{{ url_for('painting_brushes') }}">
                     <span class="icon"><i class="fa-solid fa-palette"></i></span>
-                    <span class="item">Reports</span>
+                    <span class="item"><b>Painting Brushes</b></span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="{{ url_for('materials') }}">
                     <span class="icon"><i class="fa-solid fa-palette"></i></span>
-                    <span class="item">Admin</span>
+                    <span class="item"><b>Materials</b></span>
                 </a>
             </li>
-            <li>
-                <a href="#">
-                    <span class="icon"><i class="fa-solid fa-palette"></i></span>
-                    <span class="item">Settings</span>
-                </a>
-            </li>
-        </ul>    
+       
+        </ul>
+         
         </div>
         
     </div>
@@ -261,9 +389,49 @@ body.active .wrapper .section{
   <article class="card">
     <img src="../static/img/Watercolor-Paintings.jpg" alt="Sample photo">
     <div class="text">
-      <h3>Water Colors</h3>
-      <p class="para">Watercolor painting is the process of painting with pigments that are mixed with water. Of all the painting processes, watercolor painting is known for its inherent delicacy and subtlety because watercolor art is all about thin washes and transparent color </p>
-      <a><button class="btn"><b>READ MORE</b></button></a>
+      <h3>WaterColor paints </h3>
+      <p class="para">Watercolor painting is the process of painting with pigments that are mixed with water. Of all the painting processes, watercolor painting is known for its inherent delicacy and subtlety because watercolor art is all about thin washes and transparent color.</p>
+      <a><button id="myBtn" class="btn"><b>READ MORE</b></button></a>
+      <!--model-->
+      <div id="myModal" class="modal">
+        <!--model content-->
+        <div id="modal-content">
+          <span class="close">&times;</span>
+          <h2> What are Water Colors?</h2><hr><!--1st-->
+          <p class="modal-para">Watercolor paint is made from a color pigment dispersed in a suspension 
+            that binds the pigment and allows it to adhere to a surface when dry. In commercial watercolor paints, 
+            the binder is either natural gum arabic or synthetic glycol. Every manufacturer has their own unique suspension 
+            composition, called the backbone composition. While watercolor paint is water-soluble, due to the water-soluble 
+            binder, pigments, themselves, do not dissolve in water.<br><br>Watercolour compares in range and variety with any
+             other painting method. Transparent watercolour allows for a freshness and luminosity in its washes and for a 
+             deft calligraphic brushwork that makes it a most alluring medium. There is one basic difference between 
+             transparent watercolour and all other heavy painting mediums—its transparency. The oil painter can paint one 
+             opaque colour over another until he has achieved his desired result. The whites are created with opaque white. 
+             The watercolourist’s approach is the opposite. In essence, instead of building up he leaves out. 
+             The white paper creates the whites. The darkest accents may be placed on the paper with the pigment as it comes
+              out of the tube or with very little water mixed with it. Otherwise the colours are diluted with water. 
+              The more water in the wash, the more the paper affects the colours; for example, vermilion, a warm red,
+              will gradually turn into a cool pink as it is thinned with more water.<br><br>Watercolor paints dry fast,
+              in around 5 to 15 minutes. However, you do not have to worry about any dry paint on your palette as you can
+             easily re-wet the paint and use it again. The drying time is variable and may rely on factors like humidity or
+             the amount of water you use. The fast drying time makes watercolors a popular choice for those who like to travel 
+             and paint. Clean-up is also easy since it is water-based. The paint easily comes off your brushes, and if you
+              get some on your clothes, you can simply wipe them off with a wet cloth.
+          </p><br><hr>
+          <h2>How Many Types of Watercolours Are There?</h2><hr><!--2nd-->
+          <p class="modal-para">
+            There are many different types of watercolours, and the most common are tubes, pans, and bottles filled with liquid pigment.
+             I addition, watercolours can be purchased in the form of pencils, markers, and sheets.
+             <ol class="modal-para">
+               <li>1.Watercolour Tubes</li>
+               <li>2.Watercolour Pans</li>
+               <li>3.Liquid Watercolours</li>
+               <li>4.Watercolour Pencils</li>
+               <li>5.Watercolour Markers</li>
+              </ol>
+          </p>
+        </div>
+      </div>
     </div>
   </article>
   <article class="card">
@@ -271,25 +439,246 @@ body.active .wrapper .section{
       <img src="../static/img/Acrylic3.jpg" alt="Sample photo">
     </div>
     <div class="text">
-      <h3>Acrylic Colors</h3>
-      <p class="para">Dramatically engage seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing.</p>
-      <a><button class="btn"><b>READ MORE</b></button></a>
+      <h3>Acrylic paints</h3>
+      <p class="para"> Acrylic Paint is a very recent discovery in the art world when compared to oil paints and watercolors. Its versatile nature,
+         has meant it has taken the art world by storm.It is known for its quick-drying properties and fast application, but it also has the disadvantage of not being waterproof.
+      </p>
+      <a><button id="myBtn" class="btn"><b>READ MORE</b></button></a>
+      <!--model-->
+      <div id="myModal" class="modal">
+        <!--model content-->
+        <div id="modal-content">
+          <span class="close">&times;</span>
+          <h2> What are Acrylic Colors ?</h2><hr>
+          <p class="modal-para">Acrylic paints contain pigment, acrylic resin, and binder. This plastic-based resin is man-made, unlike the natural binder used for watercolors.
+             Acrylics are a little more versatile, as they can be watered down to imitate a watercolor effect.
+            Acrylic paints have a brighter appearance when compared to watercolors and are more opaque.
+            You can thin acrylics until they become similar to watercolors and provide a transparent effect.
+            However, even if you do thin the paint, it does tend to have more of a milky appearance.<br><br>
+            Acrylic paints dry quickly so you need to work quickly to get things done. Generally,
+            it takes around 10 to 20 minutes to dry. This makes blending and covering larger areas a little challenging.
+            When it does dry, it dries to a flat, shiny appearance, and becomes darker in color than the wet paint.
+             So, remember this point when mixing specific colors.Brushes can be cleaned using water with some soap
+            and should be done immediately once you have finished painting, as the paint will become difficult to remove once dry.</p><hr>
+            <h2>Types of Acrylic Paints</h2><hr>
+            <p class="modal-para">
+              Acrylic paints tend to come in jars, tubes, and bottles, of which there are a few different types available. You get your standard paint,
+              different fluid types of acrylic paint, and paints that are re-workable. Many of the acrylic paints have different drying times, the longer the better for some. Medium-viscosity acrylic paint is similar to oil paint, while fluid acrylic paints are best used for glazing purposes.
+              You can also get pastes, gels, and other mediums that can alter the paint’s drying time, transparency, as well as the texture of the paint.
+              This makes acrylic paints a great option for mixed-media art.
+            </p>
+        </div>
+      </div>
     </div>
   </article>
   <article class="card">
-    <img src="../static/img/oilcolors.jpg" alt="Sample photo">
+    <img src="../static/img/oilcolors.jpg" alt="Sample photo" height="190px" width="100%">
+    <div class="text">
+      <h3>Oil Paints</h3>
+      <p class="para">Oil paint is a type of slow-drying paint that consists of particles of pigment suspended in a drying oil,
+         commonly linseed oil. The viscosity of the paint may be modified by the addition of a solvent such as turpentine or
+          white spirit, and varnish may be added to increase the glossiness of the dried oil paint film.</p>
+      <a><button id="myBtn" class="btn"><b>READ MORE</b></button></a>
+      <!--model-->
+      <div id="myModal" class="modal">
+        <!--model content-->
+        <div id="modal-content">
+          <span class="close">&times;</span>
+          <h2>What is Oil Painting ?</h2><hr>
+          <p class="modal-para">
+            Oil painting as an art form has been around for almost as long as people have been making paintings.
+            Many of the world’s most famous artworks are oil paintings. Oil paints have been used for centuries and are one of the most well-respected and popular choices of artists’ color.
+            Oils have also been a favored medium of famous fine artists and have a strong reputation.<br><br>
+            To produce oil paints, pigment is mixed with drying oil such as linseed or walnut oil. 
+            The oils give a glossier look and feel to the paint because they resist the passage of light.
+            The drying oils dry by oxidation and polymerization. They form a film on top of the paint's surface, 
+            thereby creating a barrier between paint layers even if additional layers are applied over them.
+            Oil-based paints are capable of producing excellent tones and colors, which differentiate them
+            from other painting materials. In addition, oils can create both satisfactory linear treatment and
+            crisp effects when used on canvas.<br><br>
+            Oil paintings are usually coated in varnish as the final layer
+            on the canvas to protect and preserve the paint from the atmosphere, dirt, and minor abrasions.
+            Fine art which is displayed in museums will often be preserved in special conditions with minimal lighting and even temperatures.
+           While most collectors won’t be able to create a perfect microclimate for their paintings at home, you can take some precautions when storing oil paints.
+          For example, you can cover your oil paintings with tissue paper, sheets, or foam before storing them.   
+          </p>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="card">
+    <img src="../static/img/gouache3.jpg" alt="Sample photo">
     <div class="text">
       <h3>Gouache Colors</h3>
-      <p class="para">Completely synergize resource taxing relationships via premier niche markets.</p>
-      <a><button class="btn"><b>READ MORE</b></button></a>
+      <p class="para">Many people consider gouache to be its own form of paint.
+        It is very similar to watercolor paint in its composition but is designed to be opaque and dries to a flat finish.
+        Because of this, gouache is often referred to as opaque watercolor. It is made with intense concentrations of large pigments. </p>
+      <a><button id="myBtn"class="btn"><b>READ MORE</b></button></a>
+      <!--model-->
+        <div id="myModal" class="modal">
+          <!--model content-->
+          <div id="modal-content">
+            <span class="close">&times;</span>
+            <h2>What are Gouache Paints ?</h2><hr>
+            <p class="modal-para">
+              Gouache, painting technique in which a gum or an opaque white pigment is added to watercolors to produce opacity.
+              In watercolour the tiny particles of pigment become enmeshed in the fibre of the paper;
+              in gouache the color lies on the surface of the paper, forming a continuous layer, or coating.
+              A gouache is characterized by a directly reflecting brilliance. When applied with bristle brushes
+              it is possible to achieve a slight but effective thick-coated quality; with sable brushes, a smooth, flawless colour field is obtained.<br><br>
+              Gouache, like watercolor, can be re-wetted and binds to the paper that it’s on, but unlike watercolor, gouache paints cannot be watered down to look more translucent.
+              Artists can’t use gouache to build layers of color like they can with watercolor.<hr> 
+            </p>
+            <h2>Is Gouache the Same as Acrylic Paint? </h2><hr>
+            <p class="modal-para">
+              Gouache and acrylic paint are not the same. Acrylic paint is thicker and more durable than gouache — acrylics are waterproof and can stand up to dust and light. Acrylics are also ideal for multiple types of mediums, including paper, wood, glass, and plastic. Gouache, on the other hand, is best suited for paper.  
+              Gouache also can’t be applied so thickly that it creates surface texture like acrylics and oils can (gouache cracks if it is applied too thickly). While gouache is typically applied with a paintbrush, acrylics can be applied with other tools, such as a palette knife.<br><br> 
+              Acrylic, unlike gouache, can’t be rewet and reworked — once it’s dry, you can’t change it (although you can paint over it). By rewetting gouache, you can reactivate the paint and make changes. This makes it a versatile and forgiving medium . 
+            </p><hr>
+            <h2>Protecting a Gouache Painting ?</h2><hr>
+            <p class="modal-para">
+              When you want to display one of your gouache paintings, make sure to protect it appropriately.
+              As you’ve learned, water can reactivate the paint, so even just one stray drop of water can ruin your painting.
+              The best protection is a glass frame; however, you can also use a spray fixative. 
+            </p>
+          </div>
+        </div>
     </div>
   </article>
   <article class="card">
-    <img src="../static/img/gouache3.jpg" alt="Sample photo" height="335px;" width="100%;">
+    <img src="../static/img/poster.jpg" alt="Sample photo" height="180px" width="100%">
     <div class="text">
-      <h3>Oil Colors</h3>
-      <p class="para">Imagine jumping into that boat, and just letting it sail wherever the wind takes you...</p>
-      <a><button class="btn"><b>READ MORE</b></button></a>
+      <h3>Poster Colors</h3>
+      <p class="para">A poster paint (also known as tempera paint in the US) is a distemper paint that is usually made up of Starch,
+      Cornstarch, cellulose, gum-water, or another glue size as its binder.
+      You can buy it in a large bottle or jar, or it can be powdered.</p>
+      <a><button id="myBtn" class="btn"><b>READ MORE</b></button></a>
+      <!--model-->
+      <div id="myModal" class="modal">
+        <!--model content-->
+        <div id="modal-content">
+          <span class="close">&times;</span>
+          <h2>What are Poster Colors ?</h2><hr>
+          <p class="modal-para">Unlike “watercolor” and “gouache,” “poster color” does not refer to a specific kind of paint.
+          Instead, it is a general term for opaque water-soluble paints meant for scanning and reproduction rather than display.
+          Poster colors are usually less expensive than paints intended for display, and not very lightfast. Their opacity comes
+          from additives and coarsely-ground pigments. They also lift very easily. It’s a good idea to test any new paint so you
+          know how it will behave before you use it in your art, but we especially recommend testing poster colors because they
+          can be made with a wide variety of different binders.<br><br>
+          Poster colors are highly opaque. Like gouache, they work well on both white and toned paper. You can easily add light
+          colors over dark hues, so they are wonderfully straightforward to paint with. They are also very vibrant. Some colors
+          are made with multiple pigments and can form muddy hues when mixed, so it’s best to start with large blocks of thin color
+          and add details on top with thicker paint. This prevents the previous layers from reactivating and mixing with the new paint.
+        
+          </p>
+        </div>
+      </div>
     </div>
-</article>
+  </article>
+  <article class="card">
+    <img src="../static/img/glass.jpg" alt="Sample photo" height="180px;">
+    <div class="text">
+      <h3>Glass Painting</h3>
+      <p class="para">Glass painting is one of the most attractive art form.
+      Glass painting gives the presence of a fairy-tale. It is also been referred to as a glass art or stained glass.
+      Glass art amplifies its beauty when the light passes through it.
+       It is best used in contemporary and abstract art.</p>
+      <a><button id="myBtn" class="btn"><b>READ MORE</b></button></a>
+      <!--model-->
+      <div id="myModal" class="modal">
+        <!--model content-->
+        <div id="modal-content">
+          <span class="close">&times;</span>
+          <h2>Glass Paintings</h2><hr>
+          <p class="modal-para">Glass painting is a contemporary art which has been derived from the age old art of stained glass painting which
+          involves putting smaller coloured pieces of glass together. It was a common feature in high windows and doors etc in the olden times and
+          can still be seen in churches and old buildings. These days glass painting is becoming a popular feature and catching up as a hobby due to
+          its awesome results and easy availability of glass painting equipment. Many companies launch glass painting ideas for hobbies. They can have different levels like beginners,
+          which is basically for experimental purpose for children. At home (as a hobby), glass paintings can be as wall hangings, wine glasses painting,
+          on windows, acrylic sheets, cups, mugs, tiles, mirrors etc.<br><br>
+          Glass paintings look most beautiful when illuminated by sunlight.
+          The sun rays going through the transparent coloured glass gives it a glow that no other artificial light can give.
+          It looks simply awesome!(however, too much exposure can sometimes result into fading of colours).
+          Some glass paintings are framed with silver foil to reflect light to create a similar effect. 
+          This technique can be used when it is not possible to expose the painting to required amount of light.
+        </p><hr>
+        <h2>How to do Glass Painting ?</h2><hr>
+        <p class="modal-para">
+          If you are interested in glass painting and want to try it, go ahead and experience the joy!
+          All you need is a glass piece, sheet of paper of almost same size as that of the glass sheet,
+          glass paints, an outliner, a design, silver foil (if required) and some amount of patience. 
+          Water based acrylic glass paints are readily available in market. They are ready to use, convenient and suitable 
+          for beginners. Do not be afraid of mistakes as they can be removed after the painting has dried. This can be done
+          for the outliner and paint, both. They can be carefully scraped off with a paper knife etc. But this has to be done
+          very carefully as it can also put scratches on the glass. Cotton can also be used to wipe off the wet paint or 
+          outliner in case of a mistake. The most common and easiest glass paintings designs are that of peacocks,
+          floral, marine life etc. These days stencils are also available, so if you are not too confident about your 
+          drawing, you can take their help.
+        </p>
+        </div>
+      </div>
+    </div>
+  </article>   
+
+
+    
 </main>
+<script>
+  // Get the modal
+
+  var modalparent = document.getElementsByClassName("modal");
+
+  // Get the button that opens the modal
+
+  var modal_btn_multi = document.getElementsByClassName("btn");
+
+  // Get the <span> element that closes the modal
+  var span_close_multi = document.getElementsByClassName("close");
+
+  // When the user clicks the button, open the modal
+  function setDataIndex() {
+
+      for (i = 0; i < modal_btn_multi.length; i++)
+      {
+          modal_btn_multi[i].setAttribute('data-index', i);
+          modalparent[i].setAttribute('data-index', i);
+          span_close_multi[i].setAttribute('data-index', i);
+      }
+  }
+
+
+
+  for (i = 0; i < modal_btn_multi.length; i++)
+  {
+      modal_btn_multi[i].onclick = function() {
+          var ElementIndex = this.getAttribute('data-index');
+          modalparent[ElementIndex].style.display = "block";
+      };
+
+      // When the user clicks on <span> (x), close the modal
+      span_close_multi[i].onclick = function() {
+          var ElementIndex = this.getAttribute('data-index');
+          modalparent[ElementIndex].style.display = "none";
+      };
+
+  }
+
+  window.onload = function() {
+
+      setDataIndex();
+  };
+
+  window.onclick = function(event) {
+      if (event.target === modalparent[event.target.getAttribute('data-index')]) {
+          modalparent[event.target.getAttribute('data-index')].style.display = "none";
+      }
+
+      // OLD CODE
+      if (event.target === modal) {
+          modal.style.display = "none";
+      }
+  };
+
+</script> 
+</body>
+</html>

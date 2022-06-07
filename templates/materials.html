@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>painting</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+ @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    @import url(https://fonts.googleapis.com/css?family=Chewy);
+    @import url(https://fonts.googleapis.com/css?family=Passion+One);
+    @media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+*{
+	list-style: none;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+}
+
+body{
+	background:white;
+}
+
+.wrapper .sidebar{
+	background-image: url("../static/img/sidebar3.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    position: fixed;
+	top: 0;
+	left: 0;
+	width: 225px;
+	height: 100%;
+	transition: all 0.5s ease;
+}
+
+
+.wrapper .sidebar ul li a{
+	display: block;
+	padding: 13px 30px;
+	border-bottom: 1px solid #2d0831;
+	color: rgb(241, 237, 237);
+	font-size: 16px;
+	position: relative;
+}
+
+.wrapper .sidebar ul li a .icon{
+	color: #dee4ec;
+	width: 30px;
+	display: inline-block;
+}
+
+ 
+
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active{
+	color: #130110;
+
+	background:rgb(233, 214, 236);
+    border-right: 0px solid rgb(5, 68, 104);
+    opacity:0.5;
+}
+
+.wrapper .sidebar ul li a:hover .icon,
+.wrapper .sidebar ul li a.active .icon{
+	color: #2d0831;
+}
+
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before{
+	display: block;
+}
+
+.wrapper .section{
+	width: calc(100% - 225px);
+	margin-left: 225px;
+	transition: all 0.5s ease;
+}
+
+.wrapper .section .top_navbar{
+	background:linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 158, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+	height: 50px;
+	display: flex;
+	align-items: center;
+	padding: 0 30px;
+ 
+}
+
+.wrapper .section .top_navbar .hamburger a{
+	font-size: 28px;
+	color: #f4fbff;
+}
+
+.wrapper .section .top_navbar .hamburger a:hover{
+	color:#e9c9ef;
+}
+
+body.active .wrapper .sidebar{
+	left: -225px;
+}
+
+body.active .wrapper .section{
+	margin-left: 0;
+	width: 100%;
+}
+.layout{
+    margin-left:280px;
+    margin-top:40px;
+    margin-right:50px;}
+.heading{  
+    text-align:justify;
+    font-family: "Chewy";
+    justify-content: space-between;
+    font-size:50px;
+    background: -webkit-linear-gradient(92deg, transparent 0%, rgba(48,6,59,0.9) 88%, #7d155b 100%),
+            -webkit-linear-gradient(173deg, #d93232 0%, #c0a1e2 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.para{
+    padding-top:10px;
+    text-align: justify;
+    
+}
+.img{
+    text-align: center;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align:start;
+  font-family: arial;
+}
+
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: rgb(65, 42, 91);
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  margin:0;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+.cards{
+    display: flex;
+    flex-direction: row;
+}
+</style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="section">
+            <div class="top_navbar">
+                <div class="hamburger">
+                    <a href="#">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <a href="{{ url_for('index') }}" style="position:relative; left:900px;">
+                        <i class="fa fa-snowflake-o"></i>
+                    </a>
+                </div>
+            </div>
+             
+        </div>
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a href="{{ url_for('learn_blog') }}" class="active">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></i></span>
+                        <span class="item">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('painting') }}">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></i></span>
+                        <span class="item">Paintings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('mandalas') }}">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></i></span>
+                        <span class="item">Mandalas</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('zentangle') }}">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></i></span>
+                        <span class="item"><b>Zentangles</b></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('doodle') }}">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></span>
+                        <span class="item"><b>Cartoon Doodles</b></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('painting_brushes') }}">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></span>
+                        <span class="item"><b>Painting Brushes</b></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('materials') }}">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></span>
+                        <span class="item"><b>Materials</b></span>
+                    </a>
+                </li>
+           
+            </ul>
+        </div>
+        
+    </div>
+    <script>
+        var hamburger = document.querySelector(".hamburger");
+     hamburger.addEventListener("click", function(){
+         document.querySelector("body").classList.toggle("active");
+     })
+   </script>
+<!--mandala content-->
+<div class="layout">
+    <h1 class="heading">Paper & Canvas</h1><br><hr><br>
+    <h2>What is Paper</h2><br><hr>
+    <p class="para">
+        Paper is made of plant fibers, most commonly cotton or wood, but also other fibers, such as rice, straw, flax and hemp. All natural materials are subject to decay over time, which is an important consideration for the artist. Light, heat, humidity and pollutants all contribute to this process. When looking for paper that will stand the test of time, check for the words cotton rag, alpha cellulose or lignin-free.<br><br>
+        Handmade paper is made by dipping a wooden frame with a fine screen (called a deckle) into a vat of pulp–a mixture of water and cotton, wood pulp or other fibers. After the water runs off, the sheet of pulp is removed from the screen and pressed between layers of felt to dry. The paper might then be processed further by being run through rollers. One sign of handmade paper is deckle edges, which are uneven or ragged.<br>
+    </p><br>
+    <div class="img">
+        <img src="../static/img/materials1.jpg" style="height:400px; width:400px;">
+    </div>
+    <p class="para">
+        Machine-made paper is produced on a Fourdrinier machine or a cylinder mold machine. In a Fourdrinier machine, a conveyor belt made of wire mesh pulls pulp through the process. The continuous sheet is dried and pressed as it passes through many rollers and is finally wound into large rolls. A cylinder mold machine works in a similar way; the resulting papers are described as mould-made.<br><br>
+        Machine-made paper is more regular, smoother and often less expensive than handmade paper. But surface quality is always determined by the screens used. Many papers have what’s called a laid finish, formed by the fine pattern of the wire screen. The thickness of paper is also determined in the manufacturing process. The thickness is indicated by weight.
+    </p><br><hr><br>
+    <h2>Watercolor Paper</h2><br><hr><br>
+    <p class="para">
+        Watercolor paint has three different types of paper that artists like to use: hot-press, cold-press, and rough. Hot-press paper has a smooth, hard surface which makes it ideal for fine detail work, but it's often criticized as being slippery and hard to control. Cold-press has a semi-rough surface that’s suitable for detail work and washes, but you can see some of the texture peeking through. Rough paper is exactly that—it has a rigid texture. Because of this, it’s great if you enjoy creating washes of color. The texture allows the pigment extra drying time.<br><br>
+        No matter what you press, each is meant for water-based media, but depending on your style, you might want to opt for one over the other.
+            </p><br><hr>
+    <div class="img">
+        <img src="../static/img/materials2.jpg" style="height:250px; width:400px;">
+        <img src="../static/img/materials3.jpg" style="height:300px; width:400px; padding-top:30px;">
+    </div><br><hr><br>
+    <h2>Acrylic, Oil & Gouache</h2><br><hr><br>
+    <p class="para">Although we typically think that acrylic and oil paint is only for canvas, many artists enjoy working on paper. It’s more affordable and versatile than canvas—especially if you paint your own papers for collage art. To paint on paper with acrylic or oil, you’ll want to look for thick paper (similar to watercolor). The type of paper texture can vary. As long as the paper has enough weight, both smooth or rough can stand up to paint. With highly textured paper, however, it will take more pigment to cover the surface; it might get stuck in the surface’s nooks and crannies.
+    <br><br>You can use the same type of paper with either acrylic or oil paint, but for oils, you need to prime the surface with gesso. (You can also do this for acrylic paint, but it’s not required.) If you do not prime a paper surface for oil paint, the pigment might sink into the paper and look dull.</p><br>
+    <div class="img">
+    <img src="../static/img/material4.jpg" style="height:400px; width:400px;" >
+    <img src="../static/img/material5.jpg"style="height:405px; width:405px;"></div><br><hr><br>
+    <h2>Paper for Drawing</h2><br><hr><br>
+    <p class="para">
+        Like painting, the type of paper you choose for your drawing will depend on your media. There are, however, many sketch pads that contain paper that covers most of the dry materials you’ll use.Generally, you’ll want to look for medium-weight papers (around 80 pounds) that have a light texture. (Any paper under 80 pounds is considered thin and won’t be able to withstand many layers of material.)
+    </p><br><hr><br>
+    <h2>Canvas</h2><br><hr><br>
+    <p class="para">
+        Canvas is a strong, woven cloth traditionally used by artists as a support (surface on which to paint).Canvas is very flexible in terms of size and can be used for everything from tiny paintings to large, expansive works. However, the two main reasons why canvas is such a popular surface among painters is due to how great it feels under the brush, as well as its obvious longevity. Canvas is also much lighter and easier to transport than traditional wood surfaces that was also often used.<br><br>
+        canvas boards are slimmer, lighter and more portable, and are also cheaper and easier to store. They are thus suitable for practicing painting in oil and for use outdoors. Depending on the primer, they can also be used with acrylic paint.
+    </p><br>
+    <div class="img">
+        <img src="../static/img/material6.jpg" style="height:400px; width:400px;" >
+        <img src="../static/img/material7.jpg"style="height:405px; width:405px;"></div>
+    
+    <br><hr><br>
+    <div class="cards">
+        <div class="card">
+            <img src="../static/img/material8.webp" style="width:100%">
+            <button>Stretched Canvas</button>
+        </div>
+        <div class="card">
+            <img src="../static/img/material9.jpg" style="width:100%">
+          <button>Canvas Panel</button></a>
+        </div>
+        <div class="card">
+            <img src="../static/img/material10.jpg" style="width:100%">
+          <button>Canvas  Pad</button></a>
+        </div>
+    </div><br>
+</div>
+</body>
+</html>

@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="A Beginner's Guide to the Artists" />
+    <meta
+      name="keywords"
+      content="color palette generator,artists e-learning,art store,art blogs,art website"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <title>Art Amour</title>
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Passion+One);
+      @import url(https://fonts.googleapis.com/css?family=Chewy);
+      body {
+        font: 15px/1.5 Arial, Helvetica, sans-serif;
+        padding: 0;
+        margin: 0;
+        background: color #f4f4f4;
+      }
+      /*global*/
+      .container {
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+      }
+      /*header*/
+      header {
+        background: linear-gradient(
+          90deg,
+          rgba(131, 58, 180, 1) 0%,
+          rgba(253, 29, 158, 1) 50%,
+          rgba(252, 176, 69, 1) 100%
+        );
+        color: black;
+        padding-top: 5px;
+        min-height: 20px;
+      }
+      header a {
+        color: white;
+        text-decoration: none;
+        text-transform: none;
+        font-size: 20px;
+        font-family: "Passion One";
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        padding: 10px;
+      }
+      .logo {
+        font-family: "Chewy";
+        display: flex;
+        color: #f4f4f4;
+        justify-content: space-between;
+      }
+      .left {
+        overflow: hidden;
+        float: left;
+        padding-top: 30px;
+      }
+      .right {
+        float: right;
+        overflow: hidden;
+        padding-top: 30px;
+        padding-left: 100spx;
+      }
+      /*A beginners guide to artists section*/
+      #section1 {
+        min-height: 450px;
+        background: url("../static/img/homeimg6.jpg") no-repeat;
+        background-size: 100%;
+        text-align: center;
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0.7;
+      }
+      #section1 h1 {
+        margin-block-start: initial;
+        margin-top: 100px;
+        font-size: 50px;
+        text-align: center;
+        font-family: "Passion One";
+        color: black;
+      }
+      #section1 p {
+        text-align: center;
+        font-size: large;
+        width: 600px;
+        margin-left: 40px;
+      }
+      .explore {
+        background-color: red;
+        padding: 20px;
+        border: 0px;
+        border-radius: 10px;
+        font-size: large;
+        color: #f4f4f4;
+      }
+      .container3 {
+        display: flex;
+        justify-content: space-around;
+      }
+      .photo_gallery {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0;
+      }
+      .photo_gallery .photo_heading {
+        width: 50%;
+        padding-bottom: 10px;
+      }
+      .photo_gallery .photo_heading h3 {
+        font-size: 3em;
+        font-weight: bolder;
+        border-bottom: 3px solid #222;
+        opacity: 0.7;
+      }
+      .photo_gallery .photo_heading h3 span {
+        font-weight: 100;
+      }
+      .line {
+        background-color: rgb(235, 166, 63);
+      }
+      /*store cards*/
+      /* Container for flexboxes */
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      /* Create four equal columns */
+      .column {
+        flex: 20%;
+        padding: 10px;
+      }
+
+      /* On screens that are 992px wide or less, go from four columns to two columns */
+      @media screen and (max-width: 992px) {
+        .column {
+          flex: 40%;
+        }
+      }
+
+      /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 600px) {
+        .row {
+          flex-direction: column;
+        }
+      }
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 250px;
+        margin: auto;
+        text-align: center;
+        font-family: arial;
+        border: 10px solid white;
+        object-fit: cover;
+      }
+
+      .card button {
+        border: none;
+        outline: 0;
+        padding: 10px;
+        color: white;
+        background-color: rgb(84, 11, 133);
+        text-align: center;
+        cursor: pointer;
+        width: 60%;
+        font-size: 18px;
+        border-radius: 5px;
+      }
+
+      .card button:hover {
+        opacity: 0.7;
+      }
+      /*nav bar*/
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background: linear-gradient(
+          90deg,
+          rgba(131, 58, 180, 1) 0%,
+          rgba(253, 29, 158, 1) 50%,
+          rgba(252, 176, 69, 1) 100%
+        );
+      }
+
+      li {
+        float: left;
+      }
+
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+      }
+
+      li a:hover {
+        background-color: rgba(207, 163, 207, 0.968);
+      }
+      .sider {
+        margin-top: 10px;
+        padding: 0;
+        width: 300px;
+        height: 20px;
+        background-color: rgb(235, 166, 63);
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        color: #f4f4f4;
+      }
+      img {
+        object-fit: fill;
+      }
+      .product-image {
+        width: 200px;
+        height: 190px;
+        object-fit: fill;
+      }
+      h4 {
+        padding: 2px;
+        margin: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <div>
+            <h1>Art_Amour</h1>
+          </div>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <div class="left">
+            <a href="{{ url_for('upload') }}">ColorPalette</a>&nbsp;&nbsp;
+            <a href="{{ url_for('learn_blog') }}">Learn</a>&nbsp;&nbsp;
+            <a href="{{ url_for('store') }}">Store</a>&nbsp;&nbsp;
+          </div>
+        </div>
+        <nav class="right">
+          <a href="{{ url_for('index') }}"
+            ><i
+              class="fa fa-snowflake-o"
+              style="font-size: 24px"
+              aria-hidden="true"
+              style="font-size: 23px"
+            ></i
+          ></a>
+        </nav>
+      </div>
+    </header>
+    <section id="section1">
+      <div class="container2">
+        <h1>"Customize your Stationary with us."</h1>
+        <p>
+          <b
+            >It's a Dream world for every artist to fill their tables and rooms
+            with colorful phenominal arts. We recommend the best and affordable
+            products to the Beginner Artists. Hurry Up!! and buy the products
+            and start making your art and show us!!</b
+          >
+        </p>
+        <button class="explore">Explore Now!</button>
+      </div>
+    </section>
+    <!--nav bar-->
+    <ul>
+      <li><a class="active" href="{{ url_for('painting') }}">Paintings</a></li>
+      <li><a href="{{ url_for('brushes') }}">Brushes</a></li>
+      <li><a href="{{ url_for('palette') }}">Palette</a></li>
+      <li><a href="{{ url_for('art_paper') }}">Canvas/Paper</a></li>
+      <li><a href="{{ url_for('pens') }}">Pens</a></li>
+    </ul>
+    <!--sider-->
+    <p class="sider" style="border: 10px solid rgb(235, 166, 63)">
+      <b>Canvas Boards</b>
+    </p>
+    <!--product grid-->
+    <div class="row">
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/canvas1.jpg"
+              alt="canvas"
+              width="230px"
+              height="190px"
+            />
+          </div>
+          <h4>
+            Craftacious Fine Arts Canvas Board for Oil Paint Acrylic Painting 12
+            X 10 Inches (3 Pieces Canvas Board Only), Brown
+          </h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Craftacious-Canvas-Acrylic-Painting-Inches/dp/B08FX47RMK/ref=sr_1_11?crid=V342NUROPWJ3&keywords=fine%2Barts%2Bcanvas&qid=1654526345&sprefix=fineart%2Caps%2C374&sr=8-11&th=1"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/canvas2.jpg"
+              alt="canvas"
+              width="260px"
+              height="220px"
+            />
+          </div>
+          <h4>
+            <br />Canvasify Medium Grain Artist Canvas Board , White, 10 x 10
+            Inch - Pack of 4
+          </h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Canvasify-Medium-Grain-Artist-Canvas/dp/B0797VLFQF/ref=sr_1_28?crid=RN9GHU7L3NGP&keywords=canvas%2Bsets%2Bof%2Ball%2Bsizes&qid=1654526252&sprefix=canvas%2Bsets%2B%2Caps%2C299&sr=8-28&th=1"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/canvas3.jpg"
+              alt="canvas"
+              width="240px"
+              height="200px"
+            />
+          </div>
+          <h4>
+            <br />Camel Camlin Kokuyo Canvas Board - 40cm x 50cm (16" x 20") by
+            Fine Creations (Pack of 2)
+          </h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Camel-Camlin-Kokuyo-Canvas-Board/dp/B08BRB7FPX/ref=sr_1_8?crid=2G5NEEOH0FANT&keywords=camel+canvas+boards+for+painting&qid=1654526760&sprefix=camel+cnavas%2Caps%2C290&sr=8-8"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/canvas4.jpg"
+              alt="canvas"
+              width="240px"
+              height="200px"
+            />
+          </div>
+          <h4>
+            Eduway Medium Grain 8x10 inch Cotton Canvas Board- Pack of 4, (20x25
+            cms) with 4mm MDF Board Backing, for Painting
+          </h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Eduway-Medium-Cotton-Backing-Painting/dp/B09MTRW7R3/ref=sr_1_2_sspa?crid=RN9GHU7L3NGP&keywords=canvas%2Bsets%2Bof%2Ball%2Bsizes&qid=1654526252&sprefix=canvas%2Bsets%2B%2Caps%2C299&sr=8-2-spons&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFPUkxITlA4VkZXU1QmZW5jcnlwdGVkSWQ9QTA1MTU5NDAyUDQ4MzMxRzk3RzNJJmVuY3J5cHRlZEFkSWQ9QTA4ODAwMjAxRFdDTUVOTjYzQ1JIJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ&th=1"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/canvas5.jpg"
+              alt="canvas"
+              width="260px"
+              height="200px"
+            />
+          </div>
+          <h4>
+            <br />Brustro Artists 100% Cotton Canvas Board Medium Grain
+            12"X16"(Inches) Pack of 1
+          </h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Brustro-Artists-Cotton-Canvas-Medium/dp/B08Z32TJZ1/ref=psdc_3591514031_t2_B08Z332SBS"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/canvas6.jpg"
+              alt="canvas"
+              width="260px"
+              height="200px"
+            />
+          </div>
+          <h4>
+            VARIETY CANVAS 8 X 10 Inch Cotton Canvas Board for Acrylic Painting,
+            25x20 cm, White Color Pack Of 6
+          </h4>
+          <p>
+            <a
+              href="https://www.amazon.in/VARIETY-CANVAS-Primed-Canvas-Board/dp/B08C528TVL/ref=sr_1_5?crid=2MS3CBNW6565D&keywords=Variety+Canvas+6+8&qid=1654527326&s=office&sprefix=variety+canvas+6+8%2Coffice-products%2C449&sr=1-5"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/canvas7.jpg"
+              alt="canvas"
+              width="260px"
+              height="190px"
+            />
+          </div>
+          <h4>
+            <br />Amazon Brand - Solimo Medium Grain Cotton Canvas Board, Set of
+            4
+          </h4>
+          <p>
+            <a
+              href="https://www.amazon.in/dp/B07X49NN7W/ref=sspa_dk_detail_4?psc=1&pd_rd_i=B07X49NN7W&pd_rd_w=QZsrp&content-id=amzn1.sym.5210e5d3-37e0-44be-93e0-eb50dad0d2ca&pf_rd_p=5210e5d3-37e0-44be-93e0-eb50dad0d2ca&pf_rd_r=SVCSNHPXR47BM8AF4P57&pd_rd_wg=SXBo4&pd_rd_r=f5ba0aa7-af64-47d1-bb2c-583cdbeea94d&s=kitchen&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUE0MjRPTFlBSEYxQ1QmZW5jcnlwdGVkSWQ9QTAyODEwNjM4SVk3T0ZCR1pCS1kmZW5jcnlwdGVkQWRJZD1BMDcyMTA4MzJEUDlORVhLUUEzTzUmd2lkZ2V0TmFtZT1zcF9kZXRhaWwmYWN0aW9uPWNsaWNrUmVkaXJlY3QmZG9Ob3RMb2dDbGljaz10cnVl"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/canvas8.jpg"
+              alt="canvas"
+              width="260px"
+              height="220px"
+            />
+          </div>
+          <h4>
+            <br />HomeStrap Cotton Canvas Board Medium Grain 4 X 6 Inch - Pack
+            of 8 - White
+          </h4>
+          <p>
+            <a
+              href="https://www.amazon.in/HomeStrap-Cotton-Canvas-Board-Medium/dp/B07HG3N24K/ref=sr_1_34?crid=RN9GHU7L3NGP&keywords=canvas+sets+of+all+sizes&qid=1654526252&sprefix=canvas+sets+%2Caps%2C299&sr=8-34"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--sider-->
+    <p class="sider" style="border: 10px solid rgb(235, 166, 63)">
+      <b>Papers</b>
+    </p>
+    <!--product grid-->
+    <div class="row">
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/paper1.jpg"
+              alt="papers"
+              width="230px"
+              height="190px"
+            />
+          </div>
+          <h4>
+            <br />Zen Sangam Express your Mind 300 GSM Cold Pressed Rough Grain
+            Surface, Acid Free, A4 Size Gouache Papers Sheets (29.7x21cm, 24
+            Sheets)
+          </h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Zen-Sangam-Watercolour-Multicolour-21x29-7cm/dp/B091FQ4PHY/ref=sr_1_11?crid=37K6NUK88F4EY&keywords=painting%2Bpapers&qid=1654527670&sprefix=painting%2Bpapers%2Caps%2C311&sr=8-11&th=1"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/paper2.jpg"
+              alt="papers"
+              width="230px"
+              height="190px"
+            />
+          </div>
+          <h4>
+            <br /><br />Brustro Artists Watercolour Paper 300 GSM A4-25% Cotton,
+            Cold Pressed, Contains 18 + 6 Sheets Free
+          </h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Brustro-Artists-Watercolour-Pressed-Contains/dp/B01GBSW23M/ref=sr_1_5?crid=37K6NUK88F4EY&keywords=painting%2Bpapers&qid=1654527670&sprefix=painting%2Bpapers%2Caps%2C311&sr=8-5&th=1"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/paper3.jpg"
+              alt="papers"
+              width="230px"
+              height="190px"
+            />
+          </div>
+          <h4>
+            <br /><br /><br />Paper Pep Artists' Acrylic Paint Paper 300GSM Cold
+            Pressed A4 Pack of 10
+          </h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Paper-Pep-Artists-Acrylic-Pressed/dp/B08P4WZNJK/ref=sr_1_6?crid=37K6NUK88F4EY&keywords=painting%2Bpapers&qid=1654527670&sprefix=painting%2Bpapers%2Caps%2C311&sr=8-6&th=1"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/paper4.jpg"
+              alt="papers"
+              width="230px"
+              height="190px"
+            />
+          </div>
+          <h4>
+            Zen Sangam Express your Mind - Square Gouache Glued Sketch Paper Pad
+            - 300 GSM - Cold Pressed - 24 Sheets - Rough Grain Surface - Size
+            (10.5cm x 10.5cm) - Gouache Book
+          </h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Zen-Sangam-Express-your-Mind/dp/B099FG89X6/ref=sr_1_15?crid=37K6NUK88F4EY&keywords=painting%2Bpapers&qid=1654527670&sprefix=painting%2Bpapers%2Caps%2C311&sr=8-15&th=1"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/paper5.jpg"
+              alt="papers"
+              width="230px"
+              height="190px"
+            />
+          </div>
+          <h4>
+            Canson Montval Watercolor 300 GSM Cold Pressed 17.5 x 7 cm Mini Art
+            Book with 1 Watercolor Brush (White, 30 Sheets)
+          </h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Canson-Montval-Watercolor-Pressed-Sheets/dp/B096W532PB/ref=sr_1_35?crid=37K6NUK88F4EY&keywords=painting+papers&qid=1654527670&sprefix=painting+papers%2Caps%2C311&sr=8-35"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/paper6.jpg"
+              alt="papers"
+              width="230px"
+              height="190px"
+            />
+          </div>
+          <h4>
+            <br />Paper Pep Artists' Watercolour Paper 200GSM Cold Pressed A3
+            Pack of 7
+          </h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Paper-Artists-Watercolour-200GSM-Pressed/dp/B0941296ST/ref=sr_1_37?crid=37K6NUK88F4EY&keywords=painting+papers&qid=1654527670&sprefix=painting+papers%2Caps%2C311&sr=8-37"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/paper7.jpg"
+              alt="papers"
+              width="230px"
+              height="190px"
+            />
+          </div>
+          <h4>
+            <br />Brustro Black Paper - 200 GSM A5 Pack of 2 (40 Sheets Each
+            Pack)
+          </h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Brustro-Black-Paper-Pack-Sheets/dp/B08L83224F/ref=sr_1_46?crid=37K6NUK88F4EY&keywords=painting+papers&qid=1654527670&sprefix=painting+papers%2Caps%2C311&sr=8-46"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/paper8.jpg"
+              alt="papers"
+              width="230px"
+              height="190px"
+            />
+          </div>
+          <h4>
+            <br />ARTIOS Artists' Watercolor Paper Combo - A3 (6 Sheets) + A4
+            (12 Sheets) + A5 (24 Sheets) 300 GSM
+          </h4>
+          <p>
+            <a
+              href="https://www.amazon.in/ARTIOS-Artists-Watercolor-Paper-Combo/dp/B09JDJKGGS/ref=sr_1_2_sspa?crid=37K6NUK88F4EY&keywords=painting%2Bpapers&qid=1654527670&sprefix=painting%2Bpapers%2Caps%2C311&sr=8-2-spons&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFCQktOT1FTMkg4RzkmZW5jcnlwdGVkSWQ9QTAwMDExNTkxUFI4T0VWTDdDTU0xJmVuY3J5cHRlZEFkSWQ9QTAyNzA4MzQxV0k1OFczSjkxVzVTJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ&th=1"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--sider-->
+    <p class="sider" style="border: 10px solid rgb(235, 166, 63)">
+      <b>Books</b>
+    </p>
+    <!--product grid-->
+    <div class="row">
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/book1.jpg"
+              alt="papers"
+              width="210px"
+              height="190px"
+              style="margin-left: 20px"
+            />
+          </div>
+          <h4>
+            <br /><br />Paper Plane Design Artist Sketch Book Perforated 140 GSM
+            Craft Book (Purple, A4 - Medium)
+          </h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Design-Artist-Sketch-Sheets-Perforated/dp/B07QKHQT76/ref=sr_1_8?crid=3KYNKC44W5YVK&keywords=sketch%2Bbooks&qid=1654528746&sprefix=sketch%2Bbook%2Caps%2C274&sr=8-8&th=1"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/book2.jpg"
+              alt="papers"
+              width="230px"
+              height="190px"
+            />
+          </div>
+          <h4>
+            <br /><br />Brustro Artists Stitched Bound Sketch Book, A5 Size, 160
+            Pages, 110 GSM (Acid Free)
+          </h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Brustro-Stitched-Bound-Artists-Sketch/dp/B07XQDPJQM/ref=sr_1_5?crid=3KYNKC44W5YVK&keywords=sketch+books&qid=1654528746&sprefix=sketch+book%2Caps%2C274&sr=8-5 "
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/book3.jpg"
+              alt="papers"
+              width="230px"
+              height="190px"
+            />
+          </div>
+          <h4>
+            Zen Sangam Express your Mind Spiral-Bound A4 Doodles Sketch Book
+            (11.7 x 8.3 Inch, Acid Free Paper for Doodling, Drawing and
+            Sketching) 50 Sheets
+          </h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Zen-Sangam-Sheets-Doodles-Sketch/dp/B08MQMZWPY/ref=sr_1_omk_4?crid=3KYNKC44W5YVK&keywords=sketch%2Bbooks&qid=1654528746&sprefix=sketch%2Bbook%2Caps%2C274&sr=8-4&th=1 "
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/book4.jpg"
+              alt="papers"
+              width="230px"
+              height="190px"
+            />
+          </div>
+          <h4>
+            MENORAH – A5 Black Sketchbook-BLACK Sketch Book for Artist -250 GSM
+            -Hard Case Bound Sketchbook-(84 Pages/42 Sheets)-(Size 14.8 x 21.0
+            cm)
+          </h4>
+          <p>
+            <a
+              href="https://www.amazon.in/MENORAH-Sketchbook-Drawing-SketchBook-Landscape/dp/B08VJ47PYB/ref=sr_1_2_sspa?crid=3KYNKC44W5YVK&keywords=sketch%2Bbooks&qid=1654528746&sprefix=sketch%2Bbook%2Caps%2C274&sr=8-2-spons&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUExRFZWNVlOV0hNME4xJmVuY3J5cHRlZElkPUEwMTk4NjUyMjM2Rk1HTUNTOEgzQSZlbmNyeXB0ZWRBZElkPUEwODI3OTAxMkRYSE1IWkpJVURYMCZ3aWRnZXROYW1lPXNwX2F0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU&th=1 "
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/book5.jpg"
+              alt="papers"
+              width="230px"
+              height="190px"
+            />
+          </div>
+          <h4>
+            Askprints 50 Sheet A5 Sketchbook Set of 2-5.8 x 8.3 Inch | Top
+            Spiral-Bound Sketchpad for Artists | Sketching and Drawing Acid Free
+            Paper, for Doodling
+          </h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Askprints-Sketchbook-Spiral-Bound-Sketchpad-Sketching/dp/B08F2NRL1H/ref=sr_1_3?crid=3KYNKC44W5YVK&keywords=sketch+books&qid=1654528746&sprefix=sketch+book%2Caps%2C274&sr=8-3 "
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/book6.jpg"
+              alt="papers"
+              width="230px"
+              height="190px"
+            />
+          </div>
+          <h4>
+            <br />BRUSTRO Artist 100% Cotton Watercolour Wiro Bound Journal Cold
+            Pressed 300 GSM, A5 - (20 Sheets)
+          </h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Brustro-Artist-Watercolour-Journal-Pressed/dp/B07YX5C87Z/ref=sr_1_9?crid=2M2RIVI505PB9&keywords=300gsm+sketch+books&qid=1654528980&sprefix=300+gsm+sketch+boo%2Caps%2C299&sr=8-9 "
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/book7.jpg"
+              alt="papers"
+              width="230px"
+              height="190px"
+            />
+          </div>
+          <h4>
+            Zen Sangam Artists’ - A4 Spiral Sketchpad Drawing Notebook - 150 GSM
+            - Ultra Smooth Surface - 50 Sheets (100 Pages) - Size (21x29.7cm) -
+            Wiro Sketchbook
+          </h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Zen-Sangam-Fineliners-OilPastels-Watercolour-Mandala/dp/B089P127LP/ref=sr_1_4?crid=2A3G6RBQXTOMN&keywords=mandala%2Bsketch%2Bbooks&qid=1654528795&sprefix=mandala%2Bs%2Caps%2C245&sr=8-4&th=1 "
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/book8.jpg"
+              alt="papers"
+              width="230px"
+              height="190px"
+            />
+          </div>
+          <h4>
+            Zen Sangam Express your Mind Artists 245GSM Cotton Landscape Cold
+            Pressed Watercolor Paper Art Journal A5 (Black) - 50 Pages
+          </h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Zen-Sangam-Artists-Watercolor-Journal/dp/B08M3R8VH1/ref=sr_1_1_sspa?crid=2M2RIVI505PB9&keywords=300gsm%2Bsketch%2Bbooks&qid=1654528980&sprefix=300%2Bgsm%2Bsketch%2Bboo%2Caps%2C299&sr=8-1-spons&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUExRzA3UDZCSjZMSkJUJmVuY3J5cHRlZElkPUEwMTU3ODYxMUVMWENQWTVFTlVOMiZlbmNyeXB0ZWRBZElkPUEwMDcxODgzMlI2N0dIMFNZNlQ3SiZ3aWRnZXROYW1lPXNwX2F0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU&th=1 "
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--sider-->
+    <p class="sider" style="border: 10px solid rgb(235, 166, 63)">
+      <b>Oils/Varnishes</b>
+    </p>
+    <!--product grid-->
+    <div class="row">
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/medium1.jpg"
+              alt="mediums"
+              width="210px"
+              height="190px"
+              style="margin-left: 20px"
+            />
+          </div>
+          <h4>
+            Camlin Supreme Quality Turpentine Oil Paints and Linseed oil 100 ml
+          </h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Camlin-Supreme-Quality-Turpentine-Linseed/dp/B08FBD9T9N/ref=asc_df_B08FBD9T9N/?tag=googleshopdes-21&linkCode=df0&hvadid=396986955303&hvpos=&hvnetw=g&hvrand=10394321405099635336&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9062178&hvtargid=pla-972927466307&psc=1&ext_vrnc=hi"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/medium2.jpg"
+              alt="mediums"
+              width="210px"
+              height="190px"
+              style="margin-left: 20px"
+            />
+          </div>
+          <h4>
+            Brustro Professional Clarified Linseed Oil 100ml (75ml + 25ml Free)
+          </h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Brustro-Professional-Clarified-Linseed-100ml/dp/B083NXQ7T8/ref=sr_1_6?crid=I1REPD0RIWXK&keywords=linseed+oil&qid=1654598098&sprefix=linseed+%2Caps%2C461&sr=8-6"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/medium4.jpg"
+              alt="mediums"
+              width="210px"
+              height="190px"
+              style="margin-left: 20px"
+            />
+          </div>
+          <h4><br />Mont Marte Gloss Acrylic Medium - 135ml (White)</h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Mont-Marte-Gloss-Acrylic-Medium/dp/B00Y6TLUDC/ref=sr_1_4?keywords=oil+colors+medium&qid=1654598063&sr=8-4"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/medium3.jpg"
+              alt="mediums"
+              width="210px"
+              height="190px"
+              style="margin-left: 20px"
+            />
+          </div>
+          <h4>
+            <br />Little Birdie 38506 Varnish, Multicolour Matte Finish 100 ml
+          </h4>
+          <p>
+            <a
+              href="https://www.amazon.in/LITTLE-BIRDIE-Decor-Varnish-Matte-100/dp/B07F78QHQH/ref=sr_1_1_sspa?keywords=oil+colors+medium&qid=1654598063&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUExWTE1N0g5NEpIOEtQJmVuY3J5cHRlZElkPUEwNzQ4NDg3Tzg5VUlUVEtDUzdWJmVuY3J5cHRlZEFkSWQ9QTAyNTYwNTkzODhUOEFZOUVHUlZTJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ=="
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

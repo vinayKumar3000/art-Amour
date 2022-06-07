@@ -28,6 +28,51 @@ def learn_blog():
      if 'username' in session:
         return  render_template('Learn-blog.html')
 
+@app.route('/materials')
+def materials():
+     if 'username' in session:
+        return  render_template('materials.html')
+
+@app.route('/zentangle')
+def zentangle():
+     if 'username' in session:
+        return  render_template('zentangle.html')
+
+@app.route('/painting-brushes')
+def painting_brushes():
+     if 'username' in session:
+        return  render_template('painting-brushes.html')
+
+@app.route('/doodle')
+def doodle():
+     if 'username' in session:
+        return  render_template('doodle.html')
+
+@app.route('/store')
+def store():
+     if 'username' in session:
+        return  render_template('store.html')
+
+@app.route('/art-paper')
+def art_paper():
+     if 'username' in session:
+        return  render_template('artpaper.html')
+
+@app.route('/brushes')
+def brushes():
+     if 'username' in session:
+        return  render_template('brushes.html')
+
+@app.route('/pens')
+def pens():
+     if 'username' in session:
+        return  render_template('pens.html')
+
+@app.route('/palette')
+def palette():
+     if 'username' in session:
+        return  render_template('palette.html')
+
 @app.route('/painting')
 def painting():
     if 'username' in session:
@@ -42,8 +87,7 @@ def mandalas():
 def upload():
      # If a form is submitted
     if request.method == "POST":
-        
-        # Unpickle classifier
+
         image2=request.files.get('img','')
 
         file=request.files['img']
@@ -115,7 +159,7 @@ def upload():
         cv2.imwrite(os.path.join('./static/img/', image2.filename),final)
         output="./static/img/"+image2.filename
     else:
-        output="./static/img/default.jpg"
+        output="./static/img/sec2.jpeg"
         
     return render_template("upload.html",output=output)
 

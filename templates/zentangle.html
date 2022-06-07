@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>painting</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+ @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    @import url(https://fonts.googleapis.com/css?family=Chewy);
+    @import url(https://fonts.googleapis.com/css?family=Passion+One);
+    @media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+*{
+	list-style: none;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+}
+
+body{
+	background:white;
+}
+
+.wrapper .sidebar{
+	background-image: url("../static/img/sidebar3.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    position: fixed;
+	top: 0;
+	left: 0;
+	width: 225px;
+	height: 100%;
+	transition: all 0.5s ease;
+}
+
+
+.wrapper .sidebar ul li a{
+	display: block;
+	padding: 13px 30px;
+	border-bottom: 1px solid #2d0831;
+	color: rgb(241, 237, 237);
+	font-size: 16px;
+	position: relative;
+}
+
+.wrapper .sidebar ul li a .icon{
+	color: #dee4ec;
+	width: 30px;
+	display: inline-block;
+}
+
+ 
+
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active{
+	color: #130110;
+
+	background:rgb(233, 214, 236);
+    border-right: 0px solid rgb(5, 68, 104);
+    opacity:0.5;
+}
+
+.wrapper .sidebar ul li a:hover .icon,
+.wrapper .sidebar ul li a.active .icon{
+	color: #2d0831;
+}
+
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before{
+	display: block;
+}
+
+.wrapper .section{
+	width: calc(100% - 225px);
+	margin-left: 225px;
+	transition: all 0.5s ease;
+}
+
+.wrapper .section .top_navbar{
+	background:linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 158, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+	height: 50px;
+	display: flex;
+	align-items: center;
+	padding: 0 30px;
+ 
+}
+
+.wrapper .section .top_navbar .hamburger a{
+	font-size: 28px;
+	color: #f4fbff;
+}
+
+.wrapper .section .top_navbar .hamburger a:hover{
+	color:#e9c9ef;
+}
+
+body.active .wrapper .sidebar{
+	left: -225px;
+}
+
+body.active .wrapper .section{
+	margin-left: 0;
+	width: 100%;
+}
+.layout{
+    margin-left:280px;
+    margin-top:40px;
+    margin-right:50px;}
+.heading{  
+    text-align:justify;
+    font-family: "Chewy";
+    justify-content: space-between;
+    font-size:50px;
+    background: -webkit-linear-gradient(92deg, transparent 0%, rgba(48,6,59,0.9) 88%, #7d155b 100%),
+            -webkit-linear-gradient(173deg, #d93232 0%, #c0a1e2 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.para{
+    padding-top:10px;
+    text-align: justify;
+    
+}
+.img{
+    text-align: center;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align:start;
+  font-family: arial;
+}
+
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: rgb(65, 42, 91);
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  margin:0;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+.cards{
+    display: flex;
+    flex-direction: row;
+}
+</style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="section">
+            <div class="top_navbar">
+                <div class="hamburger">
+                    <a href="#">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <a href="{{ url_for('index') }}" style="position:relative; left:900px;">
+                        <i class="fa fa-snowflake-o"></i>
+                    </a>
+                </div>
+            </div>
+             
+        </div>
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a href="{{ url_for('learn_blog') }}" class="active">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></i></span>
+                        <span class="item">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('painting') }}">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></i></span>
+                        <span class="item">Paintings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('mandalas') }}">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></i></span>
+                        <span class="item">Mandalas</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('zentangle') }}">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></i></span>
+                        <span class="item"><b>Zentangles</b></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('doodle') }}">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></span>
+                        <span class="item"><b>Cartoon Doodles</b></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('painting_brushes') }}">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></span>
+                        <span class="item"><b>Painting Brushes</b></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('materials') }}">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></span>
+                        <span class="item"><b>Materials</b></span>
+                    </a>
+                </li>
+           
+            </ul></div>
+        
+    </div>
+    <script>
+        var hamburger = document.querySelector(".hamburger");
+     hamburger.addEventListener("click", function(){
+         document.querySelector("body").classList.toggle("active");
+     })
+   </script>
+<!--mandala content-->
+<div class="layout">
+    <h1 class="heading">Zentangles</h1><br><hr><br>
+    <h2>What is Zentangle?</h2><br><hr>
+    <p class="para">
+        The term Zentangle comes from the words 'zen' (the Buddhist meditative philosophy for balancing the mind) and 'tangle'. The goal of this art practice is to achieve calm.
+        It was developed as a concept in 2004 in the United States, from the minds of Maria Thomas and Rick Roberts. Zentangle is a style of drawing, mainly abstract, that uses repetitive patterns and represents an artistic method of relaxation for many.<br><br>
+        The Zentangle Method is an easy-to-learn, relaxing, and fun way to create beautiful images by drawing structured patterns. We call these patterns, tangles. You create tangles with combinations of dots, lines, simple curves, S-curves and orbs. These simple shapes are the "Elemental Strokes" in all Zentangle art.
+        Zentangle art is non-representational and unplanned so you can focus on each stroke and not worry about the result. There is no up or down to Zentangle art. You don't need to know what a tangle is going to look like to draw it. You just need to know the steps. The result is a delightful surprise.
+    </p><br>
+    <div class="img">
+        <img src="../static/img/zentangle2.jpg" style="height:400px; width:400px;">
+    </div>
+    <p class="para">
+        People of all ages, skills and interests enjoy the Zentangle Method all over this world. Together, they form a world-wide community of passionate and grateful artists, full of friendships, support, sharing and learning. Zentangle art provides common meeting ground because it is independent of language, age, political views, religious beliefs or any other category that separates one from another.
+    </p><br><hr><br>
+    <h2>How can Zentangle help in your daily life?</h2><br><hr><br>
+            <p class="para">
+                Relaxation, reduced anxiety and stress, a better quality of sleep (especially if practiced before bedtime), increased creativity, and concentration are among the benefits of Zentangle. Spend as long as you wish on this practice and you’ll see how you’ll begin to clear up your mind and free your imagination.
+            </p><br><hr><br>
+    <h2>How do you create a Zentangle?</h2><br><hr><br>
+    <p class="para">
+        First, you’ll need to draw a line or a squiggle as a starting point for your Zentangle. From there, start to draw patterns around the squiggle, adding weight, intensity, and other details to the lines. The patterns can be repeated or different; you can combine lines, dots, geometrical shapes, and anything else you can think of.
+        It’s important to remember that there can be no mistakes in Zentangles, so do not use an eraser: all shapes are correct shapes! You can fill up the whole sheet or simply stop when you feel that the design is complete.
+    </p><br><hr><br>
+    <h2>Zentangle Patterns</h2><br><hr><br>
+    <p class="para">Here are few basic patterns.Have a look and explore more to make a zentangle pf your own.</p><br>
+    <div class="img">
+    <img src="../static/img/zentanglepattern1.jpg" style="height:400px; width:400px;" >
+    <img src="../static/img/zentanglepattern2.jpg"style="height:405px; width:405px;"></div><br><hr><br>
+    <h2>Learn to Draw Zentangles</h2><br><hr><br>
+    <div class="cards">
+    <div class="card">
+        <img src="../static/img/zentangle3.jpg" style="width:100%">
+        <a href="https://www.wikihow.com/Make-a-Zentangle"><button>click here</button></a>
+    </div>
+    <div class="card">
+        <img src="../static/img/zentangle3.jpg"  style="width:100%">
+        <a href="https://zentangle.com/pages/online-zentangle-resources"><button>click here</button></a>
+    </div>
+    </div><br>
+</div>
+</body>
+</html>
+
+    

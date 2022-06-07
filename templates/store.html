@@ -6,286 +6,292 @@
     <meta name="viewport" content="A Beginner's Guide to the Artists" />
     <meta
       name="keywords"
-      content="color palette generator,artists e-learning,art store,art blogs,art website"
-    />
+      content="color palette generator,artists e-learning,art store,art blogs,art website"/>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    
     <title>Art Amour</title>
     <style>
-      @import url(https://fonts.googleapis.com/css?family=Passion+One);
-      @import url(https://fonts.googleapis.com/css?family=Chewy);
-      body {
-        font: 15px/1.5 Arial, Helvetica, sans-serif;
-        padding: 0;
-        margin: 0;
-        background: color #f4f4f4;
-      }
-      /*global*/
-      .container {
-        width: 80%;
-        margin: auto;
-        overflow: hidden;
-        display: flex;
-        justify-content: space-between;
-      }
-      /*header*/
-      header {
-        background: linear-gradient(
-          90deg,
-          rgba(131, 58, 180, 1) 0%,
-          rgba(253, 29, 158, 1) 50%,
-          rgba(252, 176, 69, 1) 100%
-        );
-        color: black;
-        padding-top: 5px;
-        min-height: 20px;
-      }
-      header a {
-        color: white;
-        text-decoration: none;
-        text-transform: none;
-        font-size: 20px;
-        font-family: "Passion One";
-      }
-      .logo {
-        font-family: "Chewy";
-        display: flex;
-        color: #f4f4f4;
-        justify-content: space-between;
-      }
-      .left {
-        overflow: hidden;
-        float: left;
-        padding-top: 30px;
-      }
-      .right {
-        float: right;
-        overflow: hidden;
-        padding-top: 30px;
-        padding-left: 100spx;
-      }
-      /*slideshow*/
-      * {
-        box-sizing: border-box;
-      }
-      body {
-        font-family: Verdana, sans-serif;
-      }
-      .mySlides {
-        display: none;
-      }
-      img {
-        vertical-align: middle;
-      }
+        @import url(https://fonts.googleapis.com/css?family=Passion+One);
+        @import url(https://fonts.googleapis.com/css?family=Chewy);
+body {
+  font: 15px/1.5 Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  background: color #f4f4f4;
+}
+/*global*/
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+/*header*/
+header {
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 158, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  color: black;
+  padding-top: 5px;
+  min-height: 20px;
+}
+header a {
+  color: white;
+  text-decoration: none;
+  text-transform: none;
+  font-size: 20px;
+  font-family: "Passion One";
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding:10px;
+}
 
-      /* Slideshow container */
-      .slideshow-container {
-        max-width: 1000px;
-        position: relative;
-        margin: auto;
-      }
+.logo {
+  font-family: "Chewy";
+  display: flex;
+  color: #f4f4f4;
+  justify-content: space-between;
+}
+.left {
+  overflow: hidden;
+  float: left;
+  padding-top: 30px;
+}
+.right {
+  float: right;
+  overflow: hidden;
+  padding-top: 30px;
+  padding-left: 100spx;
+}
+/*A beginners guide to artists section*/
+#section1 {
+  min-height:450px;
+  background: url("../static/img/homeimg6.jpg") no-repeat;
+  background-size:100%;
+  text-align: center;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity:0.7;
+}
+#section1 h1 {
+  margin-block-start: initial;
+  margin-top: 100px;
+  font-size: 50px;
+  text-align: center;
+  font-family: "Passion One";
+  color: black;
+}
+#section1 p {
+  text-align:center;
+  font-size:large;
+  width:600px;
+  margin-left:40px;
+}
+.explore{
+  background-color: red;
+  padding:20px;
+  border: 0px;
+  border-radius:10px;
+  font-size: large;
+  color:#f4f4f4;
+}
+/*footer*/
+footer {
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 158, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  padding: 9px;
+  margin-top: 0px;
+  text-align: center;
+  color: #f4f4f4;
+  min-height: 10px;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+  text-transform: none;
+  font-size: 20px;
+  font-family: "Passion One";
+}
+footer p {
+  float: left;
+  font-size: 20px;
+  font-family: "Passion One";
+  margin-top: 3px;
+  margin-bottom: 10px;
+}
+.footer_left {
+  float: left;
+  padding-left: 45px;
+  padding-top: 4px;
+  margin-right: auto;
+}
+#contact {
+  float: right;
+  font-size: 20px;
+  font-family: "Passion One";
+  margin-top: 3px;
+  margin-bottom: 10px;
+}
+.container3 {
+  display: flex;
+  justify-content: space-around;
+}
+.photo_gallery{
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items:center;
+  text-align:center;
+  margin:0;
+}
+.photo_gallery .photo_heading{
+  width:50%;
+  padding-bottom:10px;
 
-      /* Caption text */
-      .text {
-        color: #f2f2f2;
-        font-size: 15px;
-        padding: 8px 12px;
-        position: absolute;
-        bottom: 8px;
-        width: 100%;
-        text-align: center;
-      }
+}
+.photo_gallery .photo_heading h3{
+  font-size: 3em;
+  font-weight:bolder;
+  border-bottom:3px solid #222;
+  opacity:0.7;
 
-      /* Number text (1/3 etc) */
-      .numbertext {
-        color: #f2f2f2;
-        font-size: 12px;
-        padding: 8px 12px;
-        position: absolute;
-        top: 0;
-      }
+}
+.photo_gallery .photo_heading h3 span{
+  font-weight:100;
+}
+.line{
+  background-color:rgb(235, 166, 63);
+  
+}
+/*store cards*/
+/* Container for flexboxes */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
 
-      /* The dots/bullets/indicators */
-      .dot {
-        height: 15px;
-        width: 15px;
-        margin: 0 2px;
-        background-color: #bbb;
-        border-radius: 50%;
-        display: inline-block;
-        transition: background-color 0.6s ease;
-      }
+/* Create four equal columns */
+.column {
+  flex: 20%;
+  padding: 10px;
+}
 
-      .active {
-        background-color: #717171;
-      }
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+  .column {
+    flex: 40%;
+  }
+}
 
-      /* Fading animation */
-      .fade {
-        animation-name: fade;
-        animation-duration: 1.5s;
-      }
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .row {
+    flex-direction: column;
+  }
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 250px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  border:10px solid white;
+  object-fit: cover;
+ 
+}
 
-      @keyframes fade {
-        from {
-          opacity: 0.4;
-        }
-        to {
-          opacity: 1;
-        }
-      }
+.price {
+  color:black;
+  font-size: 18px;
+}
 
-      /* On smaller screens, decrease text size */
-      @media only screen and (max-width: 300px) {
-        .text {
-          font-size: 11px;
-        }
-      }
+.card button {
+  border: none;
+  outline: 0;
+  padding: 10px;
+  color: white;
+  background-color:rgb(84, 11, 133);
+  text-align: center;
+  cursor: pointer;
+  width: 60%;
+  font-size: 18px;
+  border-radius: 5px;
+}
 
-      /*footer*/
-      footer {
-        background: linear-gradient(
-          90deg,
-          rgba(131, 58, 180, 1) 0%,
-          rgba(253, 29, 158, 1) 50%,
-          rgba(252, 176, 69, 1) 100%
-        );
-        padding: 9px;
-        margin-top: 0px;
-        text-align: center;
-        color: #f4f4f4;
-        min-height: 10px;
-      }
-      footer a {
-        color: white;
-        text-decoration: none;
-        text-transform: none;
-        font-size: 20px;
-        font-family: "Passion One";
-      }
-      footer p {
-        float: left;
-        font-size: 20px;
-        font-family: "Passion One";
-        margin-top: 3px;
-        margin-bottom: 10px;
-      }
-      .footer_left {
-        float: left;
-        padding-left: 45px;
-        padding-top: 4px;
-        margin-right: auto;
-      }
-      #contact {
-        float: right;
-        font-size: 20px;
-        font-family: "Passion One";
-        margin-top: 3px;
-        margin-bottom: 10px;
-      }
-      .container3 {
-        display: flex;
-        justify-content: space-around;
-      }
-      /*photo gallery*/
-      .photo_gallery {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        margin: 0 20px 0 20px;
-      }
-      .photo_gallery .photo_heading {
-        width: 50%;
-        padding-bottom: 50px;
-      }
-      .photo_gallery .photo_heading h3 {
-        font-size: 3em;
-        font-weight: bolder;
-        border-bottom: 3px solid #222;
-        opacity: 0.7;
-      }
-      .photo_gallery .photo_heading h3 span {
-        font-weight: 100;
-      }
+.card button:hover {
+  opacity: 0.7;
+}
+/*nav bar*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background:linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 158, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+}
 
-      .wrap {
-        overflow: hidden;
-        max-width: 1500px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      .box {
-        float: left;
-        position: relative;
-        width: 20%;
-        padding-bottom: 20%;
-      }
+li {
+  float: left;
+}
 
-      .boxInner {
-        position: absolute;
-        left: 10px;
-        right: 10px;
-        top: 10px;
-        bottom: 10px;
-        overflow: hidden;
-      }
-      .boxInner img {
-        width: 100%;
-        max-width: 100%;
-        max-height: 100%;
-        display: block; /* remove extra space below image */
-      }
-      /*caption for image*/
-      .overlay {
-        position: absolute;
-        bottom: 0;
-        background: rgb(0, 0, 0);
-        background: rgba(0, 0, 0, 0.5); /* Black see-through */
-        color: #f1f1f1;
-        width: 100%;
-        transition: 0.5s ease;
-        opacity: 0;
-        color: white;
-        font-size: 20px;
-        padding: 20px;
-        text-align: justify;
-      }
-      .box:hover .overlay {
-        opacity: 1;
-      }
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-transform:uppercase;
+  letter-spacing: 3px;
+}
 
-      @media only screen and (max-width: 480px) {
-        /* Smartphone view: 1 tile */
-        .box {
-          width: 100%;
-          padding-bottom: 100%;
-        }
-      }
-      @media only screen and (max-width: 650px) and (min-width: 481px) {
-        /* Tablet view: 2 tiles */
-        .box {
-          width: 50%;
-          padding-bottom: 50%;
-        }
-      }
-      @media only screen and (max-width: 1050px) and (min-width: 651px) {
-        /* Small desktop / ipad view: 3 tiles */
-        .box {
-          width: 33.3%;
-          padding-bottom: 33.3%;
-        }
-      }
-      @media only screen and (max-width: 1290px) and (min-width: 1051px) {
-        /* Medium desktop: 4 tiles */
-        .box {
-          width: 25%;
-          padding-bottom: 25%;
-        }
-      }
+li a:hover {
+  background-color: rgba(207, 163, 207, 0.968);
+}
+.sider{
+  margin-top:10px;
+  padding:0;
+  width:200px;
+  height:20px;
+  background-color:rgb(235, 166, 63);
+  text-transform:uppercase;
+  letter-spacing: 5px;
+  color: #f4f4f4;
+
+}
+img{
+  object-fit: fill;
+}
+.product-image{
+  width:200px;
+  height:190px;
+  object-fit: fill;
+}
+h4{
+  padding:2px;
+  margin:2px;
+}
+.right{
+  float:right;
+  display:block;
+}
     </style>
   </head>
   <body>
@@ -293,240 +299,587 @@
       <div class="container">
         <div class="logo">
           <div>
-            <h1>Art_Amour</h1>
+          <h1>Art_Amour</h1>
           </div>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <div class="left">
-            <a href="#">ColorPalette |</a>&nbsp;
-            <a href="../static/img/Learn-blog.html">Learn |</a>&nbsp;
-            <a href="#">Store |</a>&nbsp; <a href="#">Updates</a>&nbsp;
+            <a href="{{ url_for('upload') }}">ColorPalette</a>&nbsp;&nbsp; <a href="{{ url_for('learn_blog') }}">Learn</a>&nbsp;&nbsp;
+            <a href="{{ url_for('store') }}">Store<a>&nbsp;&nbsp;
           </div>
         </div>
 
         <nav class="right">
-          <a href="../static/img/login.html"
-            ><i
-              class="fa fa-user-circle-o fa-5x"
-              aria-hidden="true"
-              style="font-size: 23px"
-            ></i></a
-          >&nbsp;
+          <a href="{{ url_for('index') }}"><i class="fa fa-snowflake-o" style="font-size:24px" aria-hidden="true" style="font-size:23px;"></i></a>
         </nav>
       </div>
     </header>
-    <!--slideshow-->
-    <div class="slideshow-container" data-options="width:40%;">
-      <div class="mySlides fade">
-        <div class="numbertext">1 / 3</div>
-        <img src="../static/img/gouache.jpg" style="width: 100%; height: 80%" />
-        <div class="text">Caption Text</div>
+    <section id="section1">
+      <div class="container2">
+        <h1>"Customize your Stationary with us."</h1>
+        <p><b>It's a Dream world for every artist to fill their tables and rooms with colorful phenominal arts.
+          We recommend the best and affordable products to the Beginner Artists. Hurry Up!! and buy the products and start making your art and show us!!</b>
+        </p>
+        <button class="explore">Explore Now!</button>
       </div>
-
-      <div class="mySlides fade">
-        <div class="numbertext">2 / 3</div>
-        <img
-          src="../static/img/oilcolors.jpg"
-          style="width: 100%; height: 80%"
-        />
-        <div class="text">Caption Two</div>
+    </section>
+    <!--nav bar-->
+    <ul>
+      <li><a class="active" href="{{ url_for('painting') }}">Paintings</a></li>
+      <li><a href="{{ url_for('brushes') }}">Brushes</a></li>
+      <li><a href="{{ url_for('palette') }}">Palette</a></li>
+      <li><a href="{{ url_for('art_paper') }}">Canvas/Paper</a></li>
+      <li><a href="{{ url_for('pens') }}">Pens</a></li>
+    </ul>
+    <!--sider-->
+    <p class="sider" style="border: 10px solid rgb(235, 166, 63);"><b>WaterColors</b></p>
+    
+    <!--product grid-->
+    <div class="row">
+      <div class="column"><!--1-->
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p1.jpg" alt="watercolors"width="220px" height="210px">
+          </div>
+            <h4>Camel Artist Water Colour Cakes - 18 Shades</h4>
+            <p><a href="https://www.amazon.in/Camlin-Kokuyo-Water-colour-Cakes/dp/B00792MX98/ref=sr_1_4?crid=2WN2CC7OFB3HZ&keywords=watercolors&nav_sdd=aps&qid=1654442233&refinements=p_36%3A10000-80000&rnid=3444809031&s=kitchen&sprefix=watercolors&sr=1-4&th=1"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
       </div>
-
-      <div class="mySlides fade">
-        <div class="numbertext">3 / 3</div>
-        <img src="../static/img/Acrylic-Paint2.jpg" style="width: 100%" />
-        <div class="text">Caption Three</div>
+      <!--2-->
+      <div class="column"><!--1-->
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p2.jpg" alt="watercolors"width="220px" height="210px">
+          </div>
+            <h4>DOMS Water Color Cakes 24 Shades (30 mm)</h4>
+            <p><a href="https://www.amazon.in/DOMS-Water-Color-Cakes-Shades/dp/B078V9XTVH/ref=sr_1_5?crid=2WN2CC7OFB3HZ&keywords=watercolors&nav_sdd=aps&qid=1654442233&refinements=p_36%3A10000-80000&rnid=3444809031&s=kitchen&sprefix=watercolors&sr=1-5"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
       </div>
-    </div>
-    <br />
-
-    <div style="text-align: center">
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-    </div>
-    <script>
-      let slideIndex = 0;
-      showSlides();
-
-      function showSlides() {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) {
-          slideIndex = 1;
-        }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-        setTimeout(showSlides, 2000); // Change image every 2 seconds
-      }
-    </script>
-
-    <!--our gallery-->
-    <div class="photo_gallery">
-      <div class="photo_heading">
-        <h3>Art <span>Gallery</span></h3>
+    
+     
+      <!--3-->
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p3.jpg" alt="watercolors"width="240px" height="210px">
+          </div>
+            <h4>Camlin Kokuyo Artist 5ml Water Color Tube 24 Shades</h4>
+            <p><a href="https://www.amazon.in/Camlin-Kokuyo-Artist-Water-Color/dp/B0752KW82G/ref=sr_1_8?crid=2WN2CC7OFB3HZ&keywords=watercolors&nav_sdd=aps&qid=1654442233&refinements=p_36%3A10000-80000&rnid=3444809031&s=kitchen&sprefix=watercolors&sr=1-8"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
       </div>
-    </div>
-    <!--photosupload-->
-    <div class="wrap">
-      <div class="box">
-        <div class="boxInner">
-          <img src="../static/img/1.jpg" />
-          <div class="overlay">Canvas Couple Art</div>
+      
+      <!--4-->
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p4.jpg" alt="watercolors"width="260px" height="190px">
+          </div>
+            <h4>Faber-Castell Creative Studio Watercolours,5 ml-Set of 12</h4>
+            <p><a href="https://www.amazon.in/Faber-Castell-Creative-Studio-Watercolours-Set/dp/B0825WTN23/ref=sr_1_12?crid=2WN2CC7OFB3HZ&keywords=watercolors&nav_sdd=aps&qid=1654442233&refinements=p_36%3A10000-80000&rnid=3444809031&s=kitchen&sprefix=watercolors&sr=1-12"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
+      </div>
+     
+      <!--5-->
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p5.jpg" alt="watercolors"width="220px" height="170px">
+          </div>
+            <h4> Solimo Water Colour Paints,Set of 24 Shades,5ml Tubes</h4>
+            <p><a href="https://www.amazon.in/Amazon-Brand-Solimo-Pencil-Cases/dp/B08HWH4P63/ref=sr_1_13_sspa?crid=2WN2CC7OFB3HZ&keywords=watercolors&nav_sdd=aps&qid=1654442233&refinements=p_36%3A10000-80000&rnid=3444809031&s=kitchen&sprefix=watercolors&sr=1-13-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEyQ0pNWlI0NlgyVFFBJmVuY3J5cHRlZElkPUExMDMwODA0MzBQTkY5UVFPV1hCUyZlbmNyeXB0ZWRBZElkPUEwMjcwNjE0MVRFNjJXSjVKT0xVTSZ3aWRnZXROYW1lPXNwX210ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU="><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
+      </div>
+      
+      <!--6-->
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p6.jpg" alt="watercolors"width="250px" height="180px">
+          </div>
+            <h4>BRUSTRO Artists ’ Watercolour Set of 12 Colours X 12ML Tubes</h4>
+            <p><a href="https://www.amazon.in/BRUSTRO-Artists-Watercolour-Colours-Tubes/dp/B08B4TJWWR/ref=sr_1_19?crid=2WN2CC7OFB3HZ&keywords=watercolors&nav_sdd=aps&qid=1654442233&refinements=p_36%3A10000-80000&rnid=3444809031&s=kitchen&sprefix=watercolors&sr=1-19"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
+      </div>
+      
+      <!--7-->
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p7.jpg" alt="watercolors"width="250px" height="230px">
+          </div>
+            <h4>Camel Student Water Color Tube-5ml Tubes,18 Shades</h4>
+            <p><a href="https://www.amazon.in/Camel-Camlin-Kokuyo-Student-Water/dp/B00LY14BA4/ref=sr_1_17?crid=2WN2CC7OFB3HZ&keywords=watercolors&nav_sdd=aps&qid=1654442233&refinements=p_36%3A10000-80000&rnid=3444809031&s=kitchen&sprefix=watercolors&sr=1-17"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
+      </div>
+      
+      <!--8-->
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p8.jpg" alt="watercolors"width="250px" height="190px">
+          </div>
+            <h4>Flash Artist Watercolour Set|25 Colors 25 ml,0.8 fl oz Each</h4>
+            <p><a href="https://www.amazon.in/Flash-Watercolour-Paint-Colors-Bottle/dp/B095N3G6MR/ref=sr_1_27?crid=2WN2CC7OFB3HZ&keywords=watercolors&nav_sdd=aps&qid=1654442233&refinements=p_36%3A10000-80000&rnid=3444809031&s=kitchen&sprefix=watercolors&sr=1-27"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
+      </div><!-- end watercolors-->
+    <!--acrylic colors-->
+    <!--sider-->
+    <p class="sider" style="border: 10px solid rgb(235, 166, 63);"><b>Acrylic</b></p>
+    <!--product grid-->
+    <div class="row">
+      <div class="column"><!--1-->
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p9.jpg" alt="acrylic"width="220px" height="210px">
+          </div>
+            <h4>Pidilite Fevicryl Acrylic Colours Sunflower Kit (10 Colors x 15 ml)</h4>
+            <p><a href="https://www.amazon.in/Fevicryl-Acrylic-colors-Sunflower-Shades/dp/B00LXTFMRS/ref=sr_1_1_sspa?crid=3T37CR66YQRYF&keywords=acrylic+colors&qid=1654450057&refinements=p_36%3A10000-80000&rnid=3444809031&sprefix=acrylic+colours+%2Caps%2C309&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzVTlVUUdEVTdOUkJTJmVuY3J5cHRlZElkPUEwNDAzNzI1MktYVjdGVkZTNEJVTSZlbmNyeXB0ZWRBZElkPUEwMjY2Mzk3MU5BSE9UUTRRUlNEUSZ3aWRnZXROYW1lPXNwX2F0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU="><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
+      </div>
+      <!--2-->
+      <div class="column"><!--1-->
+        <div class="card">
+          <div class="product-image">
+            <img src=../static/img/p10.jpg" alt="acrylic"width="250px" height="190px">
+          </div>
+            <h4>Camel Camlin Kokuyo Acrylic Color Box - 9ml Tubes, 12 Shades</h4>
+            <p><a href="https://www.amazon.in/Camel-Camlin-Kokuyo-Acrylic-Color/dp/B00KIE28X0/ref=sr_1_6?crid=3T37CR66YQRYF&keywords=acrylic+colors&qid=1654450057&refinements=p_36%3A10000-80000&rnid=3444809031&sprefix=acrylic+colours+%2Caps%2C309&sr=8-6"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
+      </div>
+    
+     
+      <!--3-->
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p11.jpg" alt="acrylic"width="240px" height="210px">
+          </div>
+            <h4>Camel Fabrica Acrylic Ultra Pearl & Metallic Colour Set -Pack of 20</h4>
+            <p><a href="https://www.amazon.in/Camel-Fabrica-Acrylic-Metallic-Colour/dp/B07N2577XM/ref=sr_1_8?crid=3T37CR66YQRYF&keywords=acrylic%2Bcolors&qid=1654450057&refinements=p_36%3A10000-80000&rnid=3444809031&sprefix=acrylic%2Bcolours%2B%2Caps%2C309&sr=8-8&th=1"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
+      </div>
+      
+      <!--4-->
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p12.jpg" alt="acrylic"width="260px" height="190px">
+          </div>
+            <h4>Camel Acrylic Color Box - 20ml Tubes, 12 Shades</h4>
+            <p><a href="https://www.amazon.in/Camel-Camlin-Acrylic-Color-Box/dp/B00KIEGN4A/ref=sr_1_11?crid=3T37CR66YQRYF&keywords=acrylic+colors&qid=1654450057&refinements=p_36%3A10000-80000&rnid=3444809031&sprefix=acrylic+colours+%2Caps%2C309&sr=8-11"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
+      </div>
+     
+      <!--5-->
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p13.jpg" alt="acrylic"width="220px" height="170px">
+          </div>
+            <h4>Flash Acrylic Paint Set |16 Colors | 50 ml, 1.7 fl oz Each </h4>
+            <p><a href="https://www.amazon.in/Flash-Acrylic-Colour-Set-Colours/dp/B079WSXFHR/ref=sr_1_12?crid=3T37CR66YQRYF&keywords=acrylic+colors&qid=1654450057&refinements=p_36%3A10000-80000&rnid=3444809031&sprefix=acrylic+colours+%2Caps%2C309&sr=8-12"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
+      </div>
+      
+      <!--6-->
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p14.jpg" alt="acrylic"width="240px" height="180px">
+          </div>
+            <h4>BRUSTRO Artists ’ Acrylic Colour Set of 12 Colours X 12ML Tubes</h4>
+            <p><a href="https://www.amazon.in/Brustro-Artists-Acrylic-Colour-Colours/dp/B089G3FJWG/ref=sr_1_15?crid=3T37CR66YQRYF&keywords=acrylic%2Bcolors&qid=1654450057&refinements=p_36%3A10000-80000&rnid=3444809031&sprefix=acrylic%2Bcolours%2B%2Caps%2C309&sr=8-15&th=1"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
+      </div>
+      
+      <!--7-->
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p15.jpg" alt="acrylic"width="220px" height="190px">
+          </div>
+            <h4>Faber-Castell 379012 CS Acrylic Colours 9ML Set of 12</h4>
+            <p><a href="https://www.amazon.in/Faber-Castell-149012-Student-Acrylic-Colour/dp/B07HLCSNLN/ref=sr_1_19?crid=3T37CR66YQRYF&keywords=acrylic%2Bcolors&qid=1654450057&refinements=p_36%3A10000-80000&rnid=3444809031&sprefix=acrylic%2Bcolours%2B%2Caps%2C309&sr=8-19&th=1"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
+      </div>
+      
+      <!--8-->
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p16.jpg" alt="acrylic"width="250px" height="190px">
+          </div>
+            <h4>Flash Acrylic Paint Set|16 Colors|25 ml,0.8 fl oz Each</h4>
+            <p><a href="https://www.amazon.in/Flash-Acrylic-Paint-Colours-Finish/dp/B097DC29YP/ref=sr_1_20?crid=3T37CR66YQRYF&keywords=acrylic+colors&qid=1654450057&refinements=p_36%3A10000-80000&rnid=3444809031&sprefix=acrylic+colours+%2Caps%2C309&sr=8-20"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
+      </div>
+      <!--9-->
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p17.jpg" alt="acrylic"width="250px" height="190px">
+          </div>
+            <h4>Acrylic ColorTubes for Paint on Canvas|4 Flat Brushes|12 Colors</h4>
+            <p><a href="https://www.amazon.in/Pidilite-Fevicryl-Fine-Art-Professional/dp/B0924NVLX3/ref=sr_1_27?crid=3T37CR66YQRYF&keywords=acrylic+colors&qid=1654450057&refinements=p_36%3A10000-80000&rnid=3444809031&sprefix=acrylic+colours+%2Caps%2C309&sr=8-27"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
         </div>
       </div>
 
-      <div class="box">
-        <div class="boxInner">
-          <img src="../static/img/2.jpg" />
-          <div class="overlay">Gouache art</div>
+      <!--10-->
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p18.jpg" alt="acrylic"width="250px" height="190px">
+          </div>
+            <h4>Worison Acrylic Color Set of 12 Colors X 12ML Tubes</h4>
+            <p><a href="https://www.amazon.in/worison-Artists-Acrylic-Multicolour-Colors/dp/B098QS4WLW/ref=sr_1_35?crid=3T37CR66YQRYF&keywords=acrylic+colors&qid=1654450057&refinements=p_36%3A10000-80000&rnid=3444809031&sprefix=acrylic+colours+%2Caps%2C309&sr=8-35"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
+      </div>
+      <!--11-->
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p19.jpg" alt="acrylic"width="250px" height="150px">
+          </div>
+            <h4>Mont Marte Acrylic Paint - Set 12 Colors (Multicolor)</h4>
+            <p><a href="https://www.amazon.in/Mont-Marte-Acrylic-Paint-Colours/dp/B07B4B9LC4/ref=sr_1_56?crid=3T37CR66YQRYF&keywords=acrylic%2Bcolors&qid=1654450057&refinements=p_36%3A10000-80000&rnid=3444809031&smid=A3SP4U0EP0LW8B&sprefix=acrylic%2Bcolours%2B%2Caps%2C309&sr=8-56&th=1"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
+      </div>
+      <!--12-->
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p20.jpg" alt="acrylic"width="250px" height="190px">
+          </div>
+            <h4>BRUSTRO Acrylic Paint Set of 24, Multicolour 12ml Tubes</h4>
+            <p><a href="https://www.amazon.in/BRUSTRO-Artists-Acrylic-Colour-Colours/dp/B07QH6HG3Z/ref=sr_1_10?crid=3T37CR66YQRYF&keywords=acrylic%2Bcolors&qid=1654452460&refinements=p_36%3A10000-80000&rnid=3444809031&sprefix=acrylic%2Bcolours%2B%2Caps%2C309&sr=8-10&th=1"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
+      </div><!--end-->
+      <!--gouache-->
+      <!--sider-->
+    <p class="sider" style="border: 10px solid rgb(235, 166, 63);"><b>Gouache</b></p>
+    <!--product grid-->
+    <div class="row">
+      <div class="column"><!--1-->
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p21.webp" alt="gouache"width="220px" height="190px">
+          </div>
+            <h4>Flash Gouache Colors|25 Colors|25 ml,0.8 fl oz Each.</h4>
+            <p><a href="https://www.amazon.in/Flash-Gouache-Pigments-Professional-Painters/dp/B095N239ZL/ref=sr_1_2?crid=37KYT9RAW8VP1&keywords=gouache+paint+set&qid=1654452982&refinements=p_36%3A10000-80000&rnid=3444809031&sprefix=gouache%2Caps%2C395&sr=8-2"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
+      </div>
+      <!--2-->
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p22.jpg" alt="gouache"width="240px" height="200px">
+          </div>
+            <h4>Brustro Artists Gouache Colour Set of 12 Colours X 12ML Tubes.</h4>
+            <p><a href="https://www.amazon.in/Brustro-Artists-Gouache-Colour-Colours/dp/B09B3HP8ZX/ref=sr_1_3?crid=37KYT9RAW8VP1&keywords=gouache%2Bpaint%2Bset&qid=1654452982&refinements=p_36%3A10000-80000&rnid=3444809031&sprefix=gouache%2Caps%2C395&sr=8-3&th=1"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
+      </div>
+      <!--3-->
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p23.jpg" alt="gouache"width="220px" height="200px">
+          </div>
+            <h4>MONT MARTE Gouache Set - 12 Pieces, 12 ml Tubes </h4>
+            <p><a href="https://www.amazon.in/MONT-MARTE-Gouache-Set-Professionals/dp/B07L3CMW5R/ref=sr_1_4?crid=37KYT9RAW8VP1&keywords=gouache+paint+set&qid=1654452982&refinements=p_36%3A10000-80000&rnid=3444809031&sprefix=gouache%2Caps%2C395&sr=8-4"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
+      </div>
+      <!--4-->
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p24.jpg" alt="gouache"width="220px" height="210px">
+          </div>
+            <h4>Flash Metallic Gouache Color Set|25 Colors|25 ml,0.8 fl oz Each</h4>
+            <p><a href="https://www.amazon.in/Flash-Metallic-Pigments-Professional-Painters/dp/B099PKGX2D/ref=sr_1_6?crid=37KYT9RAW8VP1&keywords=gouache+paint+set&qid=1654452982&refinements=p_36%3A10000-80000&rnid=3444809031&sprefix=gouache%2Caps%2C395&sr=8-6"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
+      </div>
+      <!--5-->
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p25.jpg" alt="gouache"width="240px" height="190px">
+          </div>
+            <h4>Art Rangers Gouache 24x12ml &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
+            <p><a href="https://www.amazon.in/Acrylic-Colours-GOUACHE-TEMPERA-Painting/dp/B09NP2QRNN/ref=sr_1_10?crid=37KYT9RAW8VP1&keywords=gouache+paint+set&qid=1654452982&refinements=p_36%3A10000-80000&rnid=3444809031&sprefix=gouache%2Caps%2C395&sr=8-10"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
+      </div>
+      <!--6-->
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p26.jpg" alt="gouache"width="220px" height="190px">
+          </div>
+            <h4>Mont Marte Gouache Paints 18 Shades 12 ml Tubes</h4>
+            <p><a href="https://www.amazon.in/Mont-Marte-Gouache-Paints-Shades/dp/B08C7TZ895/ref=sr_1_15?crid=37KYT9RAW8VP1&keywords=gouache+paint+set&qid=1654453991&refinements=p_36%3A10000-80000&rnid=3444809031&sprefix=gouache%2Caps%2C395&sr=8-15"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
+      </div>
+      <!--7-->
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p27.jpg" alt="gouache"width="220px" height="190px">
+          </div>
+            <h4>Brustro Artists Gouache Colour Set of 24 Colours X 12ML Tubes.</h4>
+            <p><a href="https://www.amazon.in/BRUSTRO-Artists-Gouache-Colour-Colours/dp/B08BXPN13Q/ref=sr_1_11?crid=1046QID8DU178&keywords=gouache%2Bpaint%2Bset%2Bhimi&qid=1654453850&sprefix=gouache%2Bpaint%2Bset%2Bhimi%2Caps%2C274&sr=8-11&th=1"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
+      </div>
+      <!--8-->
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p28.jpg" alt="gouache"width="220px" height="190px">
+          </div>
+            <h4>Mont Marte Gouache 24pc x 12ml &nbsp;&nbsp</h4>
+            <p><a href="https://www.amazon.in/Mont-Marte-Gouache-24pc-12ml/dp/B08C7VXPJW/ref=sr_1_26?crid=1046QID8DU178&keywords=gouache+paint+set+himi&qid=1654453850&sprefix=gouache+paint+set+himi%2Caps%2C274&sr=8-26"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
+      </div><!--end-->
+      <!--postercolors-->
+      <!--sider-->
+    <p class="sider" style="border: 10px solid rgb(235, 166, 63);"><b>Poster colors</b></p>
+    <!--product grid-->
+    <div class="row">
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p29.jpg" alt="poster"width="230px" height="200px">
+          </div>
+            <h4>Camel Student Poster Color - 10ml each, 12 Shades</h4>
+            <p><a href="https://www.amazon.in/Camel-Student-Poster-Color-Shades/dp/B005IDLQG6/ref=sr_1_4?crid=2XWDR7DGE4G07&keywords=poster+colors+set&qid=1654454551&refinements=p_36%3A10000-80000&rnid=3444809031&sprefix=poster+colors%2Caps%2C297&sr=8-4"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
         </div>
       </div>
 
-      <div class="box">
-        <div class="boxInner">
-          <img src="../static/img/13.jpg" />
-          <div class="overlay">Doodle</div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p30.jpg" alt="poster"width="250px" height="190px">
+          </div>
+            <h4>Faber-Castell Poster Color Plastic Box - Pack of 15 (Assorted)</h4>
+            <p><a href="https://www.amazon.in/Faber-Castell-Poster-Color-Plastic-Box/dp/B073PTH7YS/ref=sr_1_5?crid=2XWDR7DGE4G07&keywords=poster+colors+set&qid=1654454551&refinements=p_36%3A10000-80000&rnid=3444809031&sprefix=poster+colors%2Caps%2C297&sr=8-5"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
         </div>
       </div>
 
-      <div class="box">
-        <div class="boxInner">
-          <img src="../static/img/4.jpg" />
-          <div class="overlay">Acrylic Wall Art</div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p31.jpg" alt="poster"width="250px" height="200px">
+          </div>
+            <h4>Camel Premium Poster Color - 15ml Each, 12 Shades</h4>
+            <p><a href="https://www.amazon.in/Camlin-Kokuyo-Premium-Poster-Color/dp/B00LY14PPK/ref=sr_1_9?crid=2XWDR7DGE4G07&keywords=poster+colors+set&qid=1654454551&refinements=p_36%3A10000-80000&rnid=3444809031&sprefix=poster+colors%2Caps%2C297&sr=8-9"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
         </div>
       </div>
 
-      <div class="box">
-        <div class="boxInner">
-          <img src="../static/img/5.jpg" />
-          <div class="overlay">Poloroid Art</div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p32.jpg" alt="poster"width="220px" height="190px">
+          </div>
+            <h4> DOMS Poster Colour, Pack of 2, Color 14 Shades</h4>
+            <p><a href="https://www.amazon.in/DOMS-Non-Toxic-Poster-Assorted-DM7118P2/dp/B095132VZT/ref=sr_1_6?crid=2XWDR7DGE4G07&keywords=poster+colors+set&qid=1654454551&refinements=p_36%3A10000-80000&rnid=3444809031&sprefix=poster+colors%2Caps%2C297&sr=8-6"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
         </div>
       </div>
 
-      <div class="box">
-        <div class="boxInner">
-          <img src="../static/img/6.jpg" />
-          <div class="overlay">WaterColor Mermaid</div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p33.jpg" alt="poster"width="250px" height="190px">
+          </div>
+            <h4>Faber-Castell Poster Color - Pack of 12 (Assorted)</h4>
+            <p><a href="https://www.amazon.in/Faber-Castell-Poster-Color-Tin-Box/dp/B073PTH7YT/ref=sr_1_11?crid=2XWDR7DGE4G07&keywords=poster%2Bcolors%2Bset&qid=1654454551&refinements=p_36%3A10000-80000&rnid=3444809031&sprefix=poster%2Bcolors%2Caps%2C297&sr=8-11&th=1"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
         </div>
       </div>
 
-      <div class="box">
-        <div class="boxInner">
-          <img src="../static/img/7.jpg" />
-          <div class="overlay">Mandala Art</div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p34.jpg" alt="poster"width="260px" height="190px">
+          </div>
+            <h4>Camel Premium Poster Colour with Brush - 20 Shades</h4>
+            <p><a href="https://www.amazon.in/Camel-Premium-Poster-Colour-Brush/dp/B075XS9NZN/ref=sr_1_12?crid=2XWDR7DGE4G07&keywords=poster+colors+set&qid=1654454551&refinements=p_36%3A10000-80000&rnid=3444809031&sprefix=poster+colors%2Caps%2C297&sr=8-12"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
         </div>
       </div>
 
-      <div class="box">
-        <div class="boxInner">
-          <img src="../static/img/8.jpg" />
-          <div class="overlay">Madubhani Art</div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p35.jpg" alt="poster"width="220px" height="190px">
+          </div>
+            <h4>DOMS Poster Colours - 12 Shades, Multicolor (DM7115)</h4>
+            <p><a href="https://www.amazon.in/doms-Poster-Colours-12-Shades/dp/B079DRKTLS/ref=sr_1_13?crid=2XWDR7DGE4G07&keywords=poster+colors+set&qid=1654454551&refinements=p_36%3A10000-80000&rnid=3444809031&sprefix=poster+colors%2Caps%2C297&sr=8-13"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
         </div>
       </div>
 
-      <div class="box">
-        <div class="boxInner">
-          <img src="../static/img/9.jpg" />
-          <div class="overlay">Calligraphy</div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p36.jpg" alt="poster"width="240px" height="190px">
+          </div>
+            <h4>Camlin Kokuyo Pack of 18,10ml each,1 palette,1 brush</h4>
+            <p><a href="https://www.amazon.in/Camel-Students-Poster-Colour-Set/dp/B072L1YBCJ/ref=sr_1_10?crid=2XWDR7DGE4G07&keywords=poster+colors+set&qid=1654454551&refinements=p_36%3A10000-80000&rnid=3444809031&sprefix=poster+colors%2Caps%2C297&sr=8-10"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
+      </div><!--end-->
+      <!--oilcolors-->
+      <!--sider-->
+    <p class="sider" style="border: 10px solid rgb(235, 166, 63);"><b>Oil Colors</b></p>
+    <!--product grid-->
+    <div class="row">
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p37.jpg" alt="oilcolors"width="230px" height="200px">
+          </div>
+            <h4>Worison Oil Color Box - 12ml Tubes, 12 Shades</h4>
+            <p><a href="https://www.amazon.in/Worison-Artists-Oil-Color-Box/dp/B098SXXSCP/ref=sr_1_19?crid=15LRTJ8XNQGG5&keywords=oil+colors+set&qid=1654455880&refinements=p_36%3A10000-100000&rnid=3444809031&sprefix=oil+%2Caps%2C311&sr=8-19"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
         </div>
       </div>
-      <div class="box">
-        <div class="boxInner">
-          <img src="../static/img/10.jpg" />
-          <div class="overlay">Pencil Art</div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p38.jpg" alt="oilcolors"width="230px" height="180px">
+          </div>
+            <h4>Camel Artist's Oil Color Box - 9ml Tubes, 12 Shades</h4>
+            <p><a href="https://www.amazon.in/Camlin-Kokuyo-Artists-Oil-Color/dp/B00KIM963C/ref=sr_1_9?crid=15LRTJ8XNQGG5&keywords=oil+colors+set&qid=1654455880&refinements=p_36%3A10000-100000&rnid=3444809031&sprefix=oil+%2Caps%2C311&sr=8-9"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
         </div>
       </div>
-      <div class="box">
-        <div class="boxInner">
-          <img src="../static/img/11.jpg" />
-          <div class="overlay">Floral Art</div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p39.jpg" alt="oilcolors"width="230px" height="180px">
+          </div>
+            <h4>Camel Artist's Oil Color Box - 20ml Tubes, 12 Shades</h4>
+            <p><a href="https://www.amazon.in/Camlin-Kokuyo-Artists-Oil-Color/dp/B00KIM147S/ref=sr_1_6?crid=15LRTJ8XNQGG5&keywords=oil%2Bcolors%2Bset&qid=1654455880&refinements=p_36%3A10000-100000&rnid=3444809031&sprefix=oil%2B%2Caps%2C311&sr=8-6&th=1"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p40.jpg" alt="oilcolors"width="230px" height="200px">
+          </div>
+            <h4>Itsy Bitsy Mont Marte 12 Pieces, 12ml Each Oil Paint</h4>
+            <p><a href="https://www.amazon.in/Mont-Marte-Oil-Paints-12pc/dp/B07TV5NQQ6/ref=sr_1_4_sspa?crid=15LRTJ8XNQGG5&keywords=oil+colors+set&qid=1654455880&refinements=p_36%3A10000-100000&rnid=3444809031&sprefix=oil+%2Caps%2C311&sr=8-4-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzQ1I5UDZCRUUxMkJHJmVuY3J5cHRlZElkPUEwOTkyNjQ0MzVFSjVaSTRMQUwyNiZlbmNyeXB0ZWRBZElkPUEwOTc3ODMxMURVUlZHVVY3UDdOMSZ3aWRnZXROYW1lPXNwX2F0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU="><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p41.jpg" alt="oilcolors"width="230px" height="200px">
+          </div>
+            <h4>Faber Castell 24 Oil Colours| 9ml each</h4>
+            <p><a href=""><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p42.jpg" alt="oilcolors"width="230px" height="190px">
+          </div>
+            <h4>Daler-Rowney Simply Oil colors (24 Multicolor Tubes x 12ml)</h4>
+            <p><a href="https://www.amazon.in/dp/B004BF4RJK/ref=sspa_dk_detail_4?pd_rd_i=B00Q6M69DS&pd_rd_w=dvobM&content-id=amzn1.sym.5210e5d3-37e0-44be-93e0-eb50dad0d2ca&pf_rd_p=5210e5d3-37e0-44be-93e0-eb50dad0d2ca&pf_rd_r=B5PHVWZETHJNXR28XDDN&pd_rd_wg=9doze&pd_rd_r=a2e8c03d-6b4a-4def-8766-8965b8963d40&s=office&smid=A2HWG907B7FMH9&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEyREY1RlFLWlhVUzc0JmVuY3J5cHRlZElkPUEwNzI4NzE1MUtaSVU4NkE2VksxTyZlbmNyeXB0ZWRBZElkPUEwNjI2NzI5MUhIVVhDNUROVDAyUiZ3aWRnZXROYW1lPXNwX2RldGFpbCZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU&th=1"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p43.jpg" alt="oilcolors"width="230px" height="200px">
+          </div>
+            <h4>Ohuhu Oil Paint Set, 36 Oil-Based Colors, 12ml/0.42oz x 36 Tubes</h4>
+            <p><a href="https://www.amazon.in/Ohuhu-Oil-based-Colors-Artists-Painting/dp/B07YTVVNPG/ref=psdc_10743065031_t1_B004BF4RJK?th=1"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p44.jpg" alt="oilcolors"width="230px" height="200px">
+          </div>
+            <h4>BRUSTRO Artists ’ Oil Colour Set of 18 Colours X 12ML Tubes</h4>
+            <p><a href="https://www.amazon.in/BRUSTRO-Artists-Colour-Colours-Tubes/dp/B08BXQ4XFH/ref=sr_1_8?crid=15LRTJ8XNQGG5&keywords=oil+colors+set&qid=1654455880&refinements=p_36%3A10000-100000&rnid=3444809031&sprefix=oil+%2Caps%2C311&sr=8-8"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
+      </div><!--end-->
+       <!--glasscolors-->
+      <!--sider-->
+    <p class="sider" style="border: 10px solid rgb(235, 166, 63);"><b>Glass Colors</b></p>
+    <!--product grid-->
+    <div class="row">
+      <div class="column"><!--1-->
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p45.jpg" alt="glass"width="220px" height="190px">
+          </div>
+            <h4>Pidilite Fevicryl Water Based GlassColors(115ml,10 Assorted)</h4>
+            <p><a href="https://www.amazon.in/Pidilite-Fevicryl-Water-Assorted-Colours/dp/B097T5M1NT/ref=sr_1_54?crid=JTEFY968IIPW&keywords=glass+painting+set&qid=1654458370&refinements=p_36%3A10000-80000&rnid=3444809031&sprefix=glass+painting+set%2Caps%2C256&sr=8-54"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
+      </div>
+      <div class="column"><!--1-->
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p46.jpg" alt="glass"width="220px" height="190px">
+          </div>
+            <h4>Funskool Glass Painting, Art And Craft Kit</h4>
+            <p><a href="https://www.amazon.in/Funskool-9609200-Funskool-Handycrafts-Glass-Painting/dp/B00ELBA5S6/ref=sr_1_6?crid=JTEFY968IIPW&keywords=glass+painting+set&qid=1654458423&refinements=p_36%3A10000-80000&rnid=3444809031&sprefix=glass+painting+set%2Caps%2C256&sr=8-6"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
         </div>
       </div>
 
-      <div class="box">
-        <div class="boxInner">
-          <img src="../static/img/12.jpg" />
-          <div class="overlay">BlackInk Art</div>
+      <div class="column"><!--1-->
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p47.jpg" alt="glass"width="250px" height="190px">
+          </div>
+            <h4>Camlin Glass Colour 5 Shades 20 ml (Pack of 5)</h4>
+            <p><a href="https://www.amazon.in/Camlin-Glass-Colour-Outliner-Solvent/dp/B08FBFQZ8B/ref=sr_1_32?crid=JTEFY968IIPW&keywords=glass+painting+set&qid=1654458423&refinements=p_36%3A10000-80000&rnid=3444809031&sprefix=glass+painting+set%2Caps%2C256&sr=8-32"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
         </div>
       </div>
 
-      <div class="box">
-        <div class="boxInner">
-          <img src="../static/img/14.jpeg" />
-          <div class="overlay">Moonscape Canvas</div>
+      <div class="column"><!--1-->
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p48.jpg" alt="glass"width="260px" height="190px">
+          </div>
+            <h4>Camel Glass Colour Water Based - No Medium Required (Red)</h4>
+            <p><a href="https://www.amazon.in/Camel-Glass-Colour-Medium-Required/dp/B07T4N4ZWN/ref=sr_1_29?crid=263RB9DLMXPIK&keywords=glass+liners+for+glass+painting+fevicryl&qid=1654458513&sprefix=glass+line%2Caps%2C525&sr=8-29"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
         </div>
       </div>
 
-      <div class="box">
-        <div class="boxInner">
-          <img src="../static/img/19.jpeg" height="295px" ; />
-          <div class="overlay">Mini Landscapes</div>
+      <div class="column"><!--1-->
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p49.jpg" alt="glass"width="220px" height="170px">
+          </div>
+            <h4>Camlin Anmol Art and Frames Camel Glass Liner (Gold, Black, Silver, 20 ml Each) - Pack of 3</h4>
+            <p><a href="https://www.amazon.in/Camlin-Anmol-Frames-Camel-Silver/dp/B07SGY5V8R/ref=sr_1_51?crid=JTEFY968IIPW&keywords=glass+painting+set&qid=1654458370&refinements=p_36%3A10000-80000&rnid=3444809031&sprefix=glass+painting+set%2Caps%2C256&sr=8-51"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
         </div>
       </div>
 
-      <div class="box">
-        <div class="boxInner">
-          <img src="../static/img/16.jpg" />
-          <div class="overlay">Zentangle Art</div>
+      <div class="column"><!--1-->
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p50.jpg" alt="glass"width="220px" height="190px">
+          </div>
+            <h4>PRANSUNITA Kit|A4 Size Acrylic Glass Sheet|Glass Color 10ml Each 6 |GlassLiner</h4>
+            <p><a href="https://www.amazon.in/Camlin-Kokuyo-Solvent-Based-Glass/dp/B00LY1FVVC/ref=sr_1_27?crid=JTEFY968IIPW&keywords=glass+painting+set&qid=1654458423&refinements=p_36%3A10000-80000&rnid=3444809031&sprefix=glass+painting+set%2Caps%2C256&sr=8-27"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
         </div>
       </div>
 
-      <div class="box">
-        <div class="boxInner">
-          <img src="../static/img/18.jpg" />
-          <div class="overlay">Unicorn Sketch</div>
+      <div class="column"><!--1-->
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p51.jpg" alt="glass"width="220px" height="190px">
+          </div>
+            <h4>DEZIINE® Glass Liner Colors 3D Glass Color 21ml x 1 Tubes With Black Color (Pack Of 1)</h4>
+            <p><a href="https://www.amazon.in/DEZIINE%C2%AE-Glass-Liner-Colors-Color/dp/B09C8KDXY1/ref=sr_1_10?crid=263RB9DLMXPIK&keywords=glass+liners+for+glass+painting+fevicryl&qid=1654458513&sprefix=glass+line%2Caps%2C525&sr=8-10"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
         </div>
       </div>
-    </div>
 
-    <footer>
-      <div class="container3">
-        <div style="margin-left: 100px"><p>Show Us Your Art On</p></div>
-        <div class="footer_left">
-          <a href="#"
-            ><i
-              class="fa fa-instagram"
-              aria-hidden="true"
-              style="font-size: 23px"
-            ></i
-            >&nbsp;|&nbsp;</a
-          >&nbsp;
-          <a href="#"
-            ><i
-              class="fa fa-pinterest"
-              aria-hidden="true"
-              style="font-size: 23px"
-            ></i
-            >&nbsp;|&nbsp;</a
-          >&nbsp;
-          <a href="#"
-            ><i
-              class="fa fa-tumblr-square"
-              aria-hidden="true"
-              style="font-size: 23px"
-            ></i
-            >&nbsp;|&nbsp;</a
-          >&nbsp;
-          <a href="#"
-            ><i
-              class="fa fa-deviantart"
-              aria-hidden="true"
-              style="font-size: 23px"
-            ></i
-          ></a>
-        </div>
-        <div id="contact">
-          Contact Us:9804560329 | Email Us: artamour@gmail.com
+      <div class="column"><!--1-->
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/p52.jpg" alt="glass"width="220px" height="190px">
+          </div>
+            <h4>DEZIINE® Glass Liner Colors 3D Glass Color 21ml x 1 Tubes With Gold Color (Pack Of 1)</h4>
+            <p><a href="https://www.amazon.in/DEZIINE%C2%AE-Glass-Liner-Colors-Color/dp/B09C8HTGYB/ref=pb_allspark_purchase_sims_desktop_sccl_4_5/258-4231916-0298828?pd_rd_w=zOcEo&content-id=amzn1.sym.a4543507-b579-4aa3-8a29-824b6607c4d8&pf_rd_p=a4543507-b579-4aa3-8a29-824b6607c4d8&pf_rd_r=86JWN317RE4VNK1A3QF5&pd_rd_wg=foBCq&pd_rd_r=489fd12e-1a19-4a9e-bfcf-a1bd5934eeb6&pd_rd_i=B09C8HTGYB&psc=1"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
         </div>
       </div>
-    </footer>
-  </body>
-</html>
+    </body>
+  </html>

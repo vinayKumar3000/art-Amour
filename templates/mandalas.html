@@ -177,7 +177,7 @@ body.active .wrapper .section{
                         <i class="fas fa-bars"></i>
                     </a>
                     <a href="{{ url_for('index') }}" style="position:relative; left:900px;">
-                        <i class="fa-solid fa-feather-pointed fa-sm"></i>
+                        <i class="fa fa-snowflake-o"></i>
                     </a>
                 </div>
             </div>
@@ -204,42 +204,32 @@ body.active .wrapper .section{
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{ url_for('zentangle') }}">
                         <span class="icon"><i class="fa-solid fa-palette"></i></i></span>
-                        <span class="item">People</span>
+                        <span class="item"><b>Zentangles</b></span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <span class="icon"><i class="fa-solid fa-palette"></i></i></span>
-                        <span class="item">Perfomance</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
+                    <a href="{{ url_for('doodle') }}">
                         <span class="icon"><i class="fa-solid fa-palette"></i></span>
-                        <span class="item">Development</span>
+                        <span class="item"><b>Cartoon Doodles</b></span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{ url_for('painting_brushes') }}">
                         <span class="icon"><i class="fa-solid fa-palette"></i></span>
-                        <span class="item">Reports</span>
+                        <span class="item"><b>Painting Brushes</b></span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{ url_for('materials') }}">
                         <span class="icon"><i class="fa-solid fa-palette"></i></span>
-                        <span class="item">Admin</span>
+                        <span class="item"><b>Materials</b></span>
                     </a>
                 </li>
-                <li>
-                    <a href="#">
-                        <span class="icon"><i class="fa-solid fa-palette"></i></span>
-                        <span class="item">Settings</span>
-                    </a>
-                </li>
+           
             </ul>
+      
         </div>
         
     </div>

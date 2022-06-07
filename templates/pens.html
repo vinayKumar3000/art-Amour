@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="A Beginner's Guide to the Artists" />
+    <meta
+      name="keywords"
+      content="color palette generator,artists e-learning,art store,art blogs,art website"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <title>Art Amour</title>
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Passion+One);
+      @import url(https://fonts.googleapis.com/css?family=Chewy);
+      body {
+        font: 15px/1.5 Arial, Helvetica, sans-serif;
+        padding: 0;
+        margin: 0;
+        background: color #f4f4f4;
+      }
+      /*global*/
+      .container {
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+      }
+      /*header*/
+      header {
+        background: linear-gradient(
+          90deg,
+          rgba(131, 58, 180, 1) 0%,
+          rgba(253, 29, 158, 1) 50%,
+          rgba(252, 176, 69, 1) 100%
+        );
+        color: black;
+        padding-top: 5px;
+        min-height: 20px;
+      }
+      header a {
+        color: white;
+        text-decoration: none;
+        text-transform: none;
+        font-size: 20px;
+        font-family: "Passion One";
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        padding: 10px;
+      }
+      .logo {
+        font-family: "Chewy";
+        display: flex;
+        color: #f4f4f4;
+        justify-content: space-between;
+      }
+      .left {
+        overflow: hidden;
+        float: left;
+        padding-top: 30px;
+      }
+      .right {
+        float: right;
+        overflow: hidden;
+        padding-top: 30px;
+        padding-left: 100spx;
+      }
+      /*A beginners guide to artists section*/
+      #section1 {
+        min-height: 450px;
+        background: url("homeimg6.jpg") no-repeat;
+        background-size: 100%;
+        text-align: center;
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0.7;
+      }
+      #section1 h1 {
+        margin-block-start: initial;
+        margin-top: 100px;
+        font-size: 50px;
+        text-align: center;
+        font-family: "Passion One";
+        color: black;
+      }
+      #section1 p {
+        text-align: center;
+        font-size: large;
+        width: 600px;
+        margin-left: 40px;
+      }
+      .explore {
+        background-color: red;
+        padding: 20px;
+        border: 0px;
+        border-radius: 10px;
+        font-size: large;
+        color: #f4f4f4;
+      }
+      .container3 {
+        display: flex;
+        justify-content: space-around;
+      }
+      .photo_gallery {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0;
+      }
+      .photo_gallery .photo_heading {
+        width: 50%;
+        padding-bottom: 10px;
+      }
+      .photo_gallery .photo_heading h3 {
+        font-size: 3em;
+        font-weight: bolder;
+        border-bottom: 3px solid #222;
+        opacity: 0.7;
+      }
+      .photo_gallery .photo_heading h3 span {
+        font-weight: 100;
+      }
+      .line {
+        background-color: rgb(235, 166, 63);
+      }
+      /*store cards*/
+      /* Container for flexboxes */
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      /* Create four equal columns */
+      .column {
+        flex: 20%;
+        padding: 10px;
+      }
+
+      /* On screens that are 992px wide or less, go from four columns to two columns */
+      @media screen and (max-width: 992px) {
+        .column {
+          flex: 40%;
+        }
+      }
+
+      /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 600px) {
+        .row {
+          flex-direction: column;
+        }
+      }
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 250px;
+        margin: auto;
+        text-align: center;
+        font-family: arial;
+        border: 10px solid white;
+        object-fit: cover;
+      }
+
+      .card button {
+        border: none;
+        outline: 0;
+        padding: 10px;
+        color: white;
+        background-color: rgb(84, 11, 133);
+        text-align: center;
+        cursor: pointer;
+        width: 60%;
+        font-size: 18px;
+        border-radius: 5px;
+      }
+
+      .card button:hover {
+        opacity: 0.7;
+      }
+      /*nav bar*/
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background: linear-gradient(
+          90deg,
+          rgba(131, 58, 180, 1) 0%,
+          rgba(253, 29, 158, 1) 50%,
+          rgba(252, 176, 69, 1) 100%
+        );
+      }
+
+      li {
+        float: left;
+      }
+
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+      }
+
+      li a:hover {
+        background-color: rgba(207, 163, 207, 0.968);
+      }
+      .sider {
+        margin-top: 10px;
+        padding: 0;
+        width: 100px;
+        height: 20px;
+        background-color: rgb(235, 166, 63);
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        color: #f4f4f4;
+      }
+      img {
+        object-fit: fill;
+      }
+      .product-image {
+        width: 200px;
+        height: 190px;
+        object-fit: fill;
+      }
+      h4 {
+        padding: 2px;
+        margin: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <div>
+            <h1>Art_Amour</h1>
+          </div>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <div class="left">
+            <a href="{{ url_for('upload') }}">ColorPalette</a>&nbsp;&nbsp;
+            <a href="{{ url_for('learn_blog') }}">Learn</a>&nbsp;&nbsp;
+            <a href="{{ url_for('store') }}">Store</a>&nbsp;&nbsp;
+          </div>
+        </div>
+        <nav class="right">
+          <a href="{{ url_for('index') }}"
+            ><i
+              class="fa fa-snowflake-o"
+              style="font-size: 24px"
+              aria-hidden="true"
+              style="font-size: 23px"
+            ></i
+          ></a>
+        </nav>
+      </div>
+    </header>
+    <section id="section1">
+      <div class="container2">
+        <h1>"Customize your Stationary with us."</h1>
+        <p>
+          <b
+            >It's a Dream world for every artist to fill their tables and rooms
+            with colorful phenominal arts. We recommend the best and affordable
+            products to the Beginner Artists. Hurry Up!! and buy the products
+            and start making your art and show us!!</b
+          >
+        </p>
+        <button class="explore">Explore Now!</button>
+      </div>
+    </section>
+    <!--nav bar-->
+    <ul>
+      <li><a class="active" href="{{ url_for('painting') }}">Paintings</a></li>
+      <li><a href="{{ url_for('brushes') }}">Brushes</a></li>
+      <li><a href="{{ url_for('palette') }}">Palette</a></li>
+      <li><a href="{{ url_for('art_paper') }}">Canvas/Paper</a></li>
+      <li><a href="{{ url_for('pens') }}">Pens</a></li>
+    </ul>
+    <!--sider-->
+    <p class="sider" style="border: 10px solid rgb(235, 166, 63)">
+      <b>Pens</b>
+    </p>
+    <!--product grid-->
+    <div class="row">
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/pen1.jpg"
+              alt="pens"
+              width="230px"
+              height="190px"
+            />
+          </div>
+          <h4>
+            Sakura Pigma Micron - Pigment Fineliner Pens -
+            01/03/05/08/Graphic/Brush - Wallet of 6 - Black Ink
+          </h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Sakura-Pigma-Micron-Pigment-Fineliner/dp/B081D1JWL2/ref=sr_1_16?crid=193H4L6IPBBKW&keywords=fine%2Bliner%2Bpens&qid=1654531176&sprefix=fine%2Bliner%2Bpen%2Caps%2C271&sr=8-16&th=1"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/pen2.jpg"
+              alt="pens"
+              width="100px"
+              height="190px"
+            />
+          </div>
+          <h4>
+            <br /><br />Faber Castell Pitt Artist Color Pen Set - Pack of 4, XS,
+            S, F, M
+          </h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Faber-Castell-Pitt-Artist-Color/dp/B003IGID52/ref=sr_1_15?crid=193H4L6IPBBKW&keywords=fine+liner+pens&qid=1654531176&sprefix=fine+liner+pen%2Caps%2C271&sr=8-15"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/pen3.jpg"
+              alt="pens"
+              width="230px"
+              height="190px"
+            />
+          </div>
+          <h4>
+            Uniball PIN-200 Fine Line Markers (0.05/0.03/0.1/0.3/0.5/0.8mm,
+            Black Body, Black Ink, Pack of 6), medium (UNMRP0.05-0.8CS6)
+          </h4>
+          <p>
+            <a
+              href="https://www.amazon.in/UNIBALL-DRAWING-PIGMENT-LINER-0-05mm/dp/B076QCC1SJ/ref=sr_1_18?crid=193H4L6IPBBKW&keywords=fine%2Bliner%2Bpens&qid=1654531176&sprefix=fine%2Bliner%2Bpen%2Caps%2C271&sr=8-18&th=1"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/pen4.jpg"
+              alt="pens"
+              width="230px"
+              height="190px"
+            />
+          </div>
+          <h4>
+            Artline Drawing Fineliner Pens, Drawing System, Set of 6 Pens (0.1
+            mm, 0.2 mm, 0.3 mm, 0.4 mm, 0.5 mm, 0.8 mm)
+          </h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Artline-Drawing-Fineliner-Pens-System/dp/B00E3JPAF4/ref=sr_1_28?crid=193H4L6IPBBKW&keywords=fine+liner+pens&qid=1654531176&sprefix=fine+liner+pen%2Caps%2C271&sr=8-28"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/pen5.jpg"
+              alt="pens"
+              width="230px"
+              height="190px"
+            />
+          </div>
+          <h4>
+            <br /><br /><br />Sakura Pigma Micron - Pigment Fineliners - Pack of
+            4-0.4mm - Black, Blue, Red, and Green
+          </h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Sakura-Pigma-Micron-Pigment-Fineliners/dp/B01M8JXRNR/ref=sr_1_39?crid=193H4L6IPBBKW&keywords=fine+liner+pens&qid=1654531176&sprefix=fine+liner+pen%2Caps%2C271&sr=8-39"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/pen6.jpg"
+              alt="pens"
+              width="230px"
+              height="190px"
+            />
+          </div>
+          <h4>
+            <br /><br />Inrali Set of 9 Black Micro-Pen Fineliner Ink Pens -
+            Waterproof Archival ink Micro Fine Point Liner Pen, Multiliner
+          </h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Inrali-Black-Micro-Pen-Fineliner-Pens/dp/B09G2Z9TZZ/ref=sr_1_4_sspa?crid=193H4L6IPBBKW&keywords=fine+liner+pens&qid=1654531176&sprefix=fine+liner+pen%2Caps%2C271&sr=8-4-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEyVkI5Q1pYNzhHRVdFJmVuY3J5cHRlZElkPUEwMjc0MTE0MjI1TFJOQUNWWTlTWCZlbmNyeXB0ZWRBZElkPUEwNTcxNjc3M1RYODZVOVZYWkhYRiZ3aWRnZXROYW1lPXNwX2F0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU="
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/pen7.jpg"
+              alt="pens"
+              width="230px"
+              height="200px"
+            />
+          </div>
+          <h4>
+            <br />Stic 25 Fineliner Free Mandala Book Doodle Fine Liner Point
+            0.5 mm Pens Set Assorted Art Markers Sketch Colours Micro tip
+            sketching doodling calligraphy
+          </h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Stic-Fineliner-sketching-calligraphy-highlighting/dp/B09W5J6775/ref=sr_1_1_sspa?crid=193H4L6IPBBKW&keywords=fine+liner+pens&qid=1654531176&sprefix=fine+liner+pen%2Caps%2C271&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEyVkI5Q1pYNzhHRVdFJmVuY3J5cHRlZElkPUEwMjc0MTE0MjI1TFJOQUNWWTlTWCZlbmNyeXB0ZWRBZElkPUEwMDI5NTQxOTI2Qk1PRjRYSEJHJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ=="
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/pen8.jpg"
+              alt="pens"
+              width="230px"
+              height="190px"
+            />
+          </div>
+          <h4>
+            THR3E STROKES Art Markers Dual Tips Coloring Brush Fineliner Color
+            Water Based Marker Pens Set for Calligraphy Drawing Sketching Bullet
+            Journal (BLACK, 12)
+          </h4>
+          <p>
+            <a
+              href="https://www.amazon.in/THR3E-STROKES-Fineliner-Calligraphy-Sketching/dp/B09DT91NM5/ref=sr_1_6?crid=2CQBEZMNIK6GG&keywords=black%2Bmarker%2Bpen%2Bfor%2Bdrawing&qid=1654531315&sprefix=black%2Bmarker%2Caps%2C365&sr=8-6&th=1"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/pen9.jpg"
+              alt="pens"
+              width="230px"
+              height="190px"
+            />
+          </div>
+          <h4>
+            Levin Dual Tip Brush Marker Pens Artistic Watercolour 24, Brush Tip
+            with Fine liner 0.4mm and Markers Pen with 1-2 mm tip for Writing
+            Drawing Coloring
+          </h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Levin-Artistic-Watercolour-Markers-Coloring/dp/B09MB48SKX/ref=sr_1_42?crid=193H4L6IPBBKW&keywords=fine+liner+pens&qid=1654531176&sprefix=fine+liner+pen%2Caps%2C271&sr=8-42"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/pen10.jpg"
+              alt="pens"
+              width="230px"
+              height="190px"
+            />
+          </div>
+          <h4><br /><br /><br />Camlin Brush Pen 12 Shades(Multicolor)</h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Camlin-Kokuyo-Brush-Shades-Multicolor/dp/B01N9CXEM2/ref=sr_1_7?crid=2HZ4R3NDL896U&keywords=brush+pens&qid=1654531356&sprefix=brush+pen%2Caps%2C288&sr=8-7"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/pen11.jpg"
+              alt="pens"
+              width="230px"
+              height="190px"
+            />
+          </div>
+          <h4>
+            Pathos India 36 dual tip marker pens watercolor brush pen tip Fine
+            and Brush Tip Colored Pens for Coloring,Art,Sketching,Bullet
+            Journal,Coloring Book,Drawing
+          </h4>
+          <p>
+            <a
+              href="https://www.amazon.in/watercolor-brush-Colored-Coloring-Sketching/dp/B09BLHX18S/ref=sr_1_16?crid=2HZ4R3NDL896U&keywords=brush+pens&qid=1654531356&sprefix=brush+pen%2Caps%2C288&sr=8-16"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/pen12.jpg"
+              alt="pens"
+              width="230px"
+              height="190px"
+            />
+          </div>
+          <h4>
+            Pathos India 10 Pcs Micron Pigment liner Pens Black Set for mandala
+            art,Scrapbooking, Technical Drawing, Manga Basic Set
+          </h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Pigment-Illustration-Documents-Scrapbooking-Technical/dp/B08JQKLD49/ref=sr_1_6?crid=3GZGWPTBNM3U4&keywords=mandala+pens+set&qid=1654532524&s=office&sprefix=mandala+pens+se%2Coffice-products%2C272&sr=1-6"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

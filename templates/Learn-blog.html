@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="https://kit.fontawesome.com/faa3ecd5db.js" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -127,6 +128,8 @@ body.active .wrapper .section{
     font-size:50px;
     background: -webkit-linear-gradient(92deg, transparent 0%, rgba(48,6,59,0.9) 88%, #7d155b 100%),
             -webkit-linear-gradient(173deg, #d93232 0%, #c0a1e2 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 p{
@@ -152,11 +155,11 @@ p{
             <div class="top_navbar">
                 <div class="hamburger">
                     <a href="#">
-                        <i class="fas fa-bars"></i>
+                        <i class="fa fa-bars"></i>
                     </a>
         
                     <a href="{{ url_for('index') }}" style="position:relative; left:900px;">
-                        <i class="fa-solid fa-feather-pointed fa-sm"></i>
+                        <i class="fa fa-snowflake-o"></i>
                     </a>
                 </div>
                    
@@ -185,43 +188,33 @@ p{
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{ url_for('zentangle') }}">
                         <span class="icon"><i class="fa-solid fa-palette"></i></i></span>
-                        <span class="item">People</span>
+                        <span class="item"><b>Zentangles</b></span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <span class="icon"><i class="fa-solid fa-palette"></i></i></span>
-                        <span class="item">Perfomance</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
+                    <a href="{{ url_for('doodle') }}">
                         <span class="icon"><i class="fa-solid fa-palette"></i></span>
-                        <span class="item">Development</span>
+                        <span class="item"><b>Cartoon Doodles</b></span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{ url_for('painting_brushes') }}">
                         <span class="icon"><i class="fa-solid fa-palette"></i></span>
-                        <span class="item">Reports</span>
+                        <span class="item"><b>Painting Brushes</b></span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{ url_for('materials') }}">
                         <span class="icon"><i class="fa-solid fa-palette"></i></span>
-                        <span class="item">Admin</span>
+                        <span class="item"><b>Materials</b></span>
                     </a>
                 </li>
-                <li>
-                    <a href="#">
-                        <span class="icon"><i class="fa-solid fa-palette"></i></span>
-                        <span class="item">Settings</span>
-                    </a>
-                </li>
+           
             </ul>
-        </div>
+             
+              </div>
         
     </div>
   <script>

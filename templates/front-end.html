@@ -47,6 +47,9 @@
         text-transform: none;
         font-size: 20px;
         font-family: "Passion One";
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        padding: 10px;
       }
       .logo {
         font-family: "Chewy";
@@ -115,6 +118,7 @@
         font-family: "Passion One";
         margin-top: 3px;
         margin-bottom: 10px;
+        text-transform: uppercase;
       }
       .footer_left {
         float: left;
@@ -128,6 +132,7 @@
         font-family: "Passion One";
         margin-top: 3px;
         margin-bottom: 10px;
+        text-transform: uppercase;
       }
       .container3 {
         display: flex;
@@ -242,9 +247,9 @@
           </div>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <div class="left">
-            <a href="{{ url_for('upload') }}">ColorPalette |</a>&nbsp;
-            <a href="{{ url_for('learn_blog') }}">Learn |</a>&nbsp;
-            <a href="#">Store |</a>&nbsp; <a href="#">Updates</a>&nbsp;
+            <a href="{{ url_for('upload') }}">ColorPalette </a>&nbsp;&nbsp;
+            <a href="{{ url_for('learn_blog') }}">Learn </a>&nbsp;&nbsp;
+            <a href="{{ url_for('store') }}">Store </a>&nbsp;&nbsp;
           </div>
         </div>
 
@@ -253,7 +258,7 @@
           <i
             class="fa fa-user-circle-o fa-5x"
             aria-hidden="true"
-            style="font-size: 23px"
+            style="font-size: 23px; color: white"
           >
             {{username}}</i
           >&nbsp;
@@ -399,41 +404,31 @@
       <div class="container3">
         <div style="margin-left: 100px"><p>Show Us Your Art On</p></div>
         <div class="footer_left">
-          <a href="#"
+          <a href="https://instagram.com/a.rt_a.mour?igshid=YmMyMTA2M2Y="
             ><i
-              class="fa fa-instagram"
+              class="fa fa-instagram fa-lg"
               aria-hidden="true"
-              style="font-size: 23px"
+              style="padding-right: 10px"
             ></i
-            >&nbsp;|&nbsp;</a
-          >&nbsp;
-          <a href="#"
-            ><i
-              class="fa fa-pinterest"
-              aria-hidden="true"
-              style="font-size: 23px"
-            ></i
-            >&nbsp;|&nbsp;</a
+            >&nbsp;&nbsp;</a
           >&nbsp;
           <a href="#"
             ><i
               class="fa fa-tumblr-square"
               aria-hidden="true"
-              style="font-size: 23px"
+              style="font-size: 25px; padding-right: 10px"
             ></i
-            >&nbsp;|&nbsp;</a
+            >&nbsp;&nbsp;</a
           >&nbsp;
           <a href="#"
             ><i
               class="fa fa-deviantart"
               aria-hidden="true"
-              style="font-size: 23px"
+              style="font-size: 25px; padding-right: 10px"
             ></i
           ></a>
         </div>
-        <div id="contact">
-          Contact Us:9804560329 | Email Us: artamour@gmail.com
-        </div>
+        <div id="contact">connect Us: artamour@gmail.com</div>
       </div>
     </footer>
   </body>

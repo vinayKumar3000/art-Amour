@@ -3,18 +3,77 @@
   <head>
     <title>Your Machine Learning App</title>
     <style>
+      @import url(https://fonts.googleapis.com/css?family=Passion+One);
+      @import url(https://fonts.googleapis.com/css?family=Chewy);
       body {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: azure;
         flex-direction: column;
+        margin: 0;
       }
+      .sec1 {
+        font-family: "chewy";
+        font-size: 23px;
+        word-spacing: 2px;
+      }
+      .container {
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+      }
+      header {
+        width: 100%;
+        background: linear-gradient(
+          90deg,
+          rgba(131, 58, 180, 1) 0%,
+          rgba(253, 29, 158, 1) 50%,
+          rgba(252, 176, 69, 1) 100%
+        );
+        color: black;
+        padding-top: 5px;
+        min-height: 20px;
+      }
+      header a {
+        color: white;
+        text-decoration: none;
+        text-transform: none;
+        font-size: 20px;
+        font-family: "Passion One";
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        padding: 10px;
+      }
+      .logo {
+        font-family: "Chewy";
+        display: flex;
+        color: #f4f4f4;
+        justify-content: space-between;
+      }
+      .left {
+        overflow: hidden;
+        float: left;
+        padding-top: 30px;
+      }
+      .right {
+        float: right;
+        overflow: hidden;
+        padding-top: 30px;
+        padding-left: 100spx;
+      }
+
       form {
         display: flex;
         justify-content: center;
         align-items: center;
       }
+
+      .img-upload {
+        align-self: flex-end;
+      }
+
       .top {
         display: flex;
         justify-content: center;
@@ -31,18 +90,40 @@
   </head>
 
   <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <div>
+            <h1>Art_Amour</h1>
+          </div>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <div class="left">
+            <a href="{{ url_for('upload') }}">ColorPalette </a>&nbsp;&nbsp;
+            <a href="{{ url_for('learn_blog') }}">Learn </a>&nbsp;&nbsp;
+            <a href="{{ url_for('store') }}">Store </a>&nbsp;&nbsp;
+          </div>
+        </div>
+
+        <nav class="right">
+          &nbsp;
+          <i
+            class="fa fa-user-circle-o fa-5x"
+            aria-hidden="true"
+            style="font-size: 23px; color: white"
+          >
+            {{username}}</i
+          >&nbsp;
+        </nav>
+      </div>
+    </header>
+
     <div class="top">
       <img
-        src="../static/img/10.jpg"
+        src="../static/img/sec1.jpeg"
         alt=""
-        style="
-          height: 400px;
-          width: 400px;
-          margin-right: 20px;
-          margin-top: 20px;
-        "
+        style="height: 400px; width: 60%; margin-right: 20px; margin-top: 20px"
       />
-      <h2>
+      <div class="sec1">
         Let's travel through the wonderful world of colors. Each color conceals
         a story.Colors is an element of art referring to reflected light. In
         works of art, artists use color to depict and describe the subject.
@@ -50,9 +131,8 @@
         portray mood, light, depth, and point of view in a work of art.In this
         page we will explore and play with the distinct colors.You can know the
         most dominent colors present in an image or art piece.
-      </h2>
+      </div>
     </div>
-    <h2>Upload your image</h2>
     <form
       name="form"
       method="POST"
@@ -60,8 +140,14 @@
       action="{{ url_for('upload') }}"
     >
       <input name="img" type="file" accept="image/*" />
-      <button type="submit" style="margin-right: 10px">Upload</button>
-      <img src="{{output }}" style="height: 400px; width: 400px" />
+      <button type="submit" style="margin-right: 10px; padding: 10px">
+        Upload
+      </button>
+      <img
+        class="img-upload"
+        src="{{output }}"
+        style="height: 400px; width: 60%"
+      />
     </form>
     <h1>Explore color combination</h1>
     <div class="bottom">

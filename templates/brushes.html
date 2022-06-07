@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="A Beginner's Guide to the Artists" />
+    <meta
+      name="keywords"
+      content="color palette generator,artists e-learning,art store,art blogs,art website"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <title>Art Amour</title>
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Passion+One);
+      @import url(https://fonts.googleapis.com/css?family=Chewy);
+      body {
+        font: 15px/1.5 Arial, Helvetica, sans-serif;
+        padding: 0;
+        margin: 0;
+        background: color #f4f4f4;
+      }
+      /*global*/
+      .container {
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+      }
+      /*header*/
+      header {
+        background: linear-gradient(
+          90deg,
+          rgba(131, 58, 180, 1) 0%,
+          rgba(253, 29, 158, 1) 50%,
+          rgba(252, 176, 69, 1) 100%
+        );
+        color: black;
+        padding-top: 5px;
+        min-height: 20px;
+      }
+      header a {
+        color: white;
+        text-decoration: none;
+        text-transform: none;
+        font-size: 20px;
+        font-family: "Passion One";
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        padding: 10px;
+      }
+      .logo {
+        font-family: "Chewy";
+        display: flex;
+        color: #f4f4f4;
+        justify-content: space-between;
+      }
+      .left {
+        overflow: hidden;
+        float: left;
+        padding-top: 30px;
+      }
+      .right {
+        float: right;
+        overflow: hidden;
+        padding-top: 30px;
+        padding-left: 100spx;
+      }
+      /*A beginners guide to artists section*/
+      #section1 {
+        min-height: 450px;
+        background: url("../static/img/homeimg6.jpg") no-repeat;
+        background-size: 100%;
+        text-align: center;
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0.7;
+      }
+      #section1 h1 {
+        margin-block-start: initial;
+        margin-top: 100px;
+        font-size: 50px;
+        text-align: center;
+        font-family: "Passion One";
+        color: black;
+      }
+      #section1 p {
+        text-align: center;
+        font-size: large;
+        width: 600px;
+        margin-left: 40px;
+      }
+      .explore {
+        background-color: red;
+        padding: 20px;
+        border: 0px;
+        border-radius: 10px;
+        font-size: large;
+        color: #f4f4f4;
+      }
+      .container3 {
+        display: flex;
+        justify-content: space-around;
+      }
+      .photo_gallery {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0;
+      }
+      .photo_gallery .photo_heading {
+        width: 50%;
+        padding-bottom: 10px;
+      }
+      .photo_gallery .photo_heading h3 {
+        font-size: 3em;
+        font-weight: bolder;
+        border-bottom: 3px solid #222;
+        opacity: 0.7;
+      }
+      .photo_gallery .photo_heading h3 span {
+        font-weight: 100;
+      }
+      .line {
+        background-color: rgb(235, 166, 63);
+      }
+      /*store cards*/
+      /* Container for flexboxes */
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      /* Create four equal columns */
+      .column {
+        flex: 20%;
+        padding: 10px;
+      }
+
+      /* On screens that are 992px wide or less, go from four columns to two columns */
+      @media screen and (max-width: 992px) {
+        .column {
+          flex: 40%;
+        }
+      }
+
+      /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 600px) {
+        .row {
+          flex-direction: column;
+        }
+      }
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 250px;
+        margin: auto;
+        text-align: center;
+        font-family: arial;
+        border: 10px solid white;
+        object-fit: cover;
+      }
+
+      .card button {
+        border: none;
+        outline: 0;
+        padding: 10px;
+        color: white;
+        background-color: rgb(84, 11, 133);
+        text-align: center;
+        cursor: pointer;
+        width: 60%;
+        font-size: 18px;
+        border-radius: 5px;
+      }
+
+      .card button:hover {
+        opacity: 0.7;
+      }
+      /*nav bar*/
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background: linear-gradient(
+          90deg,
+          rgba(131, 58, 180, 1) 0%,
+          rgba(253, 29, 158, 1) 50%,
+          rgba(252, 176, 69, 1) 100%
+        );
+      }
+
+      li {
+        float: left;
+      }
+
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+      }
+
+      li a:hover {
+        background-color: rgba(207, 163, 207, 0.968);
+      }
+      .sider {
+        margin-top: 10px;
+        padding: 0;
+        width: 300px;
+        height: 20px;
+        background-color: rgb(235, 166, 63);
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        color: #f4f4f4;
+      }
+      img {
+        object-fit: fill;
+      }
+      .product-image {
+        width: 200px;
+        height: 190px;
+        object-fit: fill;
+      }
+      h4 {
+        padding: 2px;
+        margin: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <div>
+            <h1>Art_Amour</h1>
+          </div>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <div class="left">
+            <a href="{{ url_for('upload') }}">ColorPalette</a>&nbsp;&nbsp;
+            <a href="{{ url_for('learn_blog') }}">Learn</a>&nbsp;&nbsp;
+            <a href="{{ url_for('store') }}">Store</a>&nbsp;&nbsp;
+          </div>
+        </div>
+
+        <nav class="right">
+          <a href="{{ url_for('index') }}"
+            ><i
+              class="fa fa-snowflake-o"
+              style="font-size: 24px"
+              aria-hidden="true"
+              style="font-size: 23px"
+            ></i
+          ></a>
+        </nav>
+      </div>
+    </header>
+    <section id="section1">
+      <div class="container2">
+        <h1>"Customize your Stationary with us."</h1>
+        <p>
+          <b
+            >It's a Dream world for every artist to fill their tables and rooms
+            with colorful phenominal arts. We recommend the best and affordable
+            products to the Beginner Artists. Hurry Up!! and buy the products
+            and start making your art and show us!!</b
+          >
+        </p>
+        <button class="explore">Explore Now!</button>
+      </div>
+    </section>
+    <!--nav bar-->
+    <ul>
+      <li><a class="active" href="{{ url_for('painting') }}">Paintings</a></li>
+      <li><a href="{{ url_for('brushes') }}">Brushes</a></li>
+      <li><a href="{{ url_for('palette') }}">Palette</a></li>
+      <li><a href="{{ url_for('art_paper') }}">Canvas/Paper</a></li>
+      <li><a href="{{ url_for('pens') }}">Pens</a></li>
+    </ul>
+    <!--sider-->
+    <p class="sider" style="border: 10px solid rgb(235, 166, 63)">
+      <b>Camlin Brushes</b>
+    </p>
+
+    <!--product grid-->
+    <div class="row">
+      <div class="column">
+        <!--1-->
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/b1.jpg"
+              alt="brushes"
+              width="260px"
+              height="220px"
+            />
+          </div>
+          <h4>Camlin Champ Flast Brush Set - Pack of 7 (Multicolor)</h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Camlin-Champ-Flast-Brush-Set/dp/B078FYHMTW/ref=sr_1_4?crid=2LXBEFCMCL2SX&keywords=painting+brushes&qid=1654498796&refinements=p_36%3A10000-100000%2Cp_89%3ABRUSTRO%7CCamel%7CCamlin%7CFaber-Castell%7CKABEER+ART%7Cdeziine&rnid=3837712031&s=kitchen&sprefix=painting+brushes%2Caps%2C360&sr=1-4"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/b2.jpg"
+              alt="brushes"
+              width="260px"
+              height="210px"
+            />
+          </div>
+          <h4>Camlin Champ Round Brush Set - Pack of 7 (Multicolor)</h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Camlin-Champ-Round-Brush-Set/dp/B078G29GK8/ref=sr_1_4?crid=G3MEZPFELE0W&keywords=camlin+painting+brushes&qid=1654499692&s=kitchen&sprefix=camlinp%2Ckitchen%2C283&sr=1-4"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/b3.jpg"
+              alt="brushes"
+              width="250px"
+              height="210px"
+            />
+          </div>
+          <h4>Camlin Champ Brush Set - Pack of 7 (Multicolor)</h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Camlin-Champ-Brush-Set-Multicolor/dp/B078GB3784/ref=sr_1_5?crid=G3MEZPFELE0W&keywords=camlin+painting+brushes&qid=1654499692&s=kitchen&sprefix=camlinp%2Ckitchen%2C283&sr=1-5"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/b4.jpg"
+              alt="brushes"
+              width="220px"
+              height="190px"
+            />
+          </div>
+          <h4>Camel Paint Brush Series 67 - Flat Synthetic Gold, Set of 7</h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Camlin-Kokuyo-Paint-Brush-Synthetic/dp/B00KIDCRVE/ref=sr_1_6?crid=G3MEZPFELE0W&keywords=camlin+painting+brushes&qid=1654499692&s=kitchen&sprefix=camlinp%2Ckitchen%2C283&sr=1-6"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/b5.jpg"
+              alt="brushes"
+              width="250px"
+              height="190px"
+            />
+          </div>
+          <h4>Camlin Kokuyo - Round & Flat Synthetic Gold,Set of 7</h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Camlin-Kokuyo-Paint-Brush-Synthetic/dp/B07NTQR8NV/ref=sr_1_8?crid=G3MEZPFELE0W&keywords=camlin+painting+brushes&qid=1654499692&s=kitchen&sprefix=camlinp%2Ckitchen%2C283&sr=1-8"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/b6.jpg"
+              alt="brushes"
+              width="250px"
+              height="210px"
+            />
+          </div>
+          <h4>Camlin Interchangeable Speciality Brushes – 8 Brushes</h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Camlin-Interchangeable-Speciality-Brushes/dp/B07D69KJ64/ref=sr_1_10?crid=G3MEZPFELE0W&keywords=camlin+painting+brushes&qid=1654499692&s=kitchen&sprefix=camlinp%2Ckitchen%2C283&sr=1-10"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/b7.jpg"
+              alt="brushes"
+              width="240px"
+              height="190px"
+            />
+          </div>
+          <h4>Camlin Kokuyo Synthetic Round Brush - Set of 4, Gold</h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Camlin-Kokuyo-Synthetic-Round-Brush/dp/B0751FRWH5/ref=sr_1_17?crid=G3MEZPFELE0W&keywords=camlin+painting+brushes&qid=1654499692&s=kitchen&sprefix=camlinp%2Ckitchen%2C283&sr=1-17"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/b8.jpg"
+              alt="brushes"
+              width="100px"
+              height="180px"
+            />
+          </div>
+          <h4>Camel Paint Brush Series 67 - Flat Synthetic Gold, Set of 4</h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Camlin-Kokuyo-Paint-Brush-Synthetic/dp/B00LY1BG9S/ref=sr_1_18?crid=G3MEZPFELE0W&keywords=camlin+painting+brushes&qid=1654499692&s=kitchen&sprefix=camlinp%2Ckitchen%2C283&sr=1-18"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--sider-->
+    <p class="sider" style="border: 10px solid rgb(235, 166, 63)">
+      <b>Faber-Castell</b>
+    </p>
+    <!--product grid-->
+    <div class="row">
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/b9.jpg"
+              alt="brushes"
+              width="240px"
+              height="190px"
+            />
+          </div>
+          <h4>Faber-Castell Paint Brush Set - Flat, Pack of 7 (Navy Blue)</h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Faber-Castell-Paint-Brush-Set-Flat/dp/B00LY29CK2/ref=sr_1_1?crid=2F8YZGVUAXKIQ&keywords=faber+castell+painting+brushes&qid=1654501278&s=kitchen&sprefix=faber+castel%2Ckitchen%2C272&sr=1-1"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/b10.jpg"
+              alt="brushes"
+              width="260px"
+              height="200px"
+            />
+          </div>
+          <h4>Faber-Castell Paint Brush Set - Round, Pack of 7 (Navy Blue)</h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Faber-Castell-Paint-Brush-Set-Round/dp/B00LY299PK/ref=sr_1_3?crid=2F8YZGVUAXKIQ&keywords=faber+castell+painting+brushes&qid=1654501278&s=kitchen&sprefix=faber+castel%2Ckitchen%2C272&sr=1-3"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/b11.jpg"
+              alt="brushes"
+              width="240px"
+              height="200px"
+            />
+          </div>
+          <h4>Faber-Castell Paint Brush Set - Round, Pack of 7 (Navy Blue)</h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Faber-Castell-Synthetic-Assorted-Paint-Brush/dp/B00LY29AWM/ref=sr_1_4?crid=2F8YZGVUAXKIQ&keywords=faber+castell+painting+brushes&qid=1654501278&s=kitchen&sprefix=faber+castel%2Ckitchen%2C272&sr=1-4"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="column">
+        <!--1-->
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/b12.jpg"
+              alt="brushes"
+              width="250px"
+              height="200px"
+            />
+          </div>
+          <h4>Faber-Castell Paint Brush Set - Round, Pack of 4 (Navy Blue)</h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Faber-Castell-Paint-Brush-Set-Round/dp/B00LY29EDM/ref=sr_1_6?crid=2F8YZGVUAXKIQ&keywords=faber+castell+painting+brushes&qid=1654501278&s=kitchen&sprefix=faber+castel%2Ckitchen%2C272&sr=1-6"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="column">
+        <!--1-->
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/b13.jpg"
+              alt="brushes"
+              width="200px"
+              height="180px"
+            />
+          </div>
+          <h4>Faber-Castell-Synthetic Hair,Size-000(Pack of 10)</h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Faber-Castell-Paint-Brush-Synthetic/dp/B00PTWLXDC/ref=sr_1_9?crid=2F8YZGVUAXKIQ&keywords=faber+castell+painting+brushes&qid=1654501278&s=kitchen&sprefix=faber+castel%2Ckitchen%2C272&sr=1-9"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="column">
+        <!--1-->
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/b14.jpg"
+              alt="brushes"
+              width="260px"
+              height="200px"
+            />
+          </div>
+          <h4>
+            Faber-Castell Paint Brush Set - Round, Pack of 7 & Flat, Pack of 7
+          </h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Faber-Castell-Paint-Brush-Set-Round/dp/B092WG251X/ref=sr_1_22?crid=2F8YZGVUAXKIQ&keywords=faber+castell+painting+brushes&qid=1654501278&s=kitchen&sprefix=faber+castel%2Ckitchen%2C272&sr=1-22"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="column">
+        <!--1-->
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/b15.jpg"
+              alt="brushes"
+              width="260px"
+              height="200px"
+            />
+          </div>
+          <h4>Faber-Castell Tri-Grip Brush - Round, Pack of 13 (Assorted)</h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Faber-Castell-Tri-Grip-Brush-Round-Assorted/dp/B014KSGT7U/ref=sr_1_8?crid=2F8YZGVUAXKIQ&keywords=faber+castell+painting+brushes&qid=1654501278&s=kitchen&sprefix=faber+castel%2Ckitchen%2C272&sr=1-8"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="column">
+        <!--1-->
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/b16.jpg"
+              alt="brushes"
+              width="170px"
+              height="180px"
+              style="margin-left: 30px"
+            />
+          </div>
+          <h4>Faber-Castell Tri-Grip Brush - Round, Pack of 4 (Assorted)</h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Faber-Castell-Tri-Grip-Brush-Round-Assorted/dp/B073PTK42H/ref=sr_1_7?crid=2F8YZGVUAXKIQ&keywords=faber%2Bcastell%2Bpainting%2Bbrushes&qid=1654501278&s=kitchen&sprefix=faber%2Bcastel%2Ckitchen%2C272&sr=1-7&th=1"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="column">
+        <!--1-->
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/b17.jpg"
+              alt="brushes"
+              width="160px"
+              height="190px"
+              style="margin-left: 30px"
+            />
+          </div>
+          <h4>Faber-Castell Tri-Grip Brush - Flat, Pack of 4 (Assorted)</h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Faber-Castell-Tri-Grip-Brush-Flat-Assorted/dp/B073PTG4Y4/ref=sr_1_5?crid=2F8YZGVUAXKIQ&keywords=faber+castell+painting+brushes&qid=1654501278&s=kitchen&sprefix=faber+castel%2Ckitchen%2C272&sr=1-5"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <!--1-->
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/b18.jpg"
+              alt="brushes"
+              width="200px"
+              height="170px"
+              style="margin-left: 30px"
+            />
+          </div>
+          <h4>Faber-Castell Tri-Grip Brush - Round, Pack of 7 (Assorted)</h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Faber-Castell-Tri-Grip-Brush-Round-Assorted/dp/B014KSGOMU/ref=sr_1_2?crid=2F8YZGVUAXKIQ&keywords=faber+castell+painting+brushes&qid=1654501278&s=kitchen&sprefix=faber+castel%2Ckitchen%2C272&sr=1-2"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <!--1-->
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/b19.jpg"
+              alt="brushes"
+              width="200px"
+              height="200px"
+              style="margin-left: 30px"
+            />
+          </div>
+          <h4>
+            Faber-Castell Angular Synthetic Round Brushes (2, 4, 6, 8, 10)
+          </h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Faber-Castell-Angular-Synthetic-Round-Brushes/dp/B07YL2RSJP/ref=sr_1_21?crid=1V1O8ESUWXCNZ&keywords=faber+castell+painting+brushes&qid=1654521891&s=kitchen&sprefix=faber+castell+painting+brushes%2Ckitchen%2C234&sr=1-21"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="column">
+        <!--1-->
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/b20.jpg"
+              alt="brushes"
+              width="190px"
+              height="190px"
+              style="margin-left: 30px"
+            />
+          </div>
+          <h4>FABER CASTELL Paint Brush TRI Grip Set of 14(7 Flat +7 Round)</h4>
+          <p>
+            <a
+              href="https://www.amazon.in/FABER-CASTELL-Paint-Brush-Round/dp/B089GW8TX4/ref=sr_1_11?crid=10XWNTB75RNT4&keywords=faber+castell+painting+brushes&qid=1654521612&s=kitchen&sprefix=faber+castell+painting+brushes%2Ckitchen%2C243&sr=1-11"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--sider-->
+    <p class="sider" style="border: 10px solid rgb(235, 166, 63)">
+      <b>Artist's Den</b>
+    </p>
+
+    <!--product grid-->
+    <div class="row">
+      <div class="column">
+        <!--1-->
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/b21.jpg"
+              alt="brushes"
+              width="260px"
+              height="220px"
+            />
+          </div>
+          <h4>
+            Artist's Den Hobby Essential Synthetic Hair Mix Brushes Set(Set of
+            10 Mix)
+          </h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Artists-Den-Synthetic-Watercolor-Painting/dp/B08LDS99KG/ref=sr_1_1?crid=CFWJ36W47N4N&keywords=Artist%27s+Den&qid=1654522433&s=kitchen&sprefix=artists+den%2Ckitchen%2C586&sr=1-1"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <!--1-->
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/b22.jpg"
+              alt="brushes"
+              width="260px"
+              height="220px"
+            />
+          </div>
+          <h4>
+            Artist's Den Hobby Essential Synthetic Hair Brushes Set of 5
+            (Filbert Brushes)
+          </h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Artists-Den-Essential-Synthetic-Watercolor/dp/B08LDF618P/ref=sr_1_2?crid=CFWJ36W47N4N&keywords=Artist%27s+Den&qid=1654522433&s=kitchen&sprefix=artists+den%2Ckitchen%2C586&sr=1-2"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <!--1-->
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/b23.jpg"
+              alt="brushes"
+              width="260px"
+              height="220px"
+            />
+          </div>
+          <h4>
+            <br />Artist's Den Synthetic Hair Brushes Set of 7 (Flat Brush)
+          </h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Artists-Den-Synthetic-Watercolor-Painting/dp/B08L5JFWJG/ref=sr_1_7?crid=CFWJ36W47N4N&keywords=Artist%27s+Den&qid=1654522433&s=kitchen&sprefix=artists+den%2Ckitchen%2C586&sr=1-7"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <!--1-->
+        <div class="card">
+          <div class="product-image">
+            <img
+              src="../static/img/b24.jpg"
+              alt="brushes"
+              width="260px"
+              height="220px"
+            />
+          </div>
+          <h4>
+            <br />Artist's Den Synthetic Hair Brushes Set (7 Round Brushes)
+          </h4>
+          <p>
+            <a
+              href="https://www.amazon.in/Artists-Den-Synthetic-Watercolor-Painting/dp/B08L3X5BTP/ref=sr_1_3?crid=CFWJ36W47N4N&keywords=Artist%27s+Den&qid=1654522433&s=kitchen&sprefix=artists+den%2Ckitchen%2C586&sr=1-3"
+              ><button>
+                <i class="fa fa-shopping-cart" aria-hidden="true"
+                  >&nbsp;Shop Now</i
+                >
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

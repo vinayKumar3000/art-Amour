@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>painting</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+ @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    @import url(https://fonts.googleapis.com/css?family=Chewy);
+    @import url(https://fonts.googleapis.com/css?family=Passion+One);
+    @media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+*{
+	list-style: none;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+}
+
+body{
+	background:white;
+}
+
+.wrapper .sidebar{
+	background-image: url("../static/img/sidebar3.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    position: fixed;
+	top: 0;
+	left: 0;
+	width: 225px;
+	height: 100%;
+	transition: all 0.5s ease;
+}
+
+
+.wrapper .sidebar ul li a{
+	display: block;
+	padding: 13px 30px;
+	border-bottom: 1px solid #2d0831;
+	color: rgb(241, 237, 237);
+	font-size: 16px;
+	position: relative;
+}
+
+.wrapper .sidebar ul li a .icon{
+	color: #dee4ec;
+	width: 30px;
+	display: inline-block;
+}
+
+ 
+
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active{
+	color: #130110;
+
+	background:rgb(233, 214, 236);
+    border-right: 0px solid rgb(5, 68, 104);
+    opacity:0.5;
+}
+
+.wrapper .sidebar ul li a:hover .icon,
+.wrapper .sidebar ul li a.active .icon{
+	color: #2d0831;
+}
+
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before{
+	display: block;
+}
+
+.wrapper .section{
+	width: calc(100% - 225px);
+	margin-left: 225px;
+	transition: all 0.5s ease;
+}
+
+.wrapper .section .top_navbar{
+	background:linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 158, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+	height: 50px;
+	display: flex;
+	align-items: center;
+	padding: 0 30px;
+ 
+}
+
+.wrapper .section .top_navbar .hamburger a{
+	font-size: 28px;
+	color: #f4fbff;
+}
+
+.wrapper .section .top_navbar .hamburger a:hover{
+	color:#e9c9ef;
+}
+
+body.active .wrapper .sidebar{
+	left: -225px;
+}
+
+body.active .wrapper .section{
+	margin-left: 0;
+	width: 100%;
+}
+.layout{
+    margin-left:280px;
+    margin-top:40px;
+    margin-right:50px;}
+.heading{  
+    text-align:justify;
+    font-family: "Chewy";
+    justify-content: space-between;
+    font-size:50px;
+    background: -webkit-linear-gradient(92deg, transparent 0%, rgba(48,6,59,0.9) 88%, #7d155b 100%),
+            -webkit-linear-gradient(173deg, #d93232 0%, #c0a1e2 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.para{
+    padding-top:10px;
+    text-align: justify;
+    
+}
+.img{
+    text-align: center;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align:start;
+  font-family: arial;
+}
+
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: rgb(65, 42, 91);
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  margin:0;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+.cards{
+    display: flex;
+    flex-direction: row;
+}
+.list li{
+    list-style:disc;
+    margin-left:15px;
+}
+</style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="section">
+            <div class="top_navbar">
+                <div class="hamburger">
+                    <a href="#">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <a href="{{ url_for('index') }}" style="position:relative; left:900px;">
+                        <i class="fa fa-snowflake-o"></i>
+                    </a>
+                </div>
+            </div>
+             
+        </div>
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a href="{{ url_for('learn_blog') }}" class="active">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></i></span>
+                        <span class="item">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('painting') }}">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></i></span>
+                        <span class="item">Paintings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('mandalas') }}">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></i></span>
+                        <span class="item">Mandalas</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('zentangle') }}">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></i></span>
+                        <span class="item"><b>Zentangles</b></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('doodle') }}">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></span>
+                        <span class="item"><b>Cartoon Doodles</b></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('painting_brushes') }}">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></span>
+                        <span class="item"><b>Painting Brushes</b></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('materials') }}">
+                        <span class="icon"><i class="fa-solid fa-palette"></i></span>
+                        <span class="item"><b>Materials</b></span>
+                    </a>
+                </li>
+           
+            </ul>
+       
+        </div>
+        
+    </div>
+    <script>
+        var hamburger = document.querySelector(".hamburger");
+     hamburger.addEventListener("click", function(){
+         document.querySelector("body").classList.toggle("active");
+     })
+   </script>
+<!--mandala content-->
+<div class="layout">
+    <h1 class="heading">Painting Brushes</h1><br><hr><br>
+    <h2>What is a Paint Brush?</h2><br><hr>
+    <p class="para">
+        A paintbrush is a brush used to apply paint or ink. A paintbrush is usually made by clamping bristles to a handle with a ferrule. They are available in various sizes, shapes, and materials. Thicker ones are used for filling in, and thinner ones are used for details. They may be subdivided into decorators' brushes used for painting and decorating and artists' brushes use for visual art.
+    </p><br>
+    <div class="img">
+        <img src="../static/img/paintbrushlearn1.jpg" style="height:280px; width:600px;">
+    </div>
+    <p class="para">
+        The art of painting is a Magic and to make the Magic come true we need a Magic wand.So for Paintings the magic wand is our Paint Brush.For the Artists,the perfect paint brush is essential tool to paint.In this blog,we are going see the different types of brushes,brush sizes and their usage in detail.
+    </p><br><hr><br>
+    <h2>What are the Parts of a Brush?</h2><br><hr><br>
+    <div class="img">
+        <img src="../static/img/paintbrushlearn2.jpg" style="height:200px; width:500px;">
+    </div>
+    <p class="para">
+        <ul class="list">
+            <li>bristles - also known as hairs. can be natural, synthetic, or combination of both.</li>
+            <li>ferrule - the silvery bit that connects the bristles with the handle.</li>
+            <li>crimp - the part of the ferrule that secures it to the handle.</li>
+            <li>handle - usually made of wood or acrylic.</li>
+        </ul>
+                
+    </p><br><hr><br>
+    <h2>Types of Bristles</h2><br><hr><br>
+    <h3>Natural Brushes</h3><br>
+    <p class="para">
+        Natural brushes are divided into two categories, soft hair and hog bristles. At the high end, soft hair brushes are made from sable, while camel hair brushes are on the lower end, but aren’t actually made from a camel. Most often these bristles are made from ox, pony, goat, mongoose, or badger. Instead, hog bristle is stiffer, sturdier, and can hold a lot of paint.
+    </p><br>
+    <ul class="list">
+        <li><h4>Sable</h4>The ultimate soft brush is made from the hairs on the tail of a sable marten; these taper naturally, so when they're put into a brush they form a point. Sable brushes are expensive, but are renowned for their softness, flexibility, and fine point. Kolinsky sable from Siberia has traditionally been considered the best hair for watercolor brushes. They are good for painting fine details and very thin paint.</li><br>
+        <li><h4>Hog/bristle</h4>These brushes are the workhorse of the oil painter. The ultimate hard brush is made from the hairs on the back of a pig (hog), which are strong yet springy. The bristles have natural split-ends, which increases the amount of paint they hold. They are good for loading with a lot of paint and painting impasto style and are used for both oils and acrylics. They age well, becoming softer and more responsive with use. </li><br>
+        <li><h4>Camel</h4>Brushes labeled 'camel' hair are really made from other types of soft hair. Camel hair is unsuitable for brushes because it is too woolly.</li><br>
+        <li><h4>Ox</h4>Long, strong and springy hair. It is most often used in flat shaped brushes.</li><br>
+        <li><h4>Pony</h4>Coarse hair that doesn't form a good point. Often used in cheaper watercolor brushes</li><br>
+    </ul><br><hr><br>
+    <h3>Synthetic Brushes</h3>
+    <p class="para">
+        Modern synthetic brushes are excellent and have the advantage of being cheaper than natural hair,they are easier to clean. As a downside, they don’t soak up quite as much pigment as natural brushes and aren’t quite as soft.<br><br>
+        Synthetic brushes, man-made of either nylon or polyester filaments treated in various ways, are particularly good for acrylic paint, which can be hard on and damage natural hair brushes, and for large-scale work. In general, brushes made for acrylics can be used for oils and watercolor, but natural hair brushes made for oil and watercolor should not be used for acrylics (particularly expensive sable brushes) unless you are willing to replace them more often.
+    </p><br><hr><br>
+    <h2>Types of Brushes</h2><br><hr><br>
+    <div class="img">
+    <img src="../static/img/paintbrushlearn3.jpg" style="height:380px; width:600px;" >
+    </div><br><hr><br>
+    <h3>Round</h3>
+    <p class="para">
+    Its is a pointed tip, long closely arranged bristles for detail.Ideal for adding fine detail, round brushes are a close gathering of bristles with a round or pointed tip. Round brushes are ideal for sketching and filling in smaller areas, as well as linework. By changing the pressure on the brush, it’s easy to vary from thin to thick lines. Round brushes work better with thinner paints.
+    </p><br>
+    <h3>Flat</h3>
+    <p class="para">
+    It is also known as <b>Wash Brush</b>. Versatile with long or medium bristles, flat brushes can be used for everything from filling in large spaces to creating bold strokes, impasto, or washes. By using the edge of the brush, it’s also possible to make fine lines.
+    </p><br>
+    <h3>Bright</h3>
+    <p class="para">
+    A bright brush is a short-bristled flat brush with edges that curve slightly toward the center. With shorter and stiffer bristles than a flat brush, these paintbrushes work well with heavy body paints when doing impasto and with thin paints to help drive the pigment into the canvas. However, they aren't good for wet on wet, as their stiff bristles can pull up the underlayer of paint.
+    </p><br>
+    <h3>Filbert</h3>
+    <p class="para">
+        This flat brush with domed edges can be either medium or long-bristled. Filbert brushes take the best of round and flat brushes, meaning they can be used for detail as well as coverage.
+    </p><br>
+    <h3>Fan</h3>
+    <p class="para">
+        The splayed out bristles of a fan brush can help create interesting textural effects on trees, clouds, and other natural elements. Natural bristles make this brush particularly effective for blending, feathering, and smoothing, while synthetic bristles work well for texture.
+    </p><br>
+    <h3>Angle</h3>
+    <p class="para">
+        Angle brushes are flat with—you guessed it—an angled edge. They are especially useful for making curved lines and filling in corners where the tip can easily reach. But they also come in handy for applying paint to larger areas, making them another versatile tool.
+    </p><br>
+    <h3>Mop</h3>
+    <p class="para">
+        Mop brushes come in larger sizes and have soft bristles with a rounded edge. They’re especially useful for watercolorists, as they are wonderful at creating washes of color. For those that work in layers, mop brushes can be used to apply a thin glaze of color over layers that are drying.
+    </p><br>
+    <h3>Rigger</h3>
+    <p class="para">
+        These long, thin round brushes work well with fluid paint. Originally used to paint the rigging of ships in paintings, they are the fine liners of the brush world. Rigger brushes, also known as liner brushes, make long continuous strokes that are useful for painting fine details like branches, as well as for lettering and calligraphy.
+    </p><br><hr><br>
+    <h2>Brush Sizes</h2><br><hr><br>
+    <p class="para">
+        Artists' brushes are usually given numbered sizes, although there is no exact standard for their physical dimensions. From smallest to largest, the sizes are: 20/0, 12/0, 10/0, 7/0, 6/0, 5/0, 4/0 (also written 0000), 000, 00, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16, 18, 20, 22, 24, 25, 26, 28, 30, 2 inch, 4 inch, 6 inch, and 8 inch. Brushes as fine as 30/0 are manufactured by major companies, but are not a common size. Sizes 000 to 20 are most common. 
+    </p><br>
+    <div class="img">
+        <img src="../static/img/paintbrushlearn4.jpg" style="height:500px; width:390px;" >
+        <img src="../static/img/paintbrushlearn5.webp" style="height:500px; width:390px;padding-bottom:9px;" >
+    </div><br><hr><br>
+    <div class="img">
+        <img src="../static/img/paintbrushlearn6.jpg" style="height:500px; width:800px;" >
+    </div><br><hr><br>
+    <h2>References</h2><br><hr><br>
+    <div class="cards">
+    <div class="card">
+        <img src="../static/img/paintbrushlearn7.jpg" style="width:100%">
+        <a href="https://www.thesprucecrafts.com/an-introduction-to-art-paint-brushes-4086375"><button>click here</button></a>
+    </div>
+    <div class="card">
+        <img src="../static/img/paintbrushlearn7.jpg"  style="width:100%">
+        <a href="https://youtu.be/xd1OWQS3c0I"><button>click here</button></a>
+    </div>
+    </div><br>
+</div>
+</body>
+</html>
+
+    

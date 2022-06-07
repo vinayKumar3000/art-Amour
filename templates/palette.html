@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="A Beginner's Guide to the Artists" />
+    <meta
+      name="keywords"
+      content="color palette generator,artists e-learning,art store,art blogs,art website"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    
+    <title>Art Amour</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Passion+One);
+        @import url(https://fonts.googleapis.com/css?family=Chewy);
+body {
+  font: 15px/1.5 Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  background: color #f4f4f4;
+}
+/*global*/
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+/*header*/
+header {
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 158, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  color: black;
+  padding-top: 5px;
+  min-height: 20px;
+}
+header a {
+  color: white;
+  text-decoration: none;
+  text-transform: none;
+  font-size: 20px;
+  font-family: "Passion One";
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding:10px;
+}
+.logo {
+  font-family: "Chewy";
+  display: flex;
+  color: #f4f4f4;
+  justify-content: space-between;
+}
+.left {
+  overflow: hidden;
+  float: left;
+  padding-top: 30px;
+}
+.right {
+  float: right;
+  overflow: hidden;
+  padding-top: 30px;
+  padding-left: 100spx;
+}
+/*A beginners guide to artists section*/
+#section1 {
+  min-height:450px;
+  background: url("homeimg6.jpg") no-repeat;
+  background-size:100%;
+  text-align: center;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity:0.7;
+}
+#section1 h1 {
+  margin-block-start: initial;
+  margin-top: 100px;
+  font-size: 50px;
+  text-align: center;
+  font-family: "Passion One";
+  color: black;
+}
+#section1 p {
+  text-align:center;
+  font-size:large;
+  width:600px;
+  margin-left:40px;
+}
+.explore{
+  background-color: red;
+  padding:20px;
+  border: 0px;
+  border-radius:10px;
+  font-size: large;
+  color:#f4f4f4;
+}
+.container3 {
+  display: flex;
+  justify-content: space-around;
+}
+.photo_gallery{
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items:center;
+  text-align:center;
+  margin:0;
+}
+.photo_gallery .photo_heading{
+  width:50%;
+  padding-bottom:10px;
+
+}
+.photo_gallery .photo_heading h3{
+  font-size: 3em;
+  font-weight:bolder;
+  border-bottom:3px solid #222;
+  opacity:0.7;
+
+}
+.photo_gallery .photo_heading h3 span{
+  font-weight:100;
+}
+.line{
+  background-color:rgb(235, 166, 63);
+  
+}
+/*store cards*/
+/* Container for flexboxes */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create four equal columns */
+.column {
+  flex: 20%;
+  padding: 10px;
+}
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+  .column {
+    flex: 40%;
+  }
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .row {
+    flex-direction: column;
+  }
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 250px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  border:10px solid white;
+  object-fit: cover;
+ 
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 10px;
+  color: white;
+  background-color:rgb(84, 11, 133);
+  text-align: center;
+  cursor: pointer;
+  width: 60%;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+/*nav bar*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background:linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 158, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-transform:uppercase;
+  letter-spacing: 3px;
+}
+
+li a:hover {
+  background-color: rgba(207, 163, 207, 0.968);
+}
+.sider{
+  margin-top:10px;
+  padding:0;
+  width:300px;
+  height:20px;
+  background-color:rgb(235, 166, 63);
+  text-transform:uppercase;
+  letter-spacing: 5px;
+  color: #f4f4f4;
+
+}
+img{
+  object-fit: fill;
+}
+.product-image{
+  width:200px;
+  height:190px;
+  object-fit: fill;
+}
+h4{
+  padding:2px;
+  margin:2px;
+}
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <div>
+          <h1>Art_Amour</h1>
+          </div>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <div class="left">
+            <a href="{{ url_for('upload') }}">ColorPalette</a>&nbsp;&nbsp; <a href="{{ url_for('learn_blog') }}">Learn</a>&nbsp;&nbsp;
+            <a href="{{ url_for('store') }}">Store</a>&nbsp;&nbsp; <a href="update.html">Updates</a>&nbsp;&nbsp;
+          </div>
+        </div>
+
+        <nav class="right">
+          <a href="{{ url_for('index') }}"><i class="fa fa-snowflake-o" style="font-size:24px"aria-hidden="true" style="font-size:23px;"></i></a>
+        </nav>
+      </div>
+    </header>
+    <section id="section1">
+      <div class="container2">
+        <h1>"Customize your Stationary with us."</h1>
+        <p><b>It's a Dream world for every artist to fill their tables and rooms with colorful phenominal arts.
+          We recommend the best and affordable products to the Beginner Artists. Hurry Up!! and buy the products and start making your art and show us!!</b>
+        </p>
+        <button class="explore">Explore Now!</button>
+      </div>
+    </section>
+    <!--nav bar-->
+    <ul>
+      <li><a class="active" href="{{ url_for('painting') }}">Paintings</a></li>
+      <li><a href="{{ url_for('brushes') }}">Brushes</a></li>
+      <li><a href="{{ url_for('palette') }}">Palette</a></li>
+      <li><a href="{{ url_for('art_paper') }}">Canvas/Paper</a></li>
+      <li><a href="{{ url_for('pens') }}">Pens</a></li>
+    </ul>
+    <!--sider-->
+    <p class="sider" style="border: 10px solid rgb(235, 166, 63);"><b>Palettes</b></p>
+    
+    <!--product grid-->
+    <div class="row">
+      <div class="column"><!--1-->
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/cp1.jpg" alt="palette"width="260px" height="220px">
+          </div>
+            <h4><br><br<br><br><br>KABEER ART 16 Well Rectangle Plastic Painting Palette</h4>
+            <p><a href="https://www.amazon.in/KABEER-ART-16-Rectangle-Plastic/dp/B011G1K9EI/ref=sr_1_2_sspa?crid=4IU2OFMMOSOD&keywords=painting+palettes&qid=1654523400&s=kitchen&sprefix=painting+palettes%2Ckitchen%2C251&sr=1-2-spons&psc=1&smid=A16PJBR3CUION9&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUE0S1E1RFZFVEZJTUcmZW5jcnlwdGVkSWQ9QTA4MzM4NDgxMFZGMzdVNVUwME1VJmVuY3J5cHRlZEFkSWQ9QTA0MTkwNTgyNEVDSVBOUDVSOFVVJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ=="><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
+      </div>
+      <div class="column"><!--1-->
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/cp2.jpg" alt="palette"width="260px" height="200px">
+          </div>
+            <h4><br>Jasol Colour Mixing Plates Pack of 2 White Rectangle  and Round Oval Shaped  Watercolor Paint Palette (White) Pack of 1</h4>
+            <p><a href="https://www.amazon.in/Colour-Mixing-rectangle-Watercolor-Palette/dp/B08KF8QPYF/ref=sr_1_11?crid=20NWUDV5JHYOQ&keywords=painting+palettes+round&qid=1654523567&s=kitchen&sprefix=painting+palettes+round%2Ckitchen%2C242&sr=1-11"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
+      </div>
+      <div class="column"><!--1-->
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/cp3.jpg" alt="palette"width="260px" height="220px">
+          </div>
+            <h4>BRUSTRO Artists’ Rectangular Peel Off Painting Palette for Oil, Acrylic, Watercolour and Gouache with 3 Mixing Areas 34x20cm</h4>
+            <p><a href="https://www.amazon.in/BRUSTRO-Artists-Rectangular-Painting-Watercolour/dp/B077TNPKMB/ref=sr_1_7?crid=2DPS0U9J1R7O1&keywords=painting+palettes&qid=1654523804&s=kitchen&sprefix=painting+palettes+round%2Ckitchen%2C258&sr=1-7"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
+      </div>
+      <div class="column"><!--1-->
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/cp4.jpg" alt="palette"width="260px" height="200px">
+          </div>
+            <h4>EZEEPORT Colour Palette | Big Rectangle Colour Mixing Palette | 2 Watercolor Compartment | 8 Mixing Compartment | Painting Palette</h4>
+            <p><a href="https://www.amazon.in/EZEEPORT-Rectangle-Watercolor-Compartment-Painting/dp/B09SWWZJXL/ref=sr_1_20?crid=2DPS0U9J1R7O1&keywords=painting+palettes&qid=1654523804&s=kitchen&sprefix=painting+palettes+round%2Ckitchen%2C258&sr=1-20"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
+      </div>
+      <div class="column"><!--1-->
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/cp5.jpg" alt="palette"width="260px" height="190px">
+          </div>
+            <h4>Craft Maniacs Painting Pallete/Color Palate/Color Mixing Pallete/14 Wells Watercolour Palette/Colouring Palette for Artist Kids – White</h4>
+            <p><a href="https://www.amazon.in/Maniacs-Painting-Pallete-Watercolour-Colouring/dp/B08PKJ4CLN/ref=sr_1_22?crid=2DPS0U9J1R7O1&keywords=painting+palettes&qid=1654523804&s=kitchen&sprefix=painting+palettes+round%2Ckitchen%2C258&sr=1-22"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
+      </div>
+      <div class="column"><!--1-->
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/cp6.jpg" alt="palette"width="260px" height="220px">
+          </div>
+            <h4>KHYATI STATIONERY REDESIGNED A032 Colour Palette | Oval Colour Mixing Palette | 10 Colour Palette | with 2 Water Compartment</h4>
+            <p><a href="https://www.amazon.in/KHYATI-STATIONERY-REDESIGNED-A032-Compartment/dp/B09N9W1R5H/ref=sr_1_27?crid=2DPS0U9J1R7O1&keywords=painting+palettes&qid=1654523804&s=kitchen&sprefix=painting+palettes+round%2Ckitchen%2C258&sr=1-27"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
+      </div>
+      <div class="column"><!--1-->
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/cp7.jpg" alt="palette"width="260px" height="200px">
+          </div>
+            <h4><br>Futurekart Watercolor Palette Folding Paint Tray Plastic Painting Pallet with 25 Compartments (White)</h4>
+            <p><a href="https://www.amazon.in/Futurekart-Colour-Palette-Folding-Watercolor/dp/B07FDQ8CYS/ref=sr_1_4?crid=2DPS0U9J1R7O1&keywords=painting+palettes&qid=1654523804&s=kitchen&sprefix=painting+palettes+round%2Ckitchen%2C258&sr=1-4"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
+      </div>
+      <div class="column"><!--1-->
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/cp8.jpg" alt="palette"width="260px" height="190px">
+          </div>
+            <h4>ARTIOS Wooden Painting Palette - 36x20cm Handmade Paint Palette with Thumb Hole -for Professional Artists, Art Enthusiasts & Kids</h4>
+            <p><a href="https://www.amazon.in/ARTIOS-Wooden-Painting-Palette-Professional/dp/B09J35ZJK9/ref=sr_1_13_sspa?crid=20NWUDV5JHYOQ&keywords=painting+palettes+round&qid=1654523567&s=kitchen&sprefix=painting+palettes+round%2Ckitchen%2C242&sr=1-13-spons&psc=1&smid=A27FVFE9Q9SPDS&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEyVllSOEVTTk1JMTVQJmVuY3J5cHRlZElkPUEwNjY5ODIwMklRVjgwS1dXUFFPRSZlbmNyeXB0ZWRBZElkPUEwNjY5OTcyMTlQMklWRE5EU1NJMiZ3aWRnZXROYW1lPXNwX210ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU="><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
+      </div>
+      <div class="column"><!--1-->
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/cp9.jpg" alt="palette"width="260px" height="200px">
+          </div>
+            <h4><br><br>Qatalitic Set of 5 Painting Knives of Various Sizes & Shapes</h4>
+            <p><a href="https://www.amazon.in/Deepak-Linograph-Vishal-Painting-Various/dp/B078GYJZDF/ref=sr_1_25?crid=2DPS0U9J1R7O1&keywords=painting+palettes&qid=1654523865&s=kitchen&sprefix=painting+palettes+round%2Ckitchen%2C258&sr=1-25"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
+      </div>
+      <div class="column"><!--1-->
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/cp10.jpg" alt="palette"width="260px" height="200px">
+          </div>
+            <h4>Worison 6Pcs Plastic Painting Palette Knives Set White Art Artist Paint Spatula Tools for Oil Acrylic Painting Color Mixing</h4>
+            <p><a href="https://www.amazon.in/Worison-Plastic-Painting-Palette-Spatula/dp/B09F9N62HW/ref=sr_1_32_sspa?crid=2DPS0U9J1R7O1&keywords=painting+palettes&qid=1654523865&s=kitchen&sprefix=painting+palettes+round%2Ckitchen%2C258&sr=1-32-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzUENZQVJWSERaMEVNJmVuY3J5cHRlZElkPUEwMjI5Njk1MkIxTUsySEtKWjY0QiZlbmNyeXB0ZWRBZElkPUEwNzc1NzY1M0NGSEJJWVNBQkU0ViZ3aWRnZXROYW1lPXNwX210ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU="><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
+      </div>
+      <div class="column"><!--1-->
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/cp11.jpg" alt="palette"width="260px" height="200px">
+          </div>
+            <h4>3pcs Acrylic Paint Palette Clear Art Palette,Transparent Non-Stick Oil Paint Palette with Protective Kraft</h4>
+            <p><a href="https://www.amazon.in/Acrylic-Transparent-Non-Stick-Protective-Painting/dp/B087JYVR9H/ref=sr_1_36?crid=2DPS0U9J1R7O1&keywords=painting+palettes&qid=1654523865&s=kitchen&sprefix=painting+palettes+round%2Ckitchen%2C258&sr=1-36"><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
+      </div>
+      <div class="column"><!--1-->
+        <div class="card">
+          <div class="product-image">
+            <img src="../static/img/cp12.jpg" alt="palette"width="260px" height="200px">
+          </div>
+            <h4>Levin THE NEXT LEVEL IN OFFICE STATIONERY Acrylic Paint Palette with Thumb Hole and Protective Brown Paper,</h4>
+            <p><a href="https://www.amazon.in/Levin-NEXT-LEVEL-OFFICE-STATIONERY/dp/B09M3X95P7/ref=sr_1_15_sspa?crid=20NWUDV5JHYOQ&keywords=painting+palettes+round&qid=1654523567&s=kitchen&sprefix=painting+palettes+round%2Ckitchen%2C242&sr=1-15-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEyVllSOEVTTk1JMTVQJmVuY3J5cHRlZElkPUEwNjY5ODIwMklRVjgwS1dXUFFPRSZlbmNyeXB0ZWRBZElkPUEwNDQ0MDkxMzUwUVBNRzNLVlFXJndpZGdldE5hbWU9c3BfbXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ=="><button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Shop Now</i></button></a></p>
+        </div>
+      </div>
+
+

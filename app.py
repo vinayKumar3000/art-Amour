@@ -159,7 +159,7 @@ def upload():
         cv2.imwrite(os.path.join('./static/img/', image2.filename),final)
         output="./static/img/"+image2.filename
     else:
-        output="./static/img/sec2.jpeg"
+        output="./static/img/colorpaletteimg2.png"
         
     return render_template("upload.html",output=output)
 

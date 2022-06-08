@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Your Machine Learning App</title>
+    <title>Color Extraction</title>
     <style>
       @import url(https://fonts.googleapis.com/css?family=Passion+One);
       @import url(https://fonts.googleapis.com/css?family=Chewy);
@@ -16,6 +16,8 @@
         font-family: "chewy";
         font-size: 23px;
         word-spacing: 2px;
+        width: 900px;
+        line-height: 33px;
       }
       .container {
         width: 80%;
@@ -68,6 +70,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 100%;
+        background-color: antiquewhite;
+        background-image: url("colorpaletteimg3.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
       }
 
       .img-upload {
@@ -80,11 +87,48 @@
         align-items: center;
         margin-top: 20px;
         padding: 20px;
+        background-color: ghostwhite;
       }
       .bottom {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
+      }
+      p {
+        text-align: justify;
+        width: 100%;
+      }
+      input[type="file"] {
+        margin-top: 200px;
+        margin-right: 100px;
+      }
+
+      button {
+        border-radius: 8px;
+        margin-top: 200px;
+        padding: 10px;
+        width: 150px;
+        text-decoration: none;
+        width: 200px;
+        border: 0px;
+        color: white;
+        background-color: indianred;
+        font-size: larger;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: rgb(125, 53, 53);
+      }
+      .h1 {
+        margin-left: 20px;
+        font-family: "chewy";
+        letter-spacing: 2px;
+      }
+      .h1-2 {
+        font-family: "chewy";
+        background-color: beige;
+        width: 100%;
+        text-align: center;
       }
     </style>
   </head>
@@ -110,8 +154,7 @@
             class="fa fa-user-circle-o fa-5x"
             aria-hidden="true"
             style="font-size: 23px; color: white"
-          >
-            {{username}}</i
+          ></i
           >&nbsp;
         </nav>
       </div>
@@ -119,62 +162,88 @@
 
     <div class="top">
       <img
-        src="../static/img/sec1.jpeg"
+        src="./static/img/sec1.jpeg"
         alt=""
-        style="height: 400px; width: 60%; margin-right: 20px; margin-top: 20px"
+        style="height: 450px; width: 60%; margin-right: 20px; margin-top: 20px"
       />
       <div class="sec1">
-        Let's travel through the wonderful world of colors. Each color conceals
-        a story.Colors is an element of art referring to reflected light. In
-        works of art, artists use color to depict and describe the subject.
-        Artists, especially painters, utilize their knowledge of color to
-        portray mood, light, depth, and point of view in a work of art.In this
-        page we will explore and play with the distinct colors.You can know the
-        most dominent colors present in an image or art piece.
+        <p>
+          Let's travel through the wonderful world of colors. Each color
+          conceals a story. Colors is an element of art referring to reflected
+          light. In works of art, artists use color to depict and describe the
+          subject. Artists, especially painters, utilize their knowledge of
+          color to portray mood, light, depth, and point of view in a work of
+          art. In this page we will explore and play with the distinct colors.
+          You can know the most dominent colors present in an image or art
+          piece.
+        </p>
       </div>
     </div>
+    <br />
     <form
       name="form"
       method="POST"
       enctype="multipart/form-data"
       action="{{ url_for('upload') }}"
     >
+      <h1 class="h1">Get Colors From Your Image</h1>
       <input name="img" type="file" accept="image/*" />
       <button type="submit" style="margin-right: 10px; padding: 10px">
         Upload
       </button>
       <img
         class="img-upload"
-        src="{{output }}"
+        src="{{output}}"
         style="height: 400px; width: 60%"
       />
     </form>
-    <h1>Explore color combination</h1>
+    <br />
+    <h1 class="h1-2">Explore color combinations</h1>
     <div class="bottom">
       <img
-        src="../static/img/10.jpg"
+        src="./static/img/combo1.png"
         alt=""
-        style="height: 100px; width: 400px; margin-top: 20px; padding-top: 20px"
+        style="height: 200px; width: 400px; margin-top: 20px; padding-top: 20px"
       />
       <img
-        src="../static/img/10.jpg"
+        src="./static/img/combo2.png"
         alt=""
-        style="height: 100px; width: 400px; margin-top: 20px; padding-top: 20px"
+        style="height: 200px; width: 400px; margin-top: 20px; padding-top: 20px"
       />
       <img
-        src="../static/img/10.jpg"
+        src="./static/img/combo3.png"
         alt=""
-        style="height: 100px; width: 400px; margin-top: 20px; padding-top: 20px"
+        style="height: 200px; width: 400px; margin-top: 20px; padding-top: 20px"
       />
       <img
-        src="../static/img/10.jpg"
+        src="./static/img/combo4.png"
         alt=""
-        style="height: 100px; width: 400px; padding-top: 20px; margin-top: 20px"
+        style="height: 200px; width: 400px; padding-top: 20px; margin-top: 20px"
       />
       <img
-        src="../static/img/10.jpg"
+        src="./static/img/combo5.png"
         alt=""
-        style="height: 100px; width: 400px; margin-top: 20px; padding-top: 20px"
+        style="height: 200px; width: 400px; margin-top: 20px; padding-top: 20px"
+      />
+      <img
+        src="./static/img/combo6.png"
+        alt=""
+        style="height: 200px; width: 400px; margin-top: 20px; padding-top: 20px"
+      />
+      <img
+        src="./static/img/combo7.png"
+        alt=""
+        style="height: 200px; width: 400px; margin-top: 20px; padding-top: 20px"
+      />
+      <img
+        src="./static/img/combo8.png"
+        alt=""
+        style="height: 200px; width: 400px; margin-top: 20px; padding-top: 20px"
+      />
+      <img
+        src="./static/img/combo9.png"
+        alt=""
+        style="height: 200px; width: 400px; margin-top: 20px; padding-top: 20px"
       />
     </div>
   </body>

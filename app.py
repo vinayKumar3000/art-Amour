@@ -1,7 +1,6 @@
 from flask import Flask, render_template, url_for, request, session, redirect
 from flask_pymongo import PyMongo
 import bcrypt
-import pandas as pd
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt

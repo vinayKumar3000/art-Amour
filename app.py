@@ -7,7 +7,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 import imutils
-import os
 
 clusters = 5 # try changing it
 
@@ -91,7 +90,7 @@ def upload():
         image2=request.files.get('img','')
 
         file=request.files['img']
-        file.save(os.path.join('./', "received.jpg"))
+        file.save("./received.jpg")
     
         ## ML CODE
         img = cv2.imread('./received.jpg')
@@ -156,8 +155,8 @@ def upload():
 
       
         cv2.destroyAllWindows()
-        cv2.imwrite(os.path.join('./static/img/', image2.filename),final)
         output="./static/img/"+image2.filename
+        cv2.imwrite(output,final)
     else:
         output="./static/img/colorpaletteimg2.png"
         
